@@ -1,0 +1,94 @@
+{% extends 'mainapp/base.html' %}
+{% load link_to_email crispy_forms_tags%}
+{% block content%}
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4">Our contacts</h1>
+  </div>
+</div>
+<div class="row justify-content-around mt-n2">
+  
+  <div class="col-sm-6 col-md-6 col-lg-4 pb-2">
+    <div class="card h-100 shadow">
+      <div class="card-body">
+        <div style="position:relative;overflow:hidden;"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d310847.31903631333!2d13.095096880638135!3d52.506386165927196!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a84e373f035901%3A0x42120465b5e3b70!2z0JHQtdGA0LvQuNC9!5e0!3m2!1sru!2sde!4v1683816558816!5m2!1sru!2sde" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>    </div>
+        <h5 class="card-title">Berlin</h5>
+        <p class="card-text">
+        <ul class="list-unstyled">
+          <li>Ph. number</li>
+          <li><strong>+49-999-11-11111</strong></li>
+        </ul>
+        <ul class="list-unstyled">
+          <li>Email</li>
+          <li><strong>{{ 'barin@gmail.com'|link_to_email }}</strong></li>
+        </ul>
+        <ul class="list-unstyled">
+          <li>Address</li>
+          <li><strong>Alexanderplatz</strong></li>
+        </ul>
+        </p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="col-sm-6 col-md-6 col-lg-4 pb-2">
+    <div class="card h-100 shadow">
+      <div class="card-body">
+        <div style="position:relative;overflow:hidden;"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d158858.5851973579!2d-0.26640529770534754!3d51.528526200756765!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8a00baf21de75%3A0x52963a5addd52a99!2z0JvQvtC90LTQvtC9LCDQktC10LvQuNC60L7QsdGA0LjRgtCw0L3QuNGP!5e0!3m2!1sru!2sde!4v1683816721817!5m2!1sru!2sde" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>        </div>
+        <h5 class="card-title">London</h5>
+        <p class="card-text">
+        <ul class="list-unstyled">
+          <li>Ph. number</li>
+          <li><strong>+11-999-22-22222</strong></li>
+        </ul>
+        <ul class="list-unstyled">
+          <li>Email</li>
+          <li><strong>{{ 'barin@gmail.com'|link_to_email }}</strong></li>
+        </ul>
+        <ul class="list-unstyled">
+          <li>Address</li>
+          <li><strong>Bigben</strong></li>
+        </ul>
+        </p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="col-sm-6 col-md-6 col-lg-4 pb-2">
+    <div class="card h-100 shadow">
+      <div class="card-body">
+        <div style="position:relative;overflow:hidden;"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387194.0622843894!2d-74.30932844391303!3d40.69701928424492!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2z0J3RjNGOLdCZ0L7RgNC6LCDQodCo0JA!5e0!3m2!1sru!2sde!4v1683816815044!5m2!1sru!2sde" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>  </div>
+        <h5 class="card-title">New York</h5>
+        <p class="card-text">
+        <ul class="list-unstyled">
+          <li>Ph. number</li>
+          <li><strong>+1-999-33-33333</strong></li>
+        </ul>
+        <ul class="list-unstyled">
+          <li>Email</li>
+          <li><strong>{{ 'barin@gmail.com'|link_to_email }}</strong></li>
+        </ul>
+        <ul class="list-unstyled">
+          <li>Address</li>
+          <li><strong>Times Square</strong></li>
+        </ul>
+        </p>
+      </div>
+    </div>
+  </div>
+  
+  
+</div>
+{% if form %}
+  
+  <h3>Send us message</h3>
+  <div>
+    <form method="post">
+    {% csrf_token %}
+    {{ form|crispy }}
+    <button type="submit" class="btn btn-primary btn-block">Send</button>
+    </form>
+  </div>
+  
+{% endif %}
+{% endblock %}
