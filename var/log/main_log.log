@@ -1822,3 +1822,5 @@ django.core.exceptions.FieldError: Cannot resolve keyword 'pub_date' into field.
 [2023-06-12 14:41:04,829] INFO django.utils.autoreload (668) Watching for file changes with StatReloader
 [2023-06-12 14:45:21,479] INFO django.utils.autoreload (266) C:\VSprojects\deploy_LP\config\settings.py changed, reloading.
 [2023-06-12 14:45:23,707] INFO django.utils.autoreload (668) Watching for file changes with StatReloader
+[2023-06-12 14:49:28,155] INFO django.utils.autoreload (266) C:\VSprojects\deploy_LP\config\settings.py changed, reloading.
+[2023-06-12 14:49:30,344] INFO django.utils.autoreload (668) Watching for file changes with StatReloader
