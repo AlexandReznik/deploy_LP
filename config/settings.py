@@ -45,7 +45,6 @@ INSTALLED_APPS = [
     'authapp',
     'social_django',
     'crispy_forms',
-    'debug_toolbar',
     'crispy_bootstrap4',
 ]
 
