@@ -1,0 +1,1820 @@
+[2023-05-11 18:41:48,547] INFO django.utils.autoreload (668) Watching for file changes with StatReloader
+[2023-05-11 18:44:54,736] INFO django.utils.autoreload (266) C:\VSprojects\djangoLMC\mainapp\models.py changed, reloading.
+[2023-05-11 18:44:59,283] INFO django.utils.autoreload (668) Watching for file changes with StatReloader
+[2023-05-11 18:45:07,378] WARNING django.security.SuspiciousSession (108) Session data corrupted
+[2023-05-11 18:45:08,055] INFO django.server (212) "GET / HTTP/1.1" 302 0
+[2023-05-11 18:45:08,905] WARNING django.security.SuspiciousSession (108) Session data corrupted
+[2023-05-11 18:45:09,757] INFO django.server (212) "GET /mainapp/ HTTP/1.1" 200 19882
+[2023-05-11 18:45:10,421] INFO django.server (212) "GET /static/debug_toolbar/css/toolbar.css HTTP/1.1" 200 12378
+[2023-05-11 18:45:10,696] INFO django.server (212) "GET /static/debug_toolbar/js/toolbar.js HTTP/1.1" 200 13404
+[2023-05-11 18:45:11,390] INFO django.server (212) "GET /static/debug_toolbar/css/print.css HTTP/1.1" 200 43
+[2023-05-11 18:45:14,048] WARNING django.security.SuspiciousSession (108) Session data corrupted
+[2023-05-11 18:45:14,170] INFO django.server (212) "GET /authapp/login/ HTTP/1.1" 200 14715
+[2023-05-11 18:45:22,890] WARNING django.security.SuspiciousSession (108) Session data corrupted
+[2023-05-11 18:45:22,977] INFO django.server (212) "POST /authapp/login/ HTTP/1.1" 200 16380
+[2023-05-11 18:45:33,038] WARNING django.security.SuspiciousSession (108) Session data corrupted
+[2023-05-11 18:45:33,101] INFO django.server (212) "POST /authapp/login/ HTTP/1.1" 200 16380
+[2023-05-11 18:45:58,692] WARNING django.security.SuspiciousSession (108) Session data corrupted
+[2023-05-11 18:45:59,312] ERROR django.request (241) Internal Server Error: /authapp/register/
+Traceback (most recent call last):
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\test\utils.py", line 112, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\test\utils.py", line 112, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 1064, in render
+    output = self.filter_expression.resolve(context)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 742, in resolve
+    new_obj = func(obj, *arg_vals)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\crispy_forms\templatetags\crispy_forms_filters.py", line 58, in as_crispy_form
+    template = uni_form_template(template_pack)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\crispy_forms\templatetags\crispy_forms_filters.py", line 21, in uni_form_template
+    return get_template("%s/uni_form.html" % template_pack)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: bootstrap4/uni_form.html
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\backends\django.py", line 63, in render
+    reraise(exc, self.backend)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\backends\django.py", line 84, in reraise
+    raise new from exc
+django.template.exceptions.TemplateDoesNotExist: bootstrap4/uni_form.html
+[2023-05-11 18:45:59,392] ERROR django.server (212) "GET /authapp/register/ HTTP/1.1" 500 190038
+[2023-05-11 18:47:06,819] INFO django.utils.autoreload (668) Watching for file changes with StatReloader
+[2023-05-11 18:47:35,444] INFO django.utils.autoreload (668) Watching for file changes with StatReloader
+[2023-05-11 18:47:38,648] WARNING django.security.SuspiciousSession (108) Session data corrupted
+[2023-05-11 18:47:38,760] INFO django.server (212) "GET / HTTP/1.1" 302 0
+[2023-05-11 18:47:39,461] WARNING django.security.SuspiciousSession (108) Session data corrupted
+[2023-05-11 18:47:39,663] INFO django.server (212) "GET /mainapp/ HTTP/1.1" 200 19881
+[2023-05-11 18:47:42,944] WARNING django.security.SuspiciousSession (108) Session data corrupted
+[2023-05-11 18:47:43,013] INFO django.server (212) "GET /authapp/login/ HTTP/1.1" 200 14714
+[2023-05-11 18:47:45,322] WARNING django.security.SuspiciousSession (108) Session data corrupted
+[2023-05-11 18:47:45,415] INFO django.server (212) "POST /authapp/login/ HTTP/1.1" 200 16380
+[2023-05-11 18:47:47,998] WARNING django.security.SuspiciousSession (108) Session data corrupted
+[2023-05-11 18:47:48,190] ERROR django.request (241) Internal Server Error: /authapp/register/
+Traceback (most recent call last):
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\test\utils.py", line 112, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\test\utils.py", line 112, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 1064, in render
+    output = self.filter_expression.resolve(context)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 742, in resolve
+    new_obj = func(obj, *arg_vals)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\crispy_forms\templatetags\crispy_forms_filters.py", line 58, in as_crispy_form
+    template = uni_form_template(template_pack)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\crispy_forms\templatetags\crispy_forms_filters.py", line 21, in uni_form_template
+    return get_template("%s/uni_form.html" % template_pack)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: bootstrap4/uni_form.html
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\backends\django.py", line 63, in render
+    reraise(exc, self.backend)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\backends\django.py", line 84, in reraise
+    raise new from exc
+django.template.exceptions.TemplateDoesNotExist: bootstrap4/uni_form.html
+[2023-05-11 18:47:48,261] ERROR django.server (212) "GET /authapp/register/ HTTP/1.1" 500 190038
+[2023-05-11 18:49:37,471] INFO django.utils.autoreload (668) Watching for file changes with StatReloader
+[2023-05-11 18:49:46,541] WARNING django.security.SuspiciousSession (108) Session data corrupted
+[2023-05-11 18:49:46,720] INFO django.server (212) "POST /authapp/login/ HTTP/1.1" 200 16380
+[2023-05-11 18:49:49,326] WARNING django.security.SuspiciousSession (108) Session data corrupted
+[2023-05-11 18:49:49,394] INFO django.server (212) "GET /mainapp/ HTTP/1.1" 200 19880
+[2023-05-11 18:49:50,415] WARNING django.security.SuspiciousSession (108) Session data corrupted
+[2023-05-11 18:49:50,479] INFO django.server (212) "GET /authapp/login/ HTTP/1.1" 200 14714
+[2023-05-11 18:50:00,253] WARNING django.security.SuspiciousSession (108) Session data corrupted
+[2023-05-11 18:50:01,211] INFO django.server (212) "POST /authapp/login/ HTTP/1.1" 302 0
+[2023-05-11 18:50:01,413] INFO django.server (212) "GET /mainapp/ HTTP/1.1" 200 20636
+[2023-05-11 18:50:09,389] INFO django.server (212) "GET /admin/ HTTP/1.1" 200 18074
+[2023-05-11 18:50:09,651] INFO django.server (212) "GET /static/admin/js/theme.js HTTP/1.1" 200 1943
+[2023-05-11 18:50:09,696] INFO django.server (212) "GET /static/admin/img/icon-yes.svg HTTP/1.1" 200 436
+[2023-05-11 18:51:31,369] INFO django.utils.autoreload (266) C:\VSprojects\djangoLMC\mainapp\admin.py changed, reloading.
+[2023-05-11 18:51:33,799] INFO django.utils.autoreload (668) Watching for file changes with StatReloader
+[2023-05-11 18:51:38,264] INFO django.server (212) "GET /admin/ HTTP/1.1" 200 18413
+[2023-05-11 18:51:38,327] INFO django.server (212) "GET /static/debug_toolbar/js/toolbar.js HTTP/1.1" 304 0
+[2023-05-11 18:51:38,327] INFO django.server (212) "GET /static/debug_toolbar/css/toolbar.css HTTP/1.1" 304 0
+[2023-05-11 18:51:38,334] INFO django.server (212) "GET /static/debug_toolbar/css/print.css HTTP/1.1" 304 0
+[2023-05-11 18:51:41,632] INFO django.server (212) "GET /admin/mainapp/courseteacher/ HTTP/1.1" 200 18958
+[2023-05-11 18:51:41,984] INFO django.server (212) "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[2023-05-11 18:51:41,985] INFO django.server (212) "GET /static/admin/css/changelists.css HTTP/1.1" 200 6584
+[2023-05-11 18:51:42,004] INFO django.server (212) "GET /static/admin/js/urlify.js HTTP/1.1" 200 7887
+[2023-05-11 18:51:42,035] INFO django.server (212) "GET /static/admin/js/actions.js HTTP/1.1" 200 7872
+[2023-05-11 18:51:42,036] INFO django.server (212) "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 200 8943
+[2023-05-11 18:51:42,047] INFO django.server (212) "GET /static/admin/js/jquery.init.js HTTP/1.1" 200 347
+[2023-05-11 18:51:42,050] INFO django.server (212) "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 200 292458
+[2023-05-11 18:51:42,098] INFO django.server (212) "GET /static/admin/js/prepopulate.js HTTP/1.1" 200 1531
+[2023-05-11 18:51:42,100] INFO django.server (212) "GET /static/admin/js/core.js HTTP/1.1" 200 5682
+[2023-05-11 18:51:42,114] INFO django.server (212) "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 200 232381
+[2023-05-11 18:51:42,147] INFO django.server (212) "GET /static/admin/js/filters.js HTTP/1.1" 200 978
+[2023-05-11 18:51:42,153] INFO django.server (212) "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 200 331
+[2023-05-11 18:51:44,566] INFO django.server (212) "GET /admin/ HTTP/1.1" 200 18413
+[2023-05-11 18:51:50,437] INFO django.server (212) "GET /authapp/logout/ HTTP/1.1" 302 0
+[2023-05-11 18:51:50,518] INFO django.server (212) "GET /mainapp/ HTTP/1.1" 200 19942
+[2023-05-11 18:51:52,816] INFO django.server (212) "GET /authapp/login/ HTTP/1.1" 200 15356
+[2023-05-11 18:52:04,297] INFO django.server (212) "POST /authapp/login/ HTTP/1.1" 302 0
+[2023-05-11 18:52:04,375] INFO django.server (212) "GET /mainapp/ HTTP/1.1" 200 20634
+[2023-05-11 18:52:08,669] INFO django.server (212) "GET /authapp/logout/ HTTP/1.1" 302 0
+[2023-05-11 18:52:08,741] INFO django.server (212) "GET /mainapp/ HTTP/1.1" 200 19942
+[2023-05-11 18:52:11,608] INFO django.server (212) "GET /authapp/login/ HTTP/1.1" 200 15356
+[2023-05-11 18:52:13,586] ERROR django.request (241) Internal Server Error: /authapp/register/
+Traceback (most recent call last):
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\test\utils.py", line 112, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\test\utils.py", line 112, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 1064, in render
+    output = self.filter_expression.resolve(context)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 742, in resolve
+    new_obj = func(obj, *arg_vals)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\crispy_forms\templatetags\crispy_forms_filters.py", line 58, in as_crispy_form
+    template = uni_form_template(template_pack)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\crispy_forms\templatetags\crispy_forms_filters.py", line 21, in uni_form_template
+    return get_template("%s/uni_form.html" % template_pack)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: bootstrap4/uni_form.html
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\backends\django.py", line 63, in render
+    reraise(exc, self.backend)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\backends\django.py", line 84, in reraise
+    raise new from exc
+django.template.exceptions.TemplateDoesNotExist: bootstrap4/uni_form.html
+[2023-05-11 18:52:13,680] ERROR django.server (212) "GET /authapp/register/ HTTP/1.1" 500 190038
+[2023-05-11 18:55:16,683] INFO django.utils.autoreload (668) Watching for file changes with StatReloader
+[2023-05-11 18:55:25,604] INFO django.server (212) "GET /authapp/login/ HTTP/1.1" 200 14715
+[2023-05-11 18:55:28,680] INFO django.server (212) "POST /authapp/login/ HTTP/1.1" 200 16380
+[2023-05-11 18:55:39,778] INFO django.server (212) "POST /authapp/login/ HTTP/1.1" 200 16380
+[2023-05-11 18:55:51,834] INFO django.server (212) "POST /authapp/login/ HTTP/1.1" 302 0
+[2023-05-11 18:55:51,998] INFO django.server (212) "GET /mainapp/ HTTP/1.1" 200 20635
+[2023-05-11 18:55:56,515] ERROR django.request (241) Internal Server Error: /authapp/profile_edit/2/
+Traceback (most recent call last):
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\test\utils.py", line 112, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\test\utils.py", line 112, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 1064, in render
+    output = self.filter_expression.resolve(context)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 742, in resolve
+    new_obj = func(obj, *arg_vals)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\crispy_forms\templatetags\crispy_forms_filters.py", line 58, in as_crispy_form
+    template = uni_form_template(template_pack)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\crispy_forms\templatetags\crispy_forms_filters.py", line 21, in uni_form_template
+    return get_template("%s/uni_form.html" % template_pack)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: bootstrap4/uni_form.html
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\backends\django.py", line 63, in render
+    reraise(exc, self.backend)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\backends\django.py", line 84, in reraise
+    raise new from exc
+django.template.exceptions.TemplateDoesNotExist: bootstrap4/uni_form.html
+[2023-05-11 18:55:56,594] ERROR django.server (212) "GET /authapp/profile_edit/2/ HTTP/1.1" 500 192793
+[2023-05-11 18:56:26,372] INFO django.server (212) "GET /authapp/profile_edit/2/ HTTP/1.1" 200 14988
+[2023-05-11 18:56:26,544] WARNING django.request (241) Not Found: /media/avatar_default.svg
+[2023-05-11 18:56:26,545] WARNING django.server (212) "GET /media/avatar_default.svg HTTP/1.1" 404 11864
+[2023-05-11 18:57:06,458] INFO django.server (212) "GET /mainapp/news/ HTTP/1.1" 200 15501
+[2023-05-11 18:57:09,274] ERROR django.request (241) Internal Server Error: /mainapp/news/create/
+Traceback (most recent call last):
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\test\utils.py", line 112, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\test\utils.py", line 112, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 1064, in render
+    output = self.filter_expression.resolve(context)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 742, in resolve
+    new_obj = func(obj, *arg_vals)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\crispy_forms\templatetags\crispy_forms_filters.py", line 58, in as_crispy_form
+    template = uni_form_template(template_pack)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\crispy_forms\templatetags\crispy_forms_filters.py", line 21, in uni_form_template
+    return get_template("%s/uni_form.html" % template_pack)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: bootstrap4/uni_form.html
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\backends\django.py", line 63, in render
+    reraise(exc, self.backend)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\backends\django.py", line 84, in reraise
+    raise new from exc
+django.template.exceptions.TemplateDoesNotExist: bootstrap4/uni_form.html
+[2023-05-11 18:57:09,365] ERROR django.server (212) "GET /mainapp/news/create/ HTTP/1.1" 500 187864
+[2023-05-11 19:44:10,166] INFO django.utils.autoreload (668) Watching for file changes with StatReloader
+[2023-05-11 19:44:14,275] INFO django.server (212) "GET / HTTP/1.1" 302 0
+[2023-05-11 19:44:15,566] INFO django.server (212) "GET /mainapp/ HTTP/1.1" 200 20636
+[2023-05-11 19:44:15,795] INFO django.server (212) "GET /static/debug_toolbar/css/toolbar.css HTTP/1.1" 304 0
+[2023-05-11 19:44:15,812] INFO django.server (212) "GET /static/debug_toolbar/js/toolbar.js HTTP/1.1" 304 0
+[2023-05-11 19:44:16,403] INFO django.server (212) "GET /static/debug_toolbar/css/print.css HTTP/1.1" 304 0
+[2023-05-11 19:44:20,918] ERROR django.request (241) Internal Server Error: /authapp/profile_edit/2/
+Traceback (most recent call last):
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\test\utils.py", line 112, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\test\utils.py", line 112, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 1064, in render
+    output = self.filter_expression.resolve(context)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 742, in resolve
+    new_obj = func(obj, *arg_vals)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\crispy_forms\templatetags\crispy_forms_filters.py", line 58, in as_crispy_form
+    template = uni_form_template(template_pack)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\crispy_forms\templatetags\crispy_forms_filters.py", line 21, in uni_form_template
+    return get_template("%s/uni_form.html" % template_pack)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: bootstrap4/uni_form.html
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\backends\django.py", line 63, in render
+    reraise(exc, self.backend)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\backends\django.py", line 84, in reraise
+    raise new from exc
+django.template.exceptions.TemplateDoesNotExist: bootstrap4/uni_form.html
+[2023-05-11 19:44:21,030] ERROR django.server (212) "GET /authapp/profile_edit/2/ HTTP/1.1" 500 192793
+[2023-05-11 19:44:55,804] INFO django.server (212) "GET /admin/ HTTP/1.1" 200 18544
+[2023-05-11 19:44:55,895] INFO django.server (212) "GET /static/admin/js/theme.js HTTP/1.1" 304 0
+[2023-05-11 19:44:55,910] INFO django.server (212) "GET /static/admin/img/icon-yes.svg HTTP/1.1" 304 0
+[2023-05-11 19:45:03,683] INFO django.server (212) "GET /admin/authapp/customuser/ HTTP/1.1" 200 21515
+[2023-05-11 19:45:03,730] INFO django.server (212) "GET /static/admin/css/changelists.css HTTP/1.1" 304 0
+[2023-05-11 19:45:03,808] INFO django.server (212) "GET /static/admin/js/actions.js HTTP/1.1" 304 0
+[2023-05-11 19:45:03,809] INFO django.server (212) "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+[2023-05-11 19:45:03,824] INFO django.server (212) "GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+[2023-05-11 19:45:03,831] INFO django.server (212) "GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+[2023-05-11 19:45:03,846] INFO django.server (212) "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+[2023-05-11 19:45:03,847] INFO django.server (212) "GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+[2023-05-11 19:45:03,848] INFO django.server (212) "GET /static/admin/js/core.js HTTP/1.1" 304 0
+[2023-05-11 19:45:03,849] INFO django.server (212) "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+[2023-05-11 19:45:03,874] INFO django.server (212) "GET /static/admin/js/filters.js HTTP/1.1" 304 0
+[2023-05-11 19:45:03,965] INFO django.server (212) "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[2023-05-11 19:45:04,000] INFO django.server (212) "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 304 0
+[2023-05-11 19:45:04,215] INFO django.server (212) "GET /static/admin/img/sorting-icons.svg HTTP/1.1" 200 1097
+[2023-05-11 19:45:12,720] INFO django.server (212) "GET /admin/ HTTP/1.1" 200 18413
+[2023-05-11 20:16:03,279] INFO django.server (212) "GET /authapp/logout/ HTTP/1.1" 302 0
+[2023-05-11 20:16:03,366] INFO django.server (212) "GET /mainapp/ HTTP/1.1" 200 19942
+[2023-05-11 20:16:03,429] INFO django.server (212) "GET /static/debug_toolbar/js/toolbar.js HTTP/1.1" 304 0
+[2023-05-11 20:16:03,429] INFO django.server (212) "GET /static/debug_toolbar/css/toolbar.css HTTP/1.1" 304 0
+[2023-05-11 20:16:03,502] INFO django.server (212) "GET /static/debug_toolbar/css/print.css HTTP/1.1" 304 0
+[2023-05-11 20:16:04,789] INFO django.server (212) "GET /authapp/login/ HTTP/1.1" 200 15356
+[2023-05-11 20:16:06,868] ERROR django.request (241) Internal Server Error: /authapp/register/
+Traceback (most recent call last):
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\response.py", line 90, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\response.py", line 72, in resolve_template
+    return select_template(template, using=self.using)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\loader.py", line 42, in select_template
+    return engine.get_template(template_name)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\backends\django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 200, in compile_nodelist
+    return parser.parse()
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\loader_tags.py", line 293, in do_extends
+    nodelist = parser.parse()
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\loader_tags.py", line 232, in do_block
+    nodelist = parser.parse(("endblock",))
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 484, in parse
+    raise self.error(token, e)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 482, in parse
+    filter_expression = self.compile_filter(token.contents)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 600, in compile_filter
+    return FilterExpression(token, self)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 698, in __init__
+    filter_func = parser.find_filter(filter_name)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 606, in find_filter
+    raise TemplateSyntaxError("Invalid filter: '%s'" % filter_name)
+django.template.exceptions.TemplateSyntaxError: Invalid filter: 'as_p'
+[2023-05-11 20:16:06,952] ERROR django.server (212) "GET /authapp/register/ HTTP/1.1" 500 195610
+[2023-05-11 20:16:21,013] INFO django.server (212) "GET /authapp/register/ HTTP/1.1" 200 14109
+[2023-05-11 20:16:24,027] INFO django.server (212) "GET /authapp/login/ HTTP/1.1" 200 14714
+[2023-05-11 20:16:42,687] ERROR django.request (241) Internal Server Error: /authapp/register/
+Traceback (most recent call last):
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\test\utils.py", line 112, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\test\utils.py", line 112, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 1064, in render
+    output = self.filter_expression.resolve(context)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 742, in resolve
+    new_obj = func(obj, *arg_vals)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\crispy_forms\templatetags\crispy_forms_filters.py", line 58, in as_crispy_form
+    template = uni_form_template(template_pack)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\crispy_forms\templatetags\crispy_forms_filters.py", line 21, in uni_form_template
+    return get_template("%s/uni_form.html" % template_pack)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: bootstrap4/uni_form.html
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\backends\django.py", line 63, in render
+    reraise(exc, self.backend)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\backends\django.py", line 84, in reraise
+    raise new from exc
+django.template.exceptions.TemplateDoesNotExist: bootstrap4/uni_form.html
+[2023-05-11 20:16:42,766] ERROR django.server (212) "GET /authapp/register/ HTTP/1.1" 500 190038
+[2023-05-11 20:33:02,848] INFO django.utils.autoreload (266) C:\VSprojects\djangoLMC\authapp\views.py changed, reloading.
+[2023-05-11 20:33:05,281] INFO django.utils.autoreload (668) Watching for file changes with StatReloader
+[2023-05-11 20:33:08,881] INFO django.server (212) "GET / HTTP/1.1" 302 0
+[2023-05-11 20:33:09,405] INFO django.server (212) "GET /mainapp/ HTTP/1.1" 200 19881
+[2023-05-11 20:33:09,553] INFO django.server (212) "GET /static/debug_toolbar/css/toolbar.css HTTP/1.1" 304 0
+[2023-05-11 20:33:09,568] INFO django.server (212) "GET /static/debug_toolbar/js/toolbar.js HTTP/1.1" 304 0
+[2023-05-11 20:33:09,915] INFO django.server (212) "GET /static/debug_toolbar/css/print.css HTTP/1.1" 304 0
+[2023-05-11 20:33:11,788] INFO django.server (212) "GET /authapp/login/ HTTP/1.1" 200 14714
+[2023-05-11 20:33:13,919] ERROR django.request (241) Internal Server Error: /authapp/register/
+Traceback (most recent call last):
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 505, in parse
+    compile_func = self.tags[command]
+KeyError: 'form|crispy'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\response.py", line 90, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\response.py", line 72, in resolve_template
+    return select_template(template, using=self.using)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\loader.py", line 42, in select_template
+    return engine.get_template(template_name)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\backends\django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 200, in compile_nodelist
+    return parser.parse()
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\loader_tags.py", line 293, in do_extends
+    nodelist = parser.parse()
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\loader_tags.py", line 232, in do_block
+    nodelist = parser.parse(("endblock",))
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 507, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 558, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 10: 'form|crispy', expected 'endblock'. Did you forget to register or load this tag?
+[2023-05-11 20:33:13,998] ERROR django.server (212) "GET /authapp/register/ HTTP/1.1" 500 191340
+[2023-05-11 20:34:31,567] INFO django.utils.autoreload (668) Watching for file changes with StatReloader
+[2023-05-11 20:35:19,263] ERROR django.request (241) Internal Server Error: /authapp/register/
+Traceback (most recent call last):
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 505, in parse
+    compile_func = self.tags[command]
+KeyError: 'form|crispy'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\response.py", line 90, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\response.py", line 72, in resolve_template
+    return select_template(template, using=self.using)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\loader.py", line 42, in select_template
+    return engine.get_template(template_name)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\backends\django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 200, in compile_nodelist
+    return parser.parse()
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\loader_tags.py", line 293, in do_extends
+    nodelist = parser.parse()
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\loader_tags.py", line 232, in do_block
+    nodelist = parser.parse(("endblock",))
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 507, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 558, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 11: 'form|crispy', expected 'endblock'. Did you forget to register or load this tag?
+[2023-05-11 20:35:19,430] ERROR django.server (212) "GET /authapp/register/ HTTP/1.1" 500 191578
+[2023-05-11 20:38:29,319] INFO django.server (212) "GET /authapp/login/ HTTP/1.1" 200 14715
+[2023-05-11 20:38:31,300] ERROR django.request (241) Internal Server Error: /authapp/register/
+Traceback (most recent call last):
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 505, in parse
+    compile_func = self.tags[command]
+KeyError: 'form|crispy'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\response.py", line 90, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\response.py", line 72, in resolve_template
+    return select_template(template, using=self.using)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\loader.py", line 42, in select_template
+    return engine.get_template(template_name)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\backends\django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 200, in compile_nodelist
+    return parser.parse()
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\loader_tags.py", line 293, in do_extends
+    nodelist = parser.parse()
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\loader_tags.py", line 232, in do_block
+    nodelist = parser.parse(("endblock",))
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 507, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 558, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 11: 'form|crispy', expected 'endblock'. Did you forget to register or load this tag?
+[2023-05-11 20:38:31,372] ERROR django.server (212) "GET /authapp/register/ HTTP/1.1" 500 191909
+[2023-05-11 20:39:08,444] INFO django.utils.autoreload (266) C:\VSprojects\djangoLMC\authapp\views.py changed, reloading.
+[2023-05-11 20:39:11,117] INFO django.utils.autoreload (668) Watching for file changes with StatReloader
+[2023-05-11 20:39:29,146] INFO django.server (212) "GET /authapp/login/ HTTP/1.1" 200 14715
+[2023-05-11 20:39:31,501] ERROR django.request (241) Internal Server Error: /authapp/register/
+Traceback (most recent call last):
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\test\utils.py", line 112, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\test\utils.py", line 112, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 1064, in render
+    output = self.filter_expression.resolve(context)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 742, in resolve
+    new_obj = func(obj, *arg_vals)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\crispy_forms\templatetags\crispy_forms_filters.py", line 58, in as_crispy_form
+    template = uni_form_template(template_pack)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\crispy_forms\templatetags\crispy_forms_filters.py", line 21, in uni_form_template
+    return get_template("%s/uni_form.html" % template_pack)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: bootstrap4/uni_form.html
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\backends\django.py", line 63, in render
+    reraise(exc, self.backend)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\backends\django.py", line 84, in reraise
+    raise new from exc
+django.template.exceptions.TemplateDoesNotExist: bootstrap4/uni_form.html
+[2023-05-11 20:39:31,590] ERROR django.server (212) "GET /authapp/register/ HTTP/1.1" 500 190038
+[2023-05-11 20:43:06,861] ERROR django.request (241) Internal Server Error: /authapp/register/
+Traceback (most recent call last):
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\response.py", line 90, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\response.py", line 72, in resolve_template
+    return select_template(template, using=self.using)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\loader.py", line 42, in select_template
+    return engine.get_template(template_name)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\backends\django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 200, in compile_nodelist
+    return parser.parse()
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\loader_tags.py", line 293, in do_extends
+    nodelist = parser.parse()
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\loader_tags.py", line 232, in do_block
+    nodelist = parser.parse(("endblock",))
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 484, in parse
+    raise self.error(token, e)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 482, in parse
+    filter_expression = self.compile_filter(token.contents)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 600, in compile_filter
+    return FilterExpression(token, self)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 698, in __init__
+    filter_func = parser.find_filter(filter_name)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 606, in find_filter
+    raise TemplateSyntaxError("Invalid filter: '%s'" % filter_name)
+django.template.exceptions.TemplateSyntaxError: Invalid filter: 'as_crispy_form'
+[2023-05-11 20:43:06,940] ERROR django.server (212) "GET /authapp/register/ HTTP/1.1" 500 195938
+[2023-05-11 20:43:06,960] INFO django.server (212) "GET /static/debug_toolbar/css/toolbar.css HTTP/1.1" 304 0
+[2023-05-11 20:43:07,044] INFO django.server (212) "GET /static/debug_toolbar/css/print.css HTTP/1.1" 304 0
+[2023-05-11 20:46:53,907] ERROR django.request (241) Internal Server Error: /authapp/register/
+Traceback (most recent call last):
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\test\utils.py", line 112, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\test\utils.py", line 112, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 1064, in render
+    output = self.filter_expression.resolve(context)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 742, in resolve
+    new_obj = func(obj, *arg_vals)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\crispy_forms\templatetags\crispy_forms_filters.py", line 58, in as_crispy_form
+    template = uni_form_template(template_pack)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\crispy_forms\templatetags\crispy_forms_filters.py", line 21, in uni_form_template
+    return get_template("%s/uni_form.html" % template_pack)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: bootstrap4/uni_form.html
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\backends\django.py", line 63, in render
+    reraise(exc, self.backend)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\backends\django.py", line 84, in reraise
+    raise new from exc
+django.template.exceptions.TemplateDoesNotExist: bootstrap4/uni_form.html
+[2023-05-11 20:46:53,984] ERROR django.server (212) "GET /authapp/register/ HTTP/1.1" 500 190242
+[2023-05-11 20:47:05,764] INFO django.server (212) "GET /authapp/register/ HTTP/1.1" 200 14110
+[2023-05-11 20:47:54,281] INFO django.utils.autoreload (266) C:\VSprojects\djangoLMC\authapp\views.py changed, reloading.
+[2023-05-11 20:47:57,178] INFO django.utils.autoreload (668) Watching for file changes with StatReloader
+[2023-05-11 20:47:58,635] ERROR django.request (241) Internal Server Error: /authapp/register/
+Traceback (most recent call last):
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\test\utils.py", line 112, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\test\utils.py", line 112, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 1064, in render
+    output = self.filter_expression.resolve(context)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 742, in resolve
+    new_obj = func(obj, *arg_vals)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\crispy_forms\templatetags\crispy_forms_filters.py", line 58, in as_crispy_form
+    template = uni_form_template(template_pack)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\crispy_forms\templatetags\crispy_forms_filters.py", line 21, in uni_form_template
+    return get_template("%s/uni_form.html" % template_pack)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: bootstrap4/uni_form.html
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\backends\django.py", line 63, in render
+    reraise(exc, self.backend)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\backends\django.py", line 84, in reraise
+    raise new from exc
+django.template.exceptions.TemplateDoesNotExist: bootstrap4/uni_form.html
+[2023-05-11 20:47:58,731] ERROR django.server (212) "GET /authapp/register/ HTTP/1.1" 500 190175
+[2023-05-12 00:38:22,862] INFO django.utils.autoreload (668) Watching for file changes with StatReloader
+[2023-05-12 00:38:50,600] INFO django.utils.autoreload (266) C:\VSprojects\djangoLMC\authapp\admin.py changed, reloading.
+[2023-05-12 00:38:53,494] INFO django.utils.autoreload (668) Watching for file changes with StatReloader
+[2023-05-12 00:38:54,399] INFO django.server (212) "GET / HTTP/1.1" 302 0
+[2023-05-12 00:38:55,287] INFO django.server (212) "GET /mainapp/ HTTP/1.1" 200 19881
+[2023-05-12 00:38:55,455] INFO django.server (212) "GET /static/debug_toolbar/css/toolbar.css HTTP/1.1" 304 0
+[2023-05-12 00:38:55,471] INFO django.server (212) "GET /static/debug_toolbar/js/toolbar.js HTTP/1.1" 304 0
+[2023-05-12 00:38:55,935] INFO django.server (212) "GET /static/debug_toolbar/css/print.css HTTP/1.1" 304 0
+[2023-05-12 00:39:01,060] INFO django.server (212) "GET /authapp/login/ HTTP/1.1" 200 14714
+[2023-05-12 00:39:04,176] ERROR django.request (241) Internal Server Error: /authapp/register/
+Traceback (most recent call last):
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\test\utils.py", line 112, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\test\utils.py", line 112, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 1064, in render
+    output = self.filter_expression.resolve(context)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 742, in resolve
+    new_obj = func(obj, *arg_vals)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\crispy_forms\templatetags\crispy_forms_filters.py", line 58, in as_crispy_form
+    template = uni_form_template(template_pack)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\crispy_forms\templatetags\crispy_forms_filters.py", line 21, in uni_form_template
+    return get_template("%s/uni_form.html" % template_pack)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: bootstrap4/uni_form.html
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\backends\django.py", line 63, in render
+    reraise(exc, self.backend)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\backends\django.py", line 84, in reraise
+    raise new from exc
+django.template.exceptions.TemplateDoesNotExist: bootstrap4/uni_form.html
+[2023-05-12 00:39:04,336] ERROR django.server (212) "GET /authapp/register/ HTTP/1.1" 500 190038
+[2023-05-12 00:39:06,058] INFO django.server (212) "GET /authapp/login/ HTTP/1.1" 200 14714
+[2023-05-12 00:39:08,503] INFO django.server (212) "GET /social_auth/login/github/ HTTP/1.1" 302 0
+[2023-05-12 00:39:16,911] INFO django.server (212) "GET /authapp/login/ HTTP/1.1" 200 14714
+[2023-05-12 00:39:40,329] INFO django.server (212) "POST /authapp/login/ HTTP/1.1" 302 0
+[2023-05-12 00:39:40,529] INFO django.server (212) "GET /mainapp/ HTTP/1.1" 200 20635
+[2023-05-12 00:39:48,350] ERROR django.request (241) Internal Server Error: /authapp/profile_edit/2/
+Traceback (most recent call last):
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\test\utils.py", line 112, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\test\utils.py", line 112, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 1064, in render
+    output = self.filter_expression.resolve(context)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 742, in resolve
+    new_obj = func(obj, *arg_vals)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\crispy_forms\templatetags\crispy_forms_filters.py", line 58, in as_crispy_form
+    template = uni_form_template(template_pack)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\crispy_forms\templatetags\crispy_forms_filters.py", line 21, in uni_form_template
+    return get_template("%s/uni_form.html" % template_pack)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: bootstrap4/uni_form.html
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\backends\django.py", line 63, in render
+    reraise(exc, self.backend)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\backends\django.py", line 84, in reraise
+    raise new from exc
+django.template.exceptions.TemplateDoesNotExist: bootstrap4/uni_form.html
+[2023-05-12 00:39:48,461] ERROR django.server (212) "GET /authapp/profile_edit/2/ HTTP/1.1" 500 192793
+[2023-05-12 00:45:38,618] INFO django.utils.autoreload (266) C:\VSprojects\djangoLMC\config\settings.py changed, reloading.
+[2023-05-12 00:45:44,838] INFO django.utils.autoreload (668) Watching for file changes with StatReloader
+[2023-05-12 00:45:48,021] INFO django.server (212) "GET / HTTP/1.1" 302 0
+[2023-05-12 00:45:48,853] INFO django.server (212) "GET /mainapp/ HTTP/1.1" 200 20635
+[2023-05-12 00:45:52,840] INFO django.server (212) "GET /authapp/profile_edit/2/ HTTP/1.1" 200 17213
+[2023-05-12 00:45:53,448] WARNING django.request (241) Not Found: /media/avatar_default.svg
+[2023-05-12 00:45:53,448] WARNING django.server (212) "GET /media/avatar_default.svg HTTP/1.1" 404 11864
+[2023-05-12 00:46:00,170] INFO django.server (212) "GET /authapp/logout/ HTTP/1.1" 302 0
+[2023-05-12 00:46:00,258] INFO django.server (212) "GET /mainapp/ HTTP/1.1" 200 19942
+[2023-05-12 00:46:02,061] INFO django.server (212) "GET /authapp/login/ HTTP/1.1" 200 15356
+[2023-05-12 00:46:03,908] INFO django.server (212) "GET /authapp/register/ HTTP/1.1" 200 16915
+[2023-05-12 00:50:14,084] INFO django.utils.autoreload (266) C:\VSprojects\djangoLMC\mainapp\models.py changed, reloading.
+[2023-05-12 00:50:17,301] INFO django.utils.autoreload (668) Watching for file changes with StatReloader
+[2023-05-12 00:55:17,549] INFO django.utils.autoreload (668) Watching for file changes with StatReloader
+[2023-05-12 00:55:54,076] INFO django.utils.autoreload (266) C:\VSprojects\djangoLMC\authapp\models.py changed, reloading.
+[2023-05-12 00:55:57,031] INFO django.utils.autoreload (668) Watching for file changes with StatReloader
+[2023-05-12 00:56:41,053] INFO django.utils.autoreload (668) Watching for file changes with StatReloader
+[2023-05-12 00:56:45,908] INFO django.server (212) "GET /mainapp/courses/ HTTP/1.1" 200 14281
+[2023-05-12 00:56:51,341] INFO django.server (212) "GET /mainapp/news/ HTTP/1.1" 200 14633
+[2023-05-12 00:56:55,013] INFO django.server (212) "GET /authapp/login/ HTTP/1.1" 200 14714
+[2023-05-12 00:57:06,568] INFO django.server (212) "POST /authapp/login/ HTTP/1.1" 302 0
+[2023-05-12 00:57:06,776] INFO django.server (212) "GET /mainapp/ HTTP/1.1" 200 20635
+[2023-05-12 00:57:08,964] INFO django.server (212) "GET /mainapp/courses/ HTTP/1.1" 200 14235
+[2023-05-12 00:57:10,535] INFO django.server (212) "GET /mainapp/news/ HTTP/1.1" 200 15499
+[2023-05-12 00:57:14,294] INFO django.server (212) "GET /mainapp/news/create/ HTTP/1.1" 200 16263
+[2023-05-12 00:57:37,904] INFO django.server (212) "POST /mainapp/news/create/ HTTP/1.1" 302 0
+[2023-05-12 00:57:38,048] INFO django.server (212) "GET /mainapp/news/ HTTP/1.1" 200 16006
+[2023-05-12 00:57:51,559] INFO django.server (212) "GET /admin/ HTTP/1.1" 200 18544
+[2023-05-12 00:57:51,647] INFO django.server (212) "GET /static/admin/js/theme.js HTTP/1.1" 304 0
+[2023-05-12 00:57:51,735] INFO django.server (212) "GET /static/admin/img/icon-yes.svg HTTP/1.1" 304 0
+[2023-05-12 00:58:10,091] INFO django.server (212) "GET /admin/mainapp/courses/ HTTP/1.1" 200 18871
+[2023-05-12 00:58:10,139] INFO django.server (212) "GET /static/admin/css/changelists.css HTTP/1.1" 304 0
+[2023-05-12 00:58:10,147] INFO django.server (212) "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+[2023-05-12 00:58:10,155] INFO django.server (212) "GET /static/admin/js/actions.js HTTP/1.1" 304 0
+[2023-05-12 00:58:10,171] INFO django.server (212) "GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+[2023-05-12 00:58:10,179] INFO django.server (212) "GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+[2023-05-12 00:58:10,187] INFO django.server (212) "GET /static/admin/js/core.js HTTP/1.1" 304 0
+[2023-05-12 00:58:10,187] INFO django.server (212) "GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+[2023-05-12 00:58:10,195] INFO django.server (212) "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+[2023-05-12 00:58:10,203] INFO django.server (212) "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+[2023-05-12 00:58:10,243] INFO django.server (212) "GET /static/admin/js/filters.js HTTP/1.1" 304 0
+[2023-05-12 00:58:10,307] INFO django.server (212) "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[2023-05-12 00:58:10,347] INFO django.server (212) "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 304 0
+[2023-05-12 00:58:13,402] INFO django.server (212) "GET /admin/mainapp/courses/add/ HTTP/1.1" 200 22080
+[2023-05-12 00:58:13,546] INFO django.server (212) "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[2023-05-12 00:58:13,674] INFO django.server (212) "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 200 586
+[2023-05-12 00:58:13,818] INFO django.server (212) "GET /static/admin/css/forms.css HTTP/1.1" 200 8953
+[2023-05-12 00:58:13,818] INFO django.server (212) "GET /static/admin/js/change_form.js HTTP/1.1" 200 606
+[2023-05-12 00:58:13,866] INFO django.server (212) "GET /static/admin/css/widgets.css HTTP/1.1" 200 11900
+[2023-05-12 00:59:55,678] INFO django.server (212) "POST /admin/mainapp/courses/add/ HTTP/1.1" 302 0
+[2023-05-12 00:59:55,958] INFO django.server (212) "GET /admin/mainapp/courses/ HTTP/1.1" 200 20225
+[2023-05-12 00:59:56,070] INFO django.server (212) "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[2023-05-12 01:00:03,264] INFO django.server (212) "GET /admin/mainapp/courses/add/ HTTP/1.1" 200 22080
+[2023-05-12 01:00:04,423] INFO django.server (212) "GET /admin/mainapp/courses/ HTTP/1.1" 200 20023
+[2023-05-12 01:00:05,512] INFO django.server (212) "GET /admin/ HTTP/1.1" 200 18734
+[2023-05-12 01:00:10,843] INFO django.server (212) "GET /mainapp/courses/ HTTP/1.1" 200 14235
+[2023-05-12 01:00:12,268] INFO django.server (212) "GET /mainapp/courses/ HTTP/1.1" 200 14235
+[2023-05-12 01:00:12,654] INFO django.server (212) "GET /mainapp/courses/ HTTP/1.1" 200 14235
+[2023-05-12 01:00:12,846] INFO django.server (212) "GET /mainapp/courses/ HTTP/1.1" 200 14235
+[2023-05-12 01:00:14,692] INFO django.server (212) "GET /mainapp/courses/ HTTP/1.1" 200 14235
+[2023-05-12 01:00:16,435] INFO django.server (212) "GET /authapp/login/ HTTP/1.1" 200 15321
+[2023-05-12 01:00:31,061] INFO django.server (212) "POST /authapp/login/ HTTP/1.1" 302 0
+[2023-05-12 01:00:31,149] INFO django.server (212) "GET /mainapp/ HTTP/1.1" 200 20634
+[2023-05-12 01:00:33,037] INFO django.server (212) "GET /mainapp/courses/ HTTP/1.1" 200 14235
+[2023-05-12 01:00:39,655] INFO django.server (212) "GET /authapp/login/ HTTP/1.1" 200 15977
+[2023-05-12 01:00:52,680] INFO django.server (212) "POST /authapp/login/ HTTP/1.1" 302 0
+[2023-05-12 01:00:52,768] INFO django.server (212) "GET /mainapp/ HTTP/1.1" 200 20634
+[2023-05-12 01:00:54,758] INFO django.server (212) "GET /mainapp/contacts/ HTTP/1.1" 200 19079
+[2023-05-12 01:00:57,981] INFO django.server (212) "GET /mainapp/courses/ HTTP/1.1" 200 14235
+[2023-05-12 01:01:08,641] INFO django.server (212) "GET /mainapp/news/ HTTP/1.1" 200 16005
+[2023-05-12 01:01:15,076] INFO django.server (212) "GET /authapp/login/ HTTP/1.1" 200 15977
+[2023-05-12 01:01:26,033] INFO django.server (212) "POST /authapp/login/ HTTP/1.1" 302 0
+[2023-05-12 01:01:26,121] INFO django.server (212) "GET /mainapp/ HTTP/1.1" 200 20634
+[2023-05-12 01:01:28,294] INFO django.server (212) "GET /mainapp/courses/ HTTP/1.1" 200 14235
+[2023-05-12 01:09:03,448] INFO django.utils.autoreload (668) Watching for file changes with StatReloader
+[2023-05-12 01:09:07,396] INFO django.server (212) "GET / HTTP/1.1" 302 0
+[2023-05-12 01:09:08,190] INFO django.server (212) "GET /mainapp/ HTTP/1.1" 200 20635
+[2023-05-12 01:09:11,547] INFO django.server (212) "GET /mainapp/courses/ HTTP/1.1" 200 15419
+[2023-05-12 01:09:11,591] WARNING django.server (212) "GET /static/ HTTP/1.1" 404 1767
+[2023-05-12 01:09:15,413] INFO django.server (212) "GET /mainapp/courses/1/detail/ HTTP/1.1" 200 18166
+[2023-05-12 01:09:15,444] WARNING django.server (212) "GET /static/ HTTP/1.1" 404 1767
+[2023-05-12 01:09:27,202] INFO django.server (212) "GET /mainapp/news/ HTTP/1.1" 200 16006
+[2023-05-12 01:09:29,028] INFO django.server (212) "GET /mainapp/news/1/detail HTTP/1.1" 200 14695
+[2023-05-12 01:09:30,539] INFO django.server (212) "GET /mainapp/news/ HTTP/1.1" 200 16005
+[2023-05-12 01:09:42,776] WARNING django.server (212) "GET /static/ HTTP/1.1" 404 1767
+[2023-05-12 01:10:49,756] INFO django.server (212) "GET /mainapp/courses/ HTTP/1.1" 200 15373
+[2023-05-12 01:10:49,784] WARNING django.server (212) "GET /static/ HTTP/1.1" 404 1767
+[2023-05-12 01:10:51,523] INFO django.server (212) "GET /mainapp/courses/ HTTP/1.1" 200 15373
+[2023-05-12 01:10:51,551] WARNING django.server (212) "GET /static/ HTTP/1.1" 404 1767
+[2023-05-12 01:10:52,879] INFO django.server (212) "GET /mainapp/ HTTP/1.1" 200 20634
+[2023-05-12 01:10:54,377] WARNING django.server (212) "GET /static/ HTTP/1.1" 404 1767
+[2023-05-12 01:10:55,971] INFO django.server (212) "GET /mainapp/courses/1/detail/ HTTP/1.1" 200 18164
+[2023-05-12 01:10:56,011] WARNING django.server (212) "GET /static/ HTTP/1.1" 404 1767
+[2023-05-12 01:11:58,559] INFO django.utils.autoreload (668) Watching for file changes with StatReloader
+[2023-05-12 01:12:08,752] INFO django.server (212) "GET / HTTP/1.1" 302 0
+[2023-05-12 01:12:09,345] INFO django.server (212) "GET /mainapp/ HTTP/1.1" 200 20635
+[2023-05-12 01:12:11,659] WARNING django.server (212) "GET /static/ HTTP/1.1" 404 1767
+[2023-05-12 01:12:13,585] INFO django.server (212) "GET /mainapp/courses/1/detail/ HTTP/1.1" 200 18165
+[2023-05-12 01:12:13,623] WARNING django.server (212) "GET /static/ HTTP/1.1" 404 1767
+[2023-05-12 01:12:46,618] INFO django.server (212) "GET /mainapp/courses/ HTTP/1.1" 200 15373
+[2023-05-12 01:12:46,650] WARNING django.server (212) "GET /static/ HTTP/1.1" 404 1767
+[2023-05-12 01:12:47,827] INFO django.server (212) "GET /mainapp/courses/ HTTP/1.1" 200 15373
+[2023-05-12 01:12:47,856] WARNING django.server (212) "GET /static/ HTTP/1.1" 404 1767
+[2023-05-12 01:13:03,148] INFO django.utils.autoreload (668) Watching for file changes with StatReloader
+[2023-05-12 01:13:49,924] INFO django.server (212) "GET / HTTP/1.1" 302 0
+[2023-05-12 01:13:50,565] INFO django.server (212) "GET /mainapp/ HTTP/1.1" 200 20635
+[2023-05-12 01:13:56,058] WARNING django.server (212) "GET /static/ HTTP/1.1" 404 1767
+[2023-05-12 01:13:58,034] INFO django.server (212) "GET /mainapp/courses/1/detail/ HTTP/1.1" 200 18165
+[2023-05-12 01:13:58,072] WARNING django.server (212) "GET /static/ HTTP/1.1" 404 1767
+[2023-05-12 01:15:02,553] INFO django.utils.autoreload (668) Watching for file changes with StatReloader
+[2023-05-12 01:15:06,406] INFO django.server (212) "GET /mainapp/courses/ HTTP/1.1" 200 15475
+[2023-05-12 01:15:06,566] INFO django.server (212) "GET /media/courses/course_Python/avatars/pic_1683842395318.jpg HTTP/1.1" 200 99030
+[2023-05-12 01:15:09,470] INFO django.server (212) "GET /mainapp/courses/1/detail/ HTTP/1.1" 200 18164
+[2023-05-12 01:15:09,507] WARNING django.server (212) "GET /static/ HTTP/1.1" 404 1767
+[2023-05-12 01:15:12,285] INFO django.server (212) "GET /mainapp/courses/1/detail/ HTTP/1.1" 200 18164
+[2023-05-12 01:15:12,322] WARNING django.server (212) "GET /static/ HTTP/1.1" 404 1767
+[2023-05-12 01:16:42,086] INFO django.server (212) "GET /mainapp/courses/1/detail/ HTTP/1.1" 200 18211
+[2023-05-12 01:16:42,146] INFO django.server (212) "GET /media/courses/course_Python/avatars/pic_1683842395318.jpg HTTP/1.1" 304 0
+[2023-05-12 01:16:48,620] INFO django.server (212) "GET /mainapp/contacts/ HTTP/1.1" 200 19079
+[2023-05-12 01:16:58,247] INFO django.server (212) "GET /mainapp/ HTTP/1.1" 200 20634
+[2023-05-12 01:18:12,040] INFO django.server (212) "GET /authapp/profile_edit/2/ HTTP/1.1" 200 17212
+[2023-05-12 01:18:12,141] WARNING django.request (241) Not Found: /media/avatar_default.svg
+[2023-05-12 01:18:12,142] WARNING django.server (212) "GET /media/avatar_default.svg HTTP/1.1" 404 11863
+[2023-05-12 01:18:56,121] ERROR django.request (241) Internal Server Error: /authapp/profile_edit/2/
+Traceback (most recent call last):
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\contrib\auth\mixins.py", line 135, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\views\generic\base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\views\generic\edit.py", line 208, in post
+    return super().post(request, *args, **kwargs)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\views\generic\edit.py", line 152, in post
+    if form.is_valid():
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\forms\forms.py", line 201, in is_valid
+    return self.is_bound and not self.errors
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\forms\forms.py", line 196, in errors
+    self.full_clean()
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\forms\forms.py", line 433, in full_clean
+    self._clean_fields()
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\forms\forms.py", line 448, in _clean_fields
+    value = getattr(self, "clean_%s" % name)()
+  File "C:\VSprojects\djangoLMC\authapp\forms.py", line 52, in clean_age
+    if data < 10 or data > 100:
+TypeError: '<' not supported between instances of 'NoneType' and 'int'
+[2023-05-12 01:18:56,187] ERROR django.server (212) "POST /authapp/profile_edit/2/ HTTP/1.1" 500 119025
+[2023-05-12 01:19:49,122] INFO django.server (212) "POST /authapp/profile_edit/2/ HTTP/1.1" 302 0
+[2023-05-12 01:19:49,216] INFO django.server (212) "GET /authapp/profile_edit/2/ HTTP/1.1" 200 17591
+[2023-05-12 01:19:49,289] INFO django.server (212) "GET /media/users/user_kinzer/avatars/pic_1683843588870.jpg HTTP/1.1" 200 68264
+[2023-05-12 01:21:53,796] INFO django.server (212) "GET /authapp/logout/ HTTP/1.1" 302 0
+[2023-05-12 01:21:53,873] INFO django.server (212) "GET /mainapp/ HTTP/1.1" 200 19942
+[2023-05-12 01:21:53,941] INFO django.server (212) "GET /static/debug_toolbar/css/toolbar.css HTTP/1.1" 304 0
+[2023-05-12 01:21:53,949] INFO django.server (212) "GET /static/debug_toolbar/js/toolbar.js HTTP/1.1" 304 0
+[2023-05-12 01:21:54,022] INFO django.server (212) "GET /static/debug_toolbar/css/print.css HTTP/1.1" 304 0
+[2023-05-12 01:21:55,583] INFO django.server (212) "GET /authapp/login/ HTTP/1.1" 200 15356
+[2023-05-12 01:21:57,712] INFO django.server (212) "GET /authapp/register/ HTTP/1.1" 200 16915
+[2023-05-12 01:23:34,291] INFO django.utils.autoreload (266) C:\VSprojects\djangoLMC\authapp\forms.py changed, reloading.
+[2023-05-12 01:23:37,193] INFO django.utils.autoreload (668) Watching for file changes with StatReloader
+[2023-05-12 01:23:42,703] INFO django.utils.autoreload (266) C:\VSprojects\djangoLMC\authapp\forms.py changed, reloading.
+[2023-05-12 01:23:45,378] INFO django.utils.autoreload (668) Watching for file changes with StatReloader
+[2023-05-12 01:23:52,784] INFO django.server (212) "GET /authapp/register/ HTTP/1.1" 200 16915
+[2023-05-12 01:23:53,765] INFO django.server (212) "GET /authapp/login/ HTTP/1.1" 200 14714
+[2023-05-12 01:24:04,263] INFO django.server (212) "POST /authapp/login/ HTTP/1.1" 302 0
+[2023-05-12 01:24:04,421] INFO django.server (212) "GET /mainapp/ HTTP/1.1" 200 20635
+[2023-05-12 01:24:08,235] INFO django.server (212) "GET /authapp/profile_edit/2/ HTTP/1.1" 200 17591
+[2023-05-12 01:24:08,375] INFO django.server (212) "GET /media/users/user_kinzer/avatars/pic_1683843588870.jpg HTTP/1.1" 200 68264
+[2023-05-12 01:24:54,236] INFO django.server (212) "POST /authapp/profile_edit/2/ HTTP/1.1" 302 0
+[2023-05-12 01:24:54,327] INFO django.server (212) "GET /authapp/profile_edit/2/ HTTP/1.1" 200 17591
+[2023-05-12 01:24:54,389] INFO django.server (212) "GET /media/users/user_kinzer/avatars/pic_1683843894057.jpg HTTP/1.1" 200 15920
+[2023-05-12 01:25:01,779] INFO django.server (212) "GET /mainapp/courses/ HTTP/1.1" 200 15476
+[2023-05-12 01:25:01,840] INFO django.server (212) "GET /media/courses/course_Python/avatars/pic_1683842395318.jpg HTTP/1.1" 200 99030
+[2023-05-12 01:25:05,062] INFO django.server (212) "GET /mainapp/courses/1/detail/ HTTP/1.1" 200 18212
+[2023-05-12 01:27:44,511] INFO django.server (212) "GET /mainapp/courses/ HTTP/1.1" 200 15432
+[2023-05-12 01:27:44,585] INFO django.server (212) "GET /media/courses/course_Python/avatars/pic_1683842395318.jpg HTTP/1.1" 304 0
+[2023-05-12 01:27:45,430] INFO django.server (212) "GET /mainapp/courses/ HTTP/1.1" 200 15432
+[2023-05-12 01:27:56,402] INFO django.utils.autoreload (668) Watching for file changes with StatReloader
+[2023-05-12 01:28:00,804] INFO django.server (212) "GET / HTTP/1.1" 302 0
+[2023-05-12 01:28:01,847] INFO django.server (212) "GET /mainapp/ HTTP/1.1" 200 20636
+[2023-05-12 01:29:56,959] INFO django.utils.autoreload (266) C:\VSprojects\djangoLMC\mainapp\views.py changed, reloading.
+[2023-05-12 01:29:59,655] INFO django.utils.autoreload (668) Watching for file changes with StatReloader
+[2023-05-12 01:30:04,070] INFO django.server (212) "GET / HTTP/1.1" 302 0
+[2023-05-12 01:30:05,002] INFO django.server (212) "GET /mainapp/ HTTP/1.1" 200 20635
+[2023-05-12 01:30:08,913] INFO django.server (212) "GET /mainapp/courses/1/detail/ HTTP/1.1" 200 18212
+[2023-05-12 01:31:40,034] INFO django.utils.autoreload (266) C:\VSprojects\djangoLMC\mainapp\views.py changed, reloading.
+[2023-05-12 01:31:42,557] INFO django.utils.autoreload (668) Watching for file changes with StatReloader
+[2023-05-12 01:31:55,707] INFO django.server (212) "GET /mainapp/courses/ HTTP/1.1" 200 14747
+[2023-05-12 01:33:40,235] INFO django.utils.autoreload (266) C:\VSprojects\djangoLMC\mainapp\views.py changed, reloading.
+[2023-05-12 13:44:25,634] INFO django.utils.autoreload (668) Watching for file changes with StatReloader
+[2023-05-12 13:44:37,837] INFO django.server (212) "GET / HTTP/1.1" 302 0
+[2023-05-12 13:44:38,893] INFO django.server (212) "GET /mainapp/ HTTP/1.1" 200 20636
+[2023-05-12 13:44:39,077] INFO django.server (212) "GET /static/debug_toolbar/css/toolbar.css HTTP/1.1" 304 0
+[2023-05-12 13:44:39,101] INFO django.server (212) "GET /static/debug_toolbar/js/toolbar.js HTTP/1.1" 304 0
+[2023-05-12 13:44:39,781] INFO django.server (212) "GET /static/debug_toolbar/css/print.css HTTP/1.1" 304 0
+[2023-05-12 13:44:42,371] INFO django.server (212) "GET /mainapp/courses/ HTTP/1.1" 200 15191
+[2023-05-12 13:44:42,483] INFO django.server (212) "GET /media/courses/course_Python/avatars/pic_1683842395318.jpg HTTP/1.1" 304 0
+[2023-05-12 13:44:45,660] INFO django.server (212) "GET /mainapp/courses/1/detail/ HTTP/1.1" 200 18212
+[2023-05-12 13:44:50,660] INFO django.server (212) "GET /authapp/profile_edit/2/ HTTP/1.1" 200 17592
+[2023-05-12 13:44:50,740] INFO django.server (212) "GET /media/users/user_kinzer/avatars/pic_1683843894057.jpg HTTP/1.1" 304 0
+[2023-05-12 13:44:53,141] INFO django.server (212) "GET /mainapp/contacts/ HTTP/1.1" 200 19079
+[2023-05-12 13:45:09,333] INFO django.server (212) "GET /mainapp/docs/ HTTP/1.1" 200 16317
+[2023-05-12 13:45:28,459] INFO django.server (212) "GET /mainapp/news/ HTTP/1.1" 200 16006
+[2023-05-12 13:45:44,871] INFO django.utils.autoreload (266) C:\VSprojects\djangoLMC\mainapp\views.py changed, reloading.
+[2023-05-12 13:45:47,828] INFO django.utils.autoreload (668) Watching for file changes with StatReloader
+[2023-05-19 20:27:24,385] INFO django.utils.autoreload (668) Watching for file changes with StatReloader
+[2023-05-19 20:27:36,139] INFO django.server (212) "GET / HTTP/1.1" 302 0
+[2023-05-19 20:27:37,546] INFO django.server (212) "GET /mainapp/ HTTP/1.1" 200 20636
+[2023-05-19 20:27:37,877] INFO django.server (212) "GET /static/css/Chart.min.css HTTP/1.1" 200 521
+[2023-05-19 20:27:37,993] INFO django.server (212) "GET /static/css/bootstrap.min.css HTTP/1.1" 200 167954
+[2023-05-19 20:27:37,996] INFO django.server (212) "GET /static/js/bootstrap.min.js HTTP/1.1" 200 63473
+[2023-05-19 20:27:38,038] INFO django.server (212) "GET /static/js/Chart.min.js HTTP/1.1" 200 173084
+[2023-05-19 20:27:38,062] INFO django.server (212) "GET /static/debug_toolbar/css/toolbar.css HTTP/1.1" 200 12378
+[2023-05-19 20:27:38,076] INFO django.server (212) "GET /static/debug_toolbar/js/toolbar.js HTTP/1.1" 200 13404
+[2023-05-19 20:27:38,096] INFO django.server (212) "GET /static/js/jquery-3.6.0.min.js HTTP/1.1" 200 89503
+[2023-05-19 20:27:38,126] INFO django.server (212) "GET /static/js/popper.min.js HTTP/1.1" 200 21238
+[2023-05-19 20:27:38,154] INFO django.server (212) "GET /static/css/fontawesome.all.min.css HTTP/1.1" 200 59348
+[2023-05-19 20:27:38,185] INFO django.server (212) "GET /static/js/fontawesome.all.min.js HTTP/1.1" 200 1195454
+[2023-05-19 20:27:38,210] INFO django.server (212) "GET /static/img/home.png HTTP/1.1" 200 9229
+[2023-05-19 20:27:38,234] INFO django.server (212) "GET /static/img/slider001.jpg HTTP/1.1" 200 183079
+[2023-05-19 20:27:38,250] INFO django.server (212) "GET /static/img/user001.png HTTP/1.1" 200 24384
+[2023-05-19 20:27:38,280] INFO django.server (212) "GET /static/img/user002.png HTTP/1.1" 200 20918
+[2023-05-19 20:27:38,303] INFO django.server (212) "GET /static/img/user003.png HTTP/1.1" 200 23170
+[2023-05-19 20:27:38,304] INFO django.server (212) "GET /static/img/promo002.jpg HTTP/1.1" 200 54342
+[2023-05-19 20:27:38,309] INFO django.server (212) "GET /static/img/promo001.jpg HTTP/1.1" 200 69037
+[2023-05-19 20:27:38,367] INFO django.server (212) "GET /static/img/promo003.jpg HTTP/1.1" 200 69825
+[2023-05-19 20:27:38,369] INFO django.server (212) "GET /static/img/slider003.jpg HTTP/1.1" 200 2863995
+[2023-05-19 20:27:38,378] INFO django.server (212) "GET /static/img/slider002.jpg HTTP/1.1" 200 3087732
+[2023-05-19 20:27:38,814] INFO django.server (212) "GET /static/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 78196
+[2023-05-19 20:27:38,860] INFO django.server (212) "GET /static/webfonts/fa-brands-400.woff2 HTTP/1.1" 200 76764
+[2023-05-19 20:27:38,935] INFO django.server (212) "GET /static/debug_toolbar/css/print.css HTTP/1.1" 200 43
+[2023-05-19 20:27:39,206] WARNING django.request (241) Not Found: /favicon.ico
+[2023-05-19 20:27:39,208] WARNING django.server (212) "GET /favicon.ico HTTP/1.1" 404 11733
+[2023-05-19 20:28:34,869] INFO django.server (212) "GET /mainapp/ HTTP/1.1" 200 20634
+[2023-05-19 20:28:34,922] INFO django.server (212) "GET /static/img/home.png HTTP/1.1" 304 0
+[2023-05-19 20:28:52,756] INFO django.server (212) "GET /mainapp/ HTTP/1.1" 200 20666
+[2023-05-19 20:29:10,962] INFO django.server (212) "GET /mainapp/ HTTP/1.1" 200 20666
+[2023-05-19 20:29:10,980] INFO django.server (212) "GET /static/img/home.png HTTP/1.1" 304 0
+[2023-05-19 20:29:20,503] INFO django.server (212) "GET /mainapp/news/ HTTP/1.1" 200 16039
+[2023-05-19 20:29:20,686] INFO django.server (212) "GET /static/webfonts/fa-regular-400.woff2 HTTP/1.1" 200 13276
+[2023-05-19 20:29:23,161] INFO django.server (212) "GET /mainapp/ HTTP/1.1" 200 20666
+[2023-05-19 20:31:54,159] INFO django.server (212) "GET /admin/ HTTP/1.1" 200 18949
+[2023-05-19 20:31:54,239] INFO django.server (212) "GET /static/img/home.png HTTP/1.1" 304 0
+[2023-05-19 20:31:54,248] INFO django.server (212) "GET /static/admin/css/dashboard.css HTTP/1.1" 200 441
+[2023-05-19 20:31:54,254] INFO django.server (212) "GET /static/admin/css/dark_mode.css HTTP/1.1" 200 2929
+[2023-05-19 20:31:54,336] INFO django.server (212) "GET /static/admin/css/base.css HTTP/1.1" 200 21207
+[2023-05-19 20:31:54,343] INFO django.server (212) "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 200 2694
+[2023-05-19 20:31:54,355] INFO django.server (212) "GET /static/admin/css/responsive.css HTTP/1.1" 200 18533
+[2023-05-19 20:31:54,362] INFO django.server (212) "GET /static/admin/js/theme.js HTTP/1.1" 200 1943
+[2023-05-19 20:31:54,387] INFO django.server (212) "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 200 3063
+[2023-05-19 20:31:54,403] INFO django.server (212) "GET /static/admin/img/icon-yes.svg HTTP/1.1" 200 436
+[2023-05-19 20:31:54,405] INFO django.server (212) "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 331
+[2023-05-19 20:31:54,405] INFO django.server (212) "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 200 380
+[2023-05-19 20:32:07,168] INFO django.server (212) "GET /mainapp/ HTTP/1.1" 200 20604
+[2023-05-19 20:32:09,013] INFO django.server (212) "GET /mainapp/ HTTP/1.1" 200 20604
+[2023-05-19 20:32:13,485] INFO django.server (212) "GET /admin/ HTTP/1.1" 200 18815
+[2023-05-19 20:33:12,107] INFO django.server (212) "GET /admin/ HTTP/1.1" 200 18807
+[2023-05-19 20:33:12,160] INFO django.server (212) "GET /static/img/home.png HTTP/1.1" 304 0
+[2023-05-19 20:33:54,615] INFO django.server (212) "GET /admin/ HTTP/1.1" 200 18807
+[2023-05-19 20:34:11,885] INFO django.server (212) "GET /admin/ HTTP/1.1" 200 18807
+[2023-05-19 20:34:11,904] INFO django.server (212) "GET /static/img/home.png HTTP/1.1" 304 0
+[2023-05-19 20:36:10,891] INFO django.server (212) "GET /admin/ HTTP/1.1" 200 18766
+[2023-05-19 20:36:10,925] INFO django.server (212) "GET /static/img/home.png HTTP/1.1" 304 0
+[2023-05-19 20:36:12,335] INFO django.server (212) "GET /admin/ HTTP/1.1" 200 18766
+[2023-05-19 20:36:14,559] INFO django.server (212) "GET / HTTP/1.1" 302 0
+[2023-05-19 20:36:14,652] INFO django.server (212) "GET /mainapp/ HTTP/1.1" 200 20604
+[2023-05-19 20:36:32,331] INFO django.server (212) "GET /mainapp/docs/ HTTP/1.1" 200 16287
+[2023-05-19 20:38:04,665] INFO django.server (212) "GET /mainapp/contacts/ HTTP/1.1" 200 19050
+[2023-05-19 20:38:04,691] INFO django.server (212) "GET /static/img/home.png HTTP/1.1" 304 0
+[2023-05-19 20:38:20,803] INFO django.server (212) "GET /mainapp/contacts/ HTTP/1.1" 200 19049
+[2023-05-19 20:40:23,813] INFO django.server (212) "GET /mainapp/contacts/ HTTP/1.1" 200 19042
+[2023-05-19 20:40:23,878] INFO django.server (212) "GET /static/img/home.png HTTP/1.1" 304 0
+[2023-05-19 20:41:06,162] INFO django.server (212) "GET /mainapp/contacts/ HTTP/1.1" 200 18908
+[2023-05-19 20:41:45,355] INFO django.server (212) "GET /mainapp/contacts/ HTTP/1.1" 200 18901
+[2023-05-19 20:42:30,881] INFO django.server (212) "GET /mainapp/contacts/ HTTP/1.1" 200 18928
+[2023-05-19 20:42:30,939] INFO django.server (212) "GET /static/img/home.png HTTP/1.1" 304 0
+[2023-05-19 20:42:32,982] INFO django.server (212) "GET /mainapp/contacts/ HTTP/1.1" 200 18928
+[2023-05-19 20:42:43,213] WARNING django.server (212) "GET /static/js/popper.min.js.map HTTP/1.1" 404 1819
+[2023-05-19 20:42:43,227] INFO django.server (212) "GET /static/js/bootstrap.min.js.map HTTP/1.1" 200 192479
+[2023-05-19 20:43:21,871] INFO django.server (212) "GET /mainapp/contacts/ HTTP/1.1" 200 18930
+[2023-05-19 20:44:00,007] INFO django.server (212) "GET /mainapp/contacts/ HTTP/1.1" 200 18919
+[2023-05-19 20:44:05,375] INFO django.server (212) "GET /mainapp/courses/ HTTP/1.1" 200 15163
+[2023-05-19 20:44:05,468] INFO django.server (212) "GET /media/courses/course_Python/avatars/pic_1683842395318.jpg HTTP/1.1" 200 99030
+[2023-05-19 20:44:07,984] INFO django.server (212) "GET /mainapp/news/ HTTP/1.1" 200 15975
+[2023-05-19 20:44:26,529] INFO django.server (212) "GET /mainapp/news/?dateFrom=2023-05-19&dateTo=2023-05-20 HTTP/1.1" 200 16017
+[2023-05-19 20:44:26,782] INFO django.server (212) "GET /static/img/home.png HTTP/1.1" 304 0
+[2023-05-19 20:44:28,500] INFO django.server (212) "GET /mainapp/news/?dateFrom=&dateTo= HTTP/1.1" 200 15997
+[2023-05-19 20:44:31,451] INFO django.server (212) "GET /mainapp/news/1/detail HTTP/1.1" 200 14665
+[2023-05-19 20:44:33,026] INFO django.server (212) "GET /mainapp/news/ HTTP/1.1" 200 15975
+[2023-05-19 20:45:11,655] INFO django.server (212) "GET /mainapp/news/?dateFrom=2023-05-20&dateTo=2023-04-24 HTTP/1.1" 200 16017
+[2023-05-19 20:45:21,489] INFO django.server (212) "GET /mainapp/news/create/ HTTP/1.1" 200 16231
+[2023-05-19 20:45:59,317] INFO django.server (212) "POST /mainapp/news/create/ HTTP/1.1" 302 0
+[2023-05-19 20:45:59,430] INFO django.server (212) "GET /mainapp/news/ HTTP/1.1" 200 16482
+[2023-05-19 20:46:09,832] INFO django.server (212) "GET /mainapp/news/?dateFrom=2023-05-18&dateTo=2023-05-19 HTTP/1.1" 200 16524
+[2023-05-19 21:05:53,057] INFO django.utils.autoreload (266) C:\VSprojects\djangoLMC\mainapp\views.py changed, reloading.
+[2023-05-19 21:06:02,101] INFO django.utils.autoreload (668) Watching for file changes with StatReloader
+[2023-05-19 21:11:19,967] INFO django.utils.autoreload (266) C:\VSprojects\djangoLMC\mainapp\views.py changed, reloading.
+[2023-05-19 21:11:30,104] INFO django.utils.autoreload (668) Watching for file changes with StatReloader
+[2023-05-19 21:13:22,470] INFO django.utils.autoreload (266) C:\VSprojects\djangoLMC\mainapp\views.py changed, reloading.
+[2023-05-19 21:13:25,074] INFO django.utils.autoreload (668) Watching for file changes with StatReloader
+[2023-05-19 21:14:28,969] INFO django.utils.autoreload (266) C:\VSprojects\djangoLMC\mainapp\views.py changed, reloading.
+[2023-05-19 21:14:31,437] INFO django.utils.autoreload (668) Watching for file changes with StatReloader
+[2023-05-19 21:17:19,243] ERROR django.request (241) Internal Server Error: /mainapp/news/
+Traceback (most recent call last):
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\views\generic\base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\views\generic\list.py", line 174, in get
+    context = self.get_context_data()
+  File "C:\VSprojects\djangoLMC\mainapp\views.py", line 92, in get_context_data
+    filtered_news = filtered_news.order_by('-pub_date')
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\db\models\query.py", line 1659, in order_by
+    obj.query.add_ordering(*field_names)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\db\models\sql\query.py", line 2178, in add_ordering
+    self.names_to_path(item.split(LOOKUP_SEP), self.model._meta)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\db\models\sql\query.py", line 1681, in names_to_path
+    raise FieldError(
+django.core.exceptions.FieldError: Cannot resolve keyword 'pub_date' into field. Choices are: body, body_as_markdown, created_at, deleted, id, preamble, title, updated_at
+[2023-05-19 21:17:19,463] ERROR django.server (212) "GET /mainapp/news/?dateFrom=2023-05-18&dateTo=2023-05-19 HTTP/1.1" 500 106714
+[2023-05-19 21:18:12,258] INFO django.utils.autoreload (266) C:\VSprojects\djangoLMC\mainapp\views.py changed, reloading.
+[2023-05-19 21:18:14,568] INFO django.utils.autoreload (668) Watching for file changes with StatReloader
+[2023-05-19 21:19:57,752] ERROR django.request (241) Internal Server Error: /mainapp/news/
+Traceback (most recent call last):
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\test\utils.py", line 112, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\test\utils.py", line 112, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\template\defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'news_list' not found. 'news_list' is not a valid view function or pattern name.
+[2023-05-19 21:19:57,984] ERROR django.server (212) "GET /mainapp/news/?dateFrom=2023-05-18&dateTo=2023-05-19 HTTP/1.1" 500 176101
+[2023-05-19 21:21:09,888] INFO django.server (212) "GET /mainapp/news/?dateFrom=2023-05-18&dateTo=2023-05-19 HTTP/1.1" 200 16772
+[2023-05-19 21:21:10,287] INFO django.server (212) "GET /static/img/home.png HTTP/1.1" 304 0
+[2023-05-19 21:22:18,544] INFO django.server (212) "GET /mainapp/news/?dateFrom=2023-05-18&dateTo=2023-05-19 HTTP/1.1" 200 16493
+[2023-05-19 21:22:34,752] ERROR django.request (241) Internal Server Error: /mainapp/news/
+Traceback (most recent call last):
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\views\generic\base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\views\generic\list.py", line 174, in get
+    context = self.get_context_data()
+  File "C:\VSprojects\djangoLMC\mainapp\views.py", line 85, in get_context_data
+    start_date = datetime.strptime(start_date, '%m-%d-%Y').date()
+  File "C:\Users\User\AppData\Local\Programs\Python\Python310\lib\_strptime.py", line 568, in _strptime_datetime
+    tt, fraction, gmtoff_fraction = _strptime(data_string, format)
+  File "C:\Users\User\AppData\Local\Programs\Python\Python310\lib\_strptime.py", line 349, in _strptime
+    raise ValueError("time data %r does not match format %r" %
+ValueError: time data '2023-05-18' does not match format '%m-%d-%Y'
+[2023-05-19 21:22:34,833] ERROR django.server (212) "GET /mainapp/news/?start_date=2023-05-18&end_date=2023-05-19 HTTP/1.1" 500 100974
+[2023-05-19 21:23:10,520] INFO django.utils.autoreload (266) C:\VSprojects\djangoLMC\mainapp\views.py changed, reloading.
+[2023-05-19 21:23:12,883] INFO django.utils.autoreload (668) Watching for file changes with StatReloader
+[2023-05-19 21:23:14,102] ERROR django.request (241) Internal Server Error: /mainapp/news/
+Traceback (most recent call last):
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\views\generic\base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\views\generic\list.py", line 174, in get
+    context = self.get_context_data()
+  File "C:\VSprojects\djangoLMC\mainapp\views.py", line 86, in get_context_data
+    filtered_news = filtered_news.filter(pub_date__gte=start_date)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\db\models\query.py", line 1436, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\db\models\query.py", line 1454, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\db\models\query.py", line 1461, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\db\models\sql\query.py", line 1502, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\db\models\sql\query.py", line 1533, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\db\models\sql\query.py", line 1383, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg, summarize)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\db\models\sql\query.py", line 1193, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\db\models\sql\query.py", line 1681, in names_to_path
+    raise FieldError(
+django.core.exceptions.FieldError: Cannot resolve keyword 'pub_date' into field. Choices are: body, body_as_markdown, created_at, deleted, id, preamble, title, updated_at
+[2023-05-19 21:23:14,413] ERROR django.server (212) "GET /mainapp/news/?start_date=2023-05-18&end_date=2023-05-19 HTTP/1.1" 500 131136
+[2023-05-19 21:23:19,080] ERROR django.request (241) Internal Server Error: /mainapp/news/
+Traceback (most recent call last):
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\views\generic\base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\views\generic\list.py", line 174, in get
+    context = self.get_context_data()
+  File "C:\VSprojects\djangoLMC\mainapp\views.py", line 86, in get_context_data
+    filtered_news = filtered_news.filter(pub_date__gte=start_date)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\db\models\query.py", line 1436, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\db\models\query.py", line 1454, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\db\models\query.py", line 1461, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\db\models\sql\query.py", line 1502, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\db\models\sql\query.py", line 1533, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\db\models\sql\query.py", line 1383, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg, summarize)
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\db\models\sql\query.py", line 1193, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "c:\VSprojects\djangoLMC\venv\lib\site-packages\django\db\models\sql\query.py", line 1681, in names_to_path
+    raise FieldError(
+django.core.exceptions.FieldError: Cannot resolve keyword 'pub_date' into field. Choices are: body, body_as_markdown, created_at, deleted, id, preamble, title, updated_at
+[2023-05-19 21:23:19,158] ERROR django.server (212) "GET /mainapp/news/?start_date=2023-05-18&end_date=2023-05-19 HTTP/1.1" 500 130999
+[2023-05-19 21:23:54,192] INFO django.utils.autoreload (266) C:\VSprojects\djangoLMC\mainapp\views.py changed, reloading.
+[2023-05-19 21:23:56,679] INFO django.utils.autoreload (668) Watching for file changes with StatReloader
+[2023-05-19 21:24:02,092] INFO django.server (212) "GET /mainapp/news/?dateFrom=2023-05-18&dateTo=2023-05-19 HTTP/1.1" 200 16494
+[2023-05-19 21:24:11,158] INFO django.server (212) "GET /mainapp/news/?start_date=2023-05-18&end_date=2023-05-19 HTTP/1.1" 200 16514
+[2023-05-19 21:24:14,234] INFO django.server (212) "GET /mainapp/news/?start_date=&end_date= HTTP/1.1" 200 16469
+[2023-05-19 21:24:21,159] INFO django.server (212) "GET /mainapp/news/?start_date=2023-05-18&end_date=2023-05-19 HTTP/1.1" 200 16513
+[2023-05-19 21:24:26,090] INFO django.server (212) "GET /mainapp/news/?start_date=&end_date= HTTP/1.1" 200 16469
+[2023-05-19 21:24:44,523] INFO django.utils.autoreload (266) C:\VSprojects\djangoLMC\mainapp\views.py changed, reloading.
+[2023-05-19 21:24:46,998] INFO django.utils.autoreload (668) Watching for file changes with StatReloader
+[2023-05-19 21:24:48,352] INFO django.server (212) "GET /mainapp/news/?start_date=&end_date= HTTP/1.1" 200 16470
+[2023-05-19 21:24:53,517] INFO django.server (212) "GET /mainapp/news/?start_date=&end_date= HTTP/1.1" 200 16469
+[2023-05-19 21:24:56,088] INFO django.server (212) "GET /mainapp/courses/ HTTP/1.1" 200 15163
+[2023-05-19 21:24:56,799] INFO django.server (212) "GET /media/courses/course_Python/avatars/pic_1683842395318.jpg HTTP/1.1" 200 99030
+[2023-05-19 21:24:57,658] INFO django.server (212) "GET /mainapp/contacts/ HTTP/1.1" 200 18920
+[2023-05-19 21:24:58,962] INFO django.server (212) "GET /mainapp/news/ HTTP/1.1" 200 16452
+[2023-05-19 21:25:07,886] INFO django.server (212) "GET /mainapp/news/?start_date=2023-05-18&end_date=2023-05-19 HTTP/1.1" 200 16513
+[2023-05-19 21:25:34,819] INFO django.server (212) "GET /mainapp/news/?start_date=2023-05-18&end_date=2023-05-19 HTTP/1.1" 200 16513
+[2023-05-19 21:25:49,492] INFO django.utils.autoreload (266) C:\VSprojects\djangoLMC\mainapp\views.py changed, reloading.
+[2023-05-19 21:25:51,857] INFO django.utils.autoreload (668) Watching for file changes with StatReloader
+[2023-05-19 21:25:53,126] INFO django.server (212) "GET /mainapp/news/?start_date=2023-05-18&end_date=2023-05-19 HTTP/1.1" 200 15422
+[2023-05-19 21:26:09,082] INFO django.server (212) "GET /mainapp/news/?start_date=2023-05-18&end_date=2023-05-19 HTTP/1.1" 200 15421
+[2023-05-19 21:26:20,508] INFO django.utils.autoreload (266) C:\VSprojects\djangoLMC\mainapp\views.py changed, reloading.
+[2023-05-19 21:26:22,870] INFO django.utils.autoreload (668) Watching for file changes with StatReloader
+[2023-05-19 21:26:26,444] INFO django.server (212) "GET /mainapp/news/?start_date=2023-05-18&end_date=2023-05-19 HTTP/1.1" 200 16514
+[2023-05-19 21:26:32,688] INFO django.server (212) "GET /mainapp/news/2/detail HTTP/1.1" 200 14672
+[2023-05-19 21:26:34,459] INFO django.server (212) "GET /mainapp/news/ HTTP/1.1" 200 16451
+[2023-05-19 21:26:36,456] INFO django.server (212) "GET /mainapp/news/2/detail HTTP/1.1" 200 14671
+[2023-05-19 21:26:37,727] INFO django.server (212) "GET /mainapp/news/ HTTP/1.1" 200 16451
+[2023-05-19 21:26:38,922] INFO django.server (212) "GET /mainapp/news/1/detail HTTP/1.1" 200 14664
+[2023-05-19 21:26:41,025] INFO django.server (212) "GET /mainapp/news/ HTTP/1.1" 200 16451
+[2023-05-19 21:26:55,701] INFO django.utils.autoreload (266) C:\VSprojects\djangoLMC\mainapp\views.py changed, reloading.
+[2023-05-19 21:26:57,936] INFO django.utils.autoreload (668) Watching for file changes with StatReloader
+[2023-05-19 21:26:59,404] INFO django.server (212) "GET /mainapp/news/ HTTP/1.1" 200 16444
+[2023-05-19 21:26:59,429] INFO django.server (212) "GET /static/img/home.png HTTP/1.1" 304 0
+[2023-05-19 21:27:01,559] INFO django.server (212) "GET /mainapp/news/ HTTP/1.1" 200 16443
+[2023-05-19 21:27:02,688] INFO django.server (212) "GET /mainapp/news/ HTTP/1.1" 200 16444
+[2023-05-19 21:27:36,004] INFO django.server (212) "GET /mainapp/news/ HTTP/1.1" 200 16482
+[2023-05-19 21:28:59,978] INFO django.utils.autoreload (266) C:\VSprojects\djangoLMC\mainapp\views.py changed, reloading.
+[2023-05-19 21:29:02,429] INFO django.utils.autoreload (668) Watching for file changes with StatReloader
+[2023-05-19 21:29:04,921] INFO django.server (212) "GET /mainapp/news/ HTTP/1.1" 200 16483
+[2023-05-19 21:29:07,923] INFO django.server (212) "GET /mainapp/news/ HTTP/1.1" 200 16482
+[2023-05-19 21:30:18,035] INFO django.utils.autoreload (668) Watching for file changes with StatReloader
+[2023-05-19 21:30:41,958] INFO django.server (212) "GET /mainapp/news/ HTTP/1.1" 200 16483
+[2023-05-19 21:30:44,842] INFO django.server (212) "GET /mainapp/news/ HTTP/1.1" 200 16482
+[2023-05-19 21:33:43,564] INFO django.server (212) "GET /mainapp/news/ HTTP/1.1" 200 16482
+[2023-05-19 21:33:43,584] INFO django.server (212) "GET /static/img/home.png HTTP/1.1" 304 0
+[2023-05-19 21:34:11,149] INFO django.utils.autoreload (266) C:\VSprojects\djangoLMC\mainapp\views.py changed, reloading.
+[2023-05-19 21:34:14,415] INFO django.utils.autoreload (668) Watching for file changes with StatReloader
+[2023-05-19 21:38:44,939] INFO django.utils.autoreload (266) C:\VSprojects\djangoLMC\mainapp\views.py changed, reloading.
+[2023-05-19 21:38:47,231] INFO django.utils.autoreload (668) Watching for file changes with StatReloader
+[2023-05-19 21:40:08,368] INFO django.utils.autoreload (266) C:\VSprojects\djangoLMC\mainapp\views.py changed, reloading.
+[2023-05-19 21:40:10,984] INFO django.utils.autoreload (668) Watching for file changes with StatReloader
+[2023-05-19 21:50:59,184] INFO django.utils.autoreload (266) C:\VSprojects\djangoLMC\mainapp\views.py changed, reloading.
+[2023-05-19 21:51:01,508] INFO django.utils.autoreload (668) Watching for file changes with StatReloader
+[2023-05-19 21:51:06,209] INFO django.server (212) "GET /mainapp/news/ HTTP/1.1" 200 16483
+[2023-05-19 21:51:06,236] INFO django.server (212) "GET /static/img/home.png HTTP/1.1" 304 0
+[2023-05-19 21:51:09,174] INFO django.server (212) "GET /mainapp/news/2/detail HTTP/1.1" 200 14671
+[2023-05-19 21:51:10,637] INFO django.server (212) "GET /mainapp/news/ HTTP/1.1" 200 16482
+[2023-05-19 21:51:20,319] INFO django.server (212) "GET /mainapp/news/?dateFrom=2023-05-19&dateTo=2023-05-19 HTTP/1.1" 200 16524
+[2023-05-19 21:51:21,615] INFO django.server (212) "GET /mainapp/news/?dateFrom=&dateTo= HTTP/1.1" 200 16504
+[2023-05-19 21:52:39,295] INFO django.utils.autoreload (266) C:\VSprojects\djangoLMC\mainapp\views.py changed, reloading.
+[2023-05-19 21:52:41,757] INFO django.utils.autoreload (668) Watching for file changes with StatReloader
+[2023-05-19 21:52:43,833] INFO django.server (212) "GET /mainapp/news/?dateFrom=&dateTo= HTTP/1.1" 200 16505
+[2023-05-19 21:52:46,069] INFO django.server (212) "GET /mainapp/contacts/ HTTP/1.1" 200 18919
+[2023-05-19 21:52:47,300] INFO django.server (212) "GET /mainapp/courses/ HTTP/1.1" 200 15162
+[2023-05-19 21:52:50,243] INFO django.server (212) "GET /mainapp/courses/1/detail/ HTTP/1.1" 200 18244
+[2023-05-19 21:53:00,490] INFO django.server (212) "POST /mainapp/course_feedback/ HTTP/1.1" 200 284
+[2023-05-19 21:53:10,709] INFO django.server (212) "GET /mainapp/news/ HTTP/1.1" 200 16482
+[2023-05-28 11:56:38,571] INFO django.utils.autoreload (668) Watching for file changes with StatReloader
+[2023-05-28 11:56:46,291] INFO django.server (212) "GET / HTTP/1.1" 302 0
+[2023-05-28 11:56:47,620] INFO django.server (212) "GET /mainapp/ HTTP/1.1" 200 20488
+[2023-05-28 11:56:48,068] INFO django.server (212) "GET /static/css/Chart.min.css HTTP/1.1" 200 521
+[2023-05-28 11:56:48,116] INFO django.server (212) "GET /static/debug_toolbar/js/toolbar.js HTTP/1.1" 200 13404
+[2023-05-28 11:56:48,196] INFO django.server (212) "GET /static/css/bootstrap.min.css HTTP/1.1" 200 167954
+[2023-05-28 11:56:48,196] INFO django.server (212) "GET /static/js/jquery-3.6.0.min.js HTTP/1.1" 200 89503
+[2023-05-28 11:56:48,204] INFO django.server (212) "GET /static/css/fontawesome.all.min.css HTTP/1.1" 200 59348
+[2023-05-28 11:56:48,316] INFO django.server (212) "GET /static/debug_toolbar/css/toolbar.css HTTP/1.1" 200 12378
+[2023-05-28 11:56:48,332] INFO django.server (212) "GET /static/js/bootstrap.min.js HTTP/1.1" 200 63473
+[2023-05-28 11:56:48,420] INFO django.server (212) "GET /static/js/popper.min.js HTTP/1.1" 200 21238
+[2023-05-28 11:56:48,452] INFO django.server (212) "GET /static/js/Chart.min.js HTTP/1.1" 200 173084
+[2023-05-28 11:56:48,612] INFO django.server (212) "GET /static/img/home.png HTTP/1.1" 200 9229
+[2023-05-28 11:56:48,620] INFO django.server (212) "GET /static/img/slider001.jpg HTTP/1.1" 200 183079
+[2023-05-28 11:56:48,820] INFO django.server (212) "GET /static/js/fontawesome.all.min.js HTTP/1.1" 200 1195454
+[2023-05-28 11:56:48,948] INFO django.server (212) "GET /static/img/user001.png HTTP/1.1" 200 24384
+[2023-05-28 11:56:48,980] INFO django.server (212) "GET /static/img/user002.png HTTP/1.1" 200 20918
+[2023-05-28 11:56:49,076] INFO django.server (212) "GET /static/img/promo001.jpg HTTP/1.1" 200 69037
+[2023-05-28 11:56:49,140] INFO django.server (212) "GET /static/img/slider003.jpg HTTP/1.1" 200 2863995
+[2023-05-28 11:56:49,156] INFO django.server (212) "GET /static/img/slider002.jpg HTTP/1.1" 200 3087732
+[2023-05-28 11:56:49,164] INFO django.server (212) "GET /static/img/user003.png HTTP/1.1" 200 23170
+[2023-05-28 11:56:49,236] INFO django.server (212) "GET /static/img/promo002.jpg HTTP/1.1" 200 54342
+[2023-05-28 11:56:49,260] INFO django.server (212) "GET /static/img/promo003.jpg HTTP/1.1" 200 69825
+[2023-05-28 11:56:49,989] INFO django.server (212) "GET /static/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 78196
+[2023-05-28 11:56:50,005] INFO django.server (212) "GET /static/webfonts/fa-brands-400.woff2 HTTP/1.1" 200 76764
+[2023-05-28 11:56:50,373] INFO django.server (212) "GET /static/debug_toolbar/css/print.css HTTP/1.1" 200 43
+[2023-05-28 11:56:50,505] WARNING django.request (241) Not Found: /favicon.ico
+[2023-05-28 11:56:50,515] WARNING django.server (212) "GET /favicon.ico HTTP/1.1" 404 11733
+[2023-05-28 11:56:59,292] INFO django.server (212) "GET /authapp/profile_edit/2/ HTTP/1.1" 200 17444
+[2023-05-28 11:56:59,452] INFO django.server (212) "GET /media/users/user_kinzer/avatars/pic_1683843894057.jpg HTTP/1.1" 200 15920
+[2023-05-28 11:57:08,285] INFO django.server (212) "GET /mainapp/news/ HTTP/1.1" 200 16366
+[2023-05-28 11:57:08,413] INFO django.server (212) "GET /static/webfonts/fa-regular-400.woff2 HTTP/1.1" 200 13276
+[2023-05-28 11:58:08,195] INFO django.server (212) "GET /authapp/profile_edit/2/ HTTP/1.1" 200 17443
+[2023-05-28 11:58:10,818] INFO django.server (212) "GET /authapp/profile_edit/2/ HTTP/1.1" 200 17443
+[2023-05-28 11:58:12,000] INFO django.server (212) "GET /authapp/profile_edit/2/ HTTP/1.1" 200 17443
+[2023-05-28 11:58:13,621] INFO django.server (212) "GET /authapp/profile_edit/2/ HTTP/1.1" 200 17443
+[2023-05-28 11:58:40,663] INFO django.utils.autoreload (668) Watching for file changes with StatReloader
+[2023-05-28 11:58:50,295] INFO django.server (212) "GET /authapp/profile_edit/2/ HTTP/1.1" 200 17444
+[2023-05-28 11:58:53,510] INFO django.server (212) "GET /authapp/profile_edit/2/ HTTP/1.1" 200 17443
+[2023-05-28 11:58:59,233] WARNING django.server (212) "GET /static/js/popper.min.js.map HTTP/1.1" 404 1819
+[2023-05-28 11:58:59,321] INFO django.server (212) "GET /static/js/bootstrap.min.js.map HTTP/1.1" 200 192479
+[2023-05-28 12:03:39,108] INFO django.server (212) "GET /mainapp/contacts/ HTTP/1.1" 200 18655
+[2023-05-28 12:03:54,424] INFO django.server (212) "GET /mainapp/news/ HTTP/1.1" 200 16366
+[2023-05-28 12:03:57,164] INFO django.server (212) "GET /mainapp/courses/ HTTP/1.1" 200 15048
+[2023-05-28 12:03:57,564] INFO django.server (212) "GET /media/courses/course_Python/avatars/pic_1683842395318.jpg HTTP/1.1" 200 99030
+[2023-05-28 12:03:59,772] INFO django.server (212) "GET /authapp/profile_edit/2/ HTTP/1.1" 200 17444
+[2023-05-28 12:05:22,585] INFO django.server (212) "GET /authapp/profile_edit/2/ HTTP/1.1" 200 17402
+[2023-05-28 12:07:26,949] INFO django.server (212) "GET /authapp/profile_edit/2/ HTTP/1.1" 200 17401
+[2023-05-28 12:07:51,093] INFO django.server (212) "GET /authapp/profile_edit/2/ HTTP/1.1" 200 17401
+[2023-05-28 12:07:52,298] INFO django.server (212) "GET /authapp/profile_edit/2/ HTTP/1.1" 200 17401
+[2023-05-28 12:07:59,553] INFO django.server (212) "GET /mainapp/news/ HTTP/1.1" 200 16365
+[2023-05-28 12:08:05,300] INFO django.server (212) "GET /authapp/profile_edit/2/ HTTP/1.1" 200 17401
+[2023-05-28 12:10:13,838] INFO django.server (212) "GET /authapp/profile_edit/2/ HTTP/1.1" 200 17401
+[2023-05-28 12:10:14,910] INFO django.server (212) "GET /authapp/profile_edit/2/ HTTP/1.1" 200 17401
+[2023-05-28 12:10:15,316] INFO django.server (212) "GET /authapp/profile_edit/2/ HTTP/1.1" 200 17401
+[2023-05-28 12:12:40,340] INFO django.server (212) "GET /authapp/profile_edit/2/ HTTP/1.1" 200 17148
+[2023-05-28 12:12:43,516] INFO django.server (212) "GET /mainapp/news/ HTTP/1.1" 200 16111
+[2023-05-28 12:12:50,130] INFO django.server (212) "GET /mainapp/ HTTP/1.1" 200 20233
+[2023-05-28 12:15:53,821] INFO django.server (212) "GET /mainapp/ HTTP/1.1" 200 20233
+[2023-05-28 12:15:56,352] INFO django.server (212) "GET /mainapp/courses/ HTTP/1.1" 200 14789
+[2023-05-28 12:15:58,880] INFO django.server (212) "GET /mainapp/courses/1/detail/ HTTP/1.1" 200 15420
+[2023-05-28 12:16:09,576] INFO django.server (212) "GET /mainapp/news/ HTTP/1.1" 200 16111
+[2023-05-28 12:19:59,093] INFO django.server (212) "GET /mainapp/news/ HTTP/1.1" 200 16189
+[2023-05-28 12:20:01,291] INFO django.server (212) "GET /mainapp/docs/ HTTP/1.1" 200 15598
+[2023-05-28 12:20:19,072] INFO django.server (212) "GET /mainapp/docs/ HTTP/1.1" 200 15562
+[2023-05-28 12:20:41,333] INFO django.server (212) "GET /mainapp/news/ HTTP/1.1" 200 16153
+[2023-05-28 12:20:42,883] INFO django.server (212) "GET /mainapp/news/2/detail HTTP/1.1" 200 14343
+[2023-05-28 12:20:44,862] INFO django.server (212) "GET /mainapp/news/ HTTP/1.1" 200 16153
+[2023-05-28 12:26:57,274] INFO django.server (212) "GET /mainapp/news/ HTTP/1.1" 200 16069
+[2023-05-28 12:26:59,007] INFO django.server (212) "GET /mainapp/ HTTP/1.1" 200 19946
+[2023-05-28 12:41:43,368] INFO django.server (212) "GET /mainapp/ HTTP/1.1" 200 18677
+[2023-05-28 12:41:52,778] INFO django.server (212) "GET /mainapp/logs/ HTTP/1.1" 200 98818
+[2023-05-28 12:41:55,038] INFO django.server (212) "GET /mainapp/contacts/ HTTP/1.1" 200 18442
+[2023-06-12 12:57:19,419] INFO django.utils.autoreload (668) Watching for file changes with StatReloader
+[2023-06-12 12:57:28,937] INFO django.server (212) "GET / HTTP/1.1" 302 0
+[2023-06-12 12:57:29,976] INFO django.server (212) "GET /mainapp/ HTTP/1.1" 200 18084
+[2023-06-12 12:57:30,207] INFO django.server (212) "GET /static/css/Chart.min.css HTTP/1.1" 200 521
+[2023-06-12 12:57:30,234] INFO django.server (212) "GET /static/css/bootstrap.min.css HTTP/1.1" 200 167954
+[2023-06-12 12:57:30,250] INFO django.server (212) "GET /static/debug_toolbar/js/toolbar.js HTTP/1.1" 200 13404
+[2023-06-12 12:57:30,287] INFO django.server (212) "GET /static/css/fontawesome.all.min.css HTTP/1.1" 200 59348
+[2023-06-12 12:57:30,389] INFO django.server (212) "GET /static/debug_toolbar/css/toolbar.css HTTP/1.1" 200 12378
+[2023-06-12 12:57:30,392] INFO django.server (212) "GET /static/js/popper.min.js HTTP/1.1" 200 21238
+[2023-06-12 12:57:30,394] INFO django.server (212) "GET /static/js/jquery-3.6.0.min.js HTTP/1.1" 200 89503
+[2023-06-12 12:57:30,436] INFO django.server (212) "GET /static/js/Chart.min.js HTTP/1.1" 200 173084
+[2023-06-12 12:57:30,501] INFO django.server (212) "GET /static/img/slider001.jpg HTTP/1.1" 200 183079
+[2023-06-12 12:57:30,522] INFO django.server (212) "GET /static/js/bootstrap.min.js HTTP/1.1" 200 63473
+[2023-06-12 12:57:30,542] INFO django.server (212) "GET /static/img/user001.png HTTP/1.1" 200 24384
+[2023-06-12 12:57:30,544] INFO django.server (212) "GET /static/js/fontawesome.all.min.js HTTP/1.1" 200 1195454
+[2023-06-12 12:57:30,594] INFO django.server (212) "GET /static/img/user002.png HTTP/1.1" 200 20918
+[2023-06-12 12:57:30,632] INFO django.server (212) "GET /static/img/user003.png HTTP/1.1" 200 23170
+[2023-06-12 12:57:30,643] INFO django.server (212) "GET /static/img/promo001.jpg HTTP/1.1" 200 69037
+[2023-06-12 12:57:30,655] INFO django.server (212) "GET /static/img/home.png HTTP/1.1" 200 9229
+[2023-06-12 12:57:30,717] INFO django.server (212) "GET /static/img/promo003.jpg HTTP/1.1" 200 69825
+[2023-06-12 12:57:30,786] INFO django.server (212) "GET /static/img/promo002.jpg HTTP/1.1" 200 54342
+[2023-06-12 12:57:30,787] INFO django.server (212) "GET /static/img/slider003.jpg HTTP/1.1" 200 2863995
+[2023-06-12 12:57:30,949] INFO django.server (212) "GET /static/img/slider002.jpg HTTP/1.1" 200 3087732
+[2023-06-12 12:57:31,395] INFO django.server (212) "GET /static/debug_toolbar/css/print.css HTTP/1.1" 200 43
+[2023-06-12 12:57:31,403] INFO django.server (212) "GET /static/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 78196
+[2023-06-12 12:57:31,417] INFO django.server (212) "GET /static/webfonts/fa-brands-400.woff2 HTTP/1.1" 200 76764
+[2023-06-12 12:57:31,668] WARNING django.request (241) Not Found: /favicon.ico
+[2023-06-12 12:57:31,670] WARNING django.server (212) "GET /favicon.ico HTTP/1.1" 404 11733
+[2023-06-12 12:57:40,177] INFO django.server (212) "GET /mainapp/news/ HTTP/1.1" 200 14968
+[2023-06-12 12:57:48,234] INFO django.server (212) "GET /authapp/login/ HTTP/1.1" 200 14450
+[2023-06-12 12:57:48,285] INFO django.server (212) "GET /static/img/logo.png HTTP/1.1" 200 4016
+[2023-06-12 12:57:51,531] INFO django.server (212) "POST /authapp/login/ HTTP/1.1" 200 16111
+[2023-06-12 12:57:51,711] INFO django.server (212) "GET /static/webfonts/fa-regular-400.woff2 HTTP/1.1" 200 13276
+[2023-06-12 12:57:57,710] INFO django.server (212) "POST /authapp/login/ HTTP/1.1" 200 16110
+[2023-06-12 12:58:07,797] INFO django.server (212) "POST /authapp/login/ HTTP/1.1" 200 16110
+[2023-06-12 12:58:17,521] INFO django.server (212) "POST /authapp/login/ HTTP/1.1" 200 16110
+[2023-06-12 12:58:26,942] INFO django.server (212) "POST /authapp/login/ HTTP/1.1" 200 16110
+[2023-06-12 12:58:30,189] INFO django.server (212) "GET /authapp/login/ HTTP/1.1" 200 14450
+[2023-06-12 12:58:32,809] INFO django.server (212) "GET /authapp/register/ HTTP/1.1" 200 16633
+[2023-06-12 12:59:29,073] INFO django.server (212) "POST /authapp/register/ HTTP/1.1" 200 16854
+[2023-06-12 12:59:57,015] INFO django.server (212) "POST /authapp/register/ HTTP/1.1" 200 16853
+[2023-06-12 13:00:37,175] INFO django.server (212) "POST /authapp/register/ HTTP/1.1" 200 16836
+[2023-06-12 13:01:09,447] INFO django.server (212) "POST /authapp/register/ HTTP/1.1" 302 0
+[2023-06-12 13:01:09,493] INFO django.server (212) "GET /mainapp/ HTTP/1.1" 200 18082
+[2023-06-12 13:01:13,655] INFO django.server (212) "GET /authapp/login/ HTTP/1.1" 200 14450
+[2023-06-12 13:01:28,743] INFO django.server (212) "POST /authapp/login/ HTTP/1.1" 302 0
+[2023-06-12 13:01:28,963] INFO django.server (212) "GET /mainapp/ HTTP/1.1" 200 18567
+[2023-06-12 13:01:33,581] INFO django.server (212) "GET /authapp/profile_edit/3/ HTTP/1.1" 200 17089
+[2023-06-12 13:01:33,650] INFO django.server (212) "GET /media/users/user_Alex/avatars/pic_1686564069265.JPG HTTP/1.1" 200 1390509
+[2023-06-12 13:01:39,949] INFO django.server (212) "GET /mainapp/courses/ HTTP/1.1" 200 14722
+[2023-06-12 13:01:40,050] INFO django.server (212) "GET /media/courses/course_Python/avatars/pic_1683842395318.jpg HTTP/1.1" 200 99030
+[2023-06-12 13:01:42,868] INFO django.server (212) "GET /mainapp/ HTTP/1.1" 200 18565
+[2023-06-12 13:05:40,756] INFO django.utils.autoreload (266) C:\VSprojects\deploy_LP\authapp\models.py changed, reloading.
+[2023-06-12 13:05:44,369] INFO django.utils.autoreload (668) Watching for file changes with StatReloader
+[2023-06-12 13:07:45,285] INFO django.utils.autoreload (266) C:\VSprojects\deploy_LP\mainapp\views.py changed, reloading.
+[2023-06-12 13:07:48,252] INFO django.utils.autoreload (668) Watching for file changes with StatReloader
+[2023-06-12 13:07:50,451] INFO django.utils.autoreload (266) C:\VSprojects\deploy_LP\mainapp\models.py changed, reloading.
+[2023-06-12 13:07:52,937] INFO django.utils.autoreload (668) Watching for file changes with StatReloader
+[2023-06-12 13:08:29,941] INFO django.server (212) "GET /mainapp/ HTTP/1.1" 200 18557
+[2023-06-12 13:08:36,870] INFO django.server (212) "GET /mainapp/docs/ HTTP/1.1" 200 15430
+[2023-06-12 13:08:45,545] INFO django.server (212) "GET /mainapp/courses/ HTTP/1.1" 200 14711
+[2023-06-12 13:25:46,634] INFO django.server (212) "GET /mainapp/courses/ HTTP/1.1" 200 14710
+[2023-06-12 14:13:42,102] INFO django.utils.autoreload (266) C:\VSprojects\deploy_LP\config\celery.py changed, reloading.
+[2023-06-12 14:13:45,063] INFO django.utils.autoreload (668) Watching for file changes with StatReloader
+[2023-06-12 14:16:57,505] INFO django.utils.autoreload (266) C:\VSprojects\deploy_LP\config\settings.py changed, reloading.
+[2023-06-12 14:17:00,111] INFO django.utils.autoreload (668) Watching for file changes with StatReloader
+[2023-06-12 14:17:12,022] INFO django.utils.autoreload (266) C:\VSprojects\deploy_LP\config\urls.py changed, reloading.
+[2023-06-12 14:17:14,246] INFO django.utils.autoreload (668) Watching for file changes with StatReloader
+[2023-06-12 14:17:33,692] INFO django.utils.autoreload (266) C:\VSprojects\deploy_LP\config\celery.py changed, reloading.
+[2023-06-12 14:17:36,014] INFO django.utils.autoreload (668) Watching for file changes with StatReloader
+[2023-06-12 14:20:02,045] INFO django.utils.autoreload (266) C:\VSprojects\deploy_LP\config\celery.py changed, reloading.
+[2023-06-12 14:21:21,225] INFO django.utils.autoreload (668) Watching for file changes with StatReloader
+[2023-06-12 14:22:34,125] INFO django.server (212) "GET /mainapp/contacts/ HTTP/1.1" 200 9327
+[2023-06-12 14:27:56,700] INFO django.utils.autoreload (266) C:\VSprojects\deploy_LP\config\__init__.py changed, reloading.
+[2023-06-12 14:27:59,911] INFO django.utils.autoreload (668) Watching for file changes with StatReloader
