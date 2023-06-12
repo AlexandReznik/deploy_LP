@@ -75,7 +75,6 @@ TEMPLATES = [
                 "django.template.context_processors.media",
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
-                # 'mainapp.context_processors.example.simple_context_processor',
                 'social_django.context_processors.backends',
                 'social_django.context_processors.login_redirect',
             ],
@@ -166,43 +165,8 @@ SOCIAL_AUTH_GITHUB_SECRET = str(os.getenv('SOCIAL_AUTH_GITHUB_SECRET'))
 
 CRISPY_TEMPLATE_PACK = "bootstrap4"
 
-# LOGGING = {
-#     "version": 1,
-#     "disable_existing_loggers": False,
-#     "formatters": {
-#     "console": {
-#         "format": "[%(asctime)s] %(levelname)s %(name)s (%(lineno)d) %(message)s"},
-#     },
-#     "handlers": {
-#         "console": {"class": "logging.StreamHandler", "formatter": "console"},
-#     },
-#     "loggers": {
-#         "django": {"level": "INFO", "handlers": ["console"]},
-#     },
-# }
 
 LOG_FILE = BASE_DIR / "var" / "log" / "main_log.log"
-# LOGGING = {
-#     "version": 1,
-#     "disable_existing_loggers": False,
-#     "formatters": {
-#         "console": {
-#             "format": "[%(asctime)s] %(levelname)s %(name)s (%(lineno)d) %(message)s"
-#         },
-#     },
-#     "handlers": {
-#         "file": {
-#             "level": "INFO",
-#             "class": "logging.FileHandler",
-#             "filename": LOG_FILE,
-#             "formatter": "console",
-#         },
-#         "console": {"class": "logging.StreamHandler", "formatter": "console"},
-#     },
-#     "loggers": {
-#         "django": {"level": "INFO", "handlers": ["file", "console"]},
-#     },
-# }
 
 LOGGING = {
     "version": 1,
@@ -223,10 +187,6 @@ LOGGING = {
     },
     "loggers": {
         "django": {"level": "INFO", "handlers": ["file", "console"]},
-        # "mainapp": {
-        #     "level": "DEBUG",
-        #     "handlers": ["file"],
-        # },
     },
 }
 

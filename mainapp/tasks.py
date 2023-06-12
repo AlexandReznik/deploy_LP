@@ -14,10 +14,10 @@ def send_feedback_mail(message_form: Dict[str, Union[int, str]]) -> None:
     model_user = get_user_model()
     user_obj = model_user.objects.get(pk=message_form["user_id"])
     send_mail(
-        "TechSupport Help", # subject (title)
-        message_form["message"], # message
-        user_obj.email, # send from
-        ["techsupport@braniac.com"], # send to
+        "TechSupport Help", 
+        message_form["message"], 
+        user_obj.email, 
+        ["techsupport@braniac.com"], 
         fail_silently=False,
     )
     return None

@@ -1,13 +1,10 @@
 from django.contrib import admin
-
-# Register your models here.
 from mainapp.models import News, Courses, Lesson, CourseTeacher
 from mainapp import models as mainapp_models
 from django.utils.translation import gettext_lazy as _
 
-# admin.site.register(News)
+
 admin.site.register(Courses)
-# admin.site.register(Lesson)
 admin.site.register(CourseTeacher)
 
 

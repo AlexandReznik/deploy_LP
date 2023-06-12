@@ -33,33 +33,6 @@ import logging
 logger = logging.getLogger(__name__)
 
 
-# class CoursesDetailView(TemplateView):
-#     template_name = "mainapp/courses_detail.html"
-
-#     def get_context_data(self, pk=None, **kwargs):
-#         logger.debug("Yet another log message")
-#         context = super(CoursesDetailView, self).get_context_data(**kwargs)
-#         context["course_object"] = get_object_or_404(
-#             mainapp_models.Courses, pk=pk
-#         )
-#         context["lessons"] = mainapp_models.Lesson.objects.filter(
-#             course=context["course_object"]
-#         )
-#         context["teachers"] = mainapp_models.CourseTeachers.objects.filter(
-#             course=context["course_object"]
-#         )
-#         if not self.request.user.is_anonymous:
-#             if not mainapp_models.CourseFeedback.objects.filter(
-#                 course=context["course_object"], user=self.request.user
-#                     ).count():
-#                         context["feedback_form"] = mainapp_forms.CourseFeedbackForm(
-#                             course=context["course_object"], user=self.request.user
-#                         )
-#         context["feedback_list"] = mainapp_models.CourseFeedback.objects.filter(
-#             course=context["course_object"]).order_by("-created", "-rating")[:5]
-#         return context
-
-
 class MainPageView(TemplateView):
     template_name = "mainapp/index.html"
 
@@ -72,30 +45,6 @@ class NewsListView(ListView):
 
     def get_queryset(self):
         return super().get_queryset().filter(deleted=False)
-
-    # def get_context_data(self, **kwargs):
-    #     context = super().get_context_data(**kwargs)
-
-    #     start_date = self.request.GET.get('start_date')
-    #     end_date = self.request.GET.get('end_date')
-
-    #     filtered_news = mainapp_models.News.objects.all()
-
-    #     if start_date:
-    #         start_date = datetime.strptime(start_date, '%Y-%m-%d').date()
-    #         filtered_news = filtered_news.filter(created_at__gte=start_date)
-
-    #     if end_date:
-    #         end_date = datetime.strptime(end_date, '%Y-%m-%d').date()
-    #         filtered_news = filtered_news.filter(created_at__lte=end_date)
-
-    #     filtered_news = filtered_news.order_by('-created_at')
-
-    #     context['news_list'] = filtered_news
-    #     context['start_date'] = start_date
-    #     context['end_date'] = end_date
-
-    #     return context
 
 
 class NewsCreateView(PermissionRequiredMixin, CreateView):
@@ -149,9 +98,6 @@ class CourseDetailView(TemplateView):
         context["lessons"] = mainapp_models.Lesson.objects.filter(
             course=context["course_object"]
         )
-        # context["teachers"] = mainapp_models.CourseTeachers.objects.filter(
-        #     course=context["course_object"]
-        # )
         if not self.request.user.is_anonymous:
             if not mainapp_models.CourseFeedback.objects.filter(
                 course=context["course_object"], user=self.request.user
@@ -244,9 +190,3 @@ class ContactsView(TemplateView):
                     self.request, messages.WARNING, ("You can send only one message per 5 minutes"),)
         return HttpResponseRedirect(reverse_lazy("mainapp:contacts"))
 
-
-# class NewsWithPaginatorView(NewsView):
-#     def get_context_data(self, page, **kwargs):
-#         context = super().get_context_data(page=page, **kwargs)
-#         context["page_num"] = page
-#         return context

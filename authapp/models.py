@@ -9,8 +9,6 @@ from django.utils.translation import gettext_lazy as _
 
 
 def users_avatars_path(instance, filename):
-    # file will be uploaded to
-    # MEDIA_ROOT / user_<username> / avatars / <filename>
     num = int(time() * 1000)
     suff = Path(filename).suffix
     return "users/user_{0}/avatars/{1}".format(instance.username, f"pic_{num}{suff}")
