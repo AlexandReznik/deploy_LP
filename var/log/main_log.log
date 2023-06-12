@@ -1818,3 +1818,5 @@ django.core.exceptions.FieldError: Cannot resolve keyword 'pub_date' into field.
 [2023-06-12 14:22:34,125] INFO django.server (212) "GET /mainapp/contacts/ HTTP/1.1" 200 9327
 [2023-06-12 14:27:56,700] INFO django.utils.autoreload (266) C:\VSprojects\deploy_LP\config\__init__.py changed, reloading.
 [2023-06-12 14:27:59,911] INFO django.utils.autoreload (668) Watching for file changes with StatReloader
+[2023-06-12 14:41:02,129] INFO django.utils.autoreload (266) C:\VSprojects\deploy_LP\config\urls.py changed, reloading.
+[2023-06-12 14:41:04,829] INFO django.utils.autoreload (668) Watching for file changes with StatReloader
