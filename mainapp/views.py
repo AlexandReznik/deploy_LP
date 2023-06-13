@@ -79,7 +79,7 @@ class NewsDeleteView(PermissionRequiredMixin, DeleteView):
 class CourseListView(ListView):
     template_name = "mainapp/courses_list.html"
     model = mainapp_models.Courses
-    paginate_by = 5
+    paginate_by = 6
     ordering = ['-created_at']
 
     def get_queryset(self):

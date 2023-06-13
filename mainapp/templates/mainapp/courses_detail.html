@@ -2,11 +2,11 @@
 {% load static crispy_forms_tags cache %}
 {% cache 300 lessons %}
 {% block title %}
-{{ course_object.name }}
+{{ course_object.title }}
 {% endblock title %}
 {% block content %}
 <h1 class="mt-2">
-{{ course_object.name }}
+{{ course_object.title }}
 </h1>
 <div class="row justify-content-center">
 <div class="col-sm-12 col-md-6 col-lg-8 order-2 order-md-1">
@@ -18,7 +18,7 @@
 <p>
 <small>Teachers</small><br>
 {% for item in teachers %}
-{{ item.name_second }} {{ item.name_first }}{% if forloop.last %}{%else %},{% endif %}
+{{ item.last_name }} {{ item.first_name }}{% if forloop.last %}{%else %},{% endif %}
 {% endfor %}
 </p>
 </div>
