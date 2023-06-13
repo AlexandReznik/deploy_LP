@@ -1872,3 +1872,18 @@ django.core.exceptions.FieldError: Cannot resolve keyword 'pub_date' into field.
 [2023-06-13 10:10:50,035] INFO django.server (212) "GET /mainapp/courses/ HTTP/1.1" 200 5715
 [2023-06-13 10:10:52,822] INFO django.server (212) "GET /mainapp/news/ HTTP/1.1" 200 6453
 [2023-06-13 10:10:53,814] INFO django.server (212) "GET /mainapp/ HTTP/1.1" 200 9573
+[2023-06-13 10:21:16,108] INFO django.utils.autoreload (266) C:\VSprojects\deploy_LP\config\settings.py changed, reloading.
+[2023-06-13 10:21:18,241] INFO django.utils.autoreload (668) Watching for file changes with StatReloader
+[2023-06-13 10:21:22,938] INFO django.server (212) "GET / HTTP/1.1" 302 0
+[2023-06-13 10:21:23,005] INFO django.server (212) "GET /mainapp/ HTTP/1.1" 200 9573
+[2023-06-13 10:21:25,532] INFO django.server (212) "GET /mainapp/news/ HTTP/1.1" 200 6453
+[2023-06-13 10:21:26,889] INFO django.server (212) "GET /mainapp/ HTTP/1.1" 200 9573
+[2023-06-13 10:24:00,430] INFO django.utils.autoreload (266) C:\VSprojects\deploy_LP\config\settings.py changed, reloading.
+[2023-06-13 10:24:02,665] INFO django.utils.autoreload (668) Watching for file changes with StatReloader
+[2023-06-13 10:24:29,778] INFO django.utils.autoreload (668) Watching for file changes with StatReloader
+[2023-06-13 10:27:33,975] INFO django.utils.autoreload (266) C:\VSprojects\deploy_LP\config\settings.py changed, reloading.
+[2023-06-13 10:27:36,596] INFO django.utils.autoreload (668) Watching for file changes with StatReloader
+[2023-06-13 10:27:46,236] INFO django.utils.autoreload (266) C:\VSprojects\deploy_LP\config\settings.py changed, reloading.
+[2023-06-13 10:27:48,548] INFO django.utils.autoreload (668) Watching for file changes with StatReloader
+[2023-06-13 10:27:59,173] INFO django.utils.autoreload (266) C:\VSprojects\deploy_LP\config\urls.py changed, reloading.
+[2023-06-13 10:28:01,584] INFO django.utils.autoreload (668) Watching for file changes with StatReloader
