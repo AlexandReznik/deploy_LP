@@ -2190,3 +2190,5 @@ ValueError: Missing staticfiles manifest entry for '{{ STATIC_URL }}css/Chart.mi
 [2023-06-13 10:51:20,843] INFO django.utils.autoreload (668) Watching for file changes with StatReloader
 [2023-06-13 10:51:28,372] INFO django.server (212) "GET / HTTP/1.1" 302 0
 [2023-06-13 10:51:28,434] INFO django.server (212) "GET /mainapp/ HTTP/1.1" 200 9573
+[2023-06-13 11:16:21,444] INFO django.utils.autoreload (266) C:\VSprojects\deploy_LP\config\urls.py changed, reloading.
+[2023-06-13 11:16:24,074] INFO django.utils.autoreload (668) Watching for file changes with StatReloader
