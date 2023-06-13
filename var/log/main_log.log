@@ -1855,3 +1855,20 @@ django.core.exceptions.FieldError: Cannot resolve keyword 'pub_date' into field.
 [2023-06-13 01:05:30,662] INFO django.utils.autoreload (668) Watching for file changes with StatReloader
 [2023-06-13 01:10:45,633] INFO django.utils.autoreload (266) C:\VSprojects\deploy_LP\config\settings.py changed, reloading.
 [2023-06-13 01:10:48,323] INFO django.utils.autoreload (668) Watching for file changes with StatReloader
+[2023-06-13 10:04:11,999] INFO django.utils.autoreload (266) C:\VSprojects\deploy_LP\config\settings.py changed, reloading.
+[2023-06-13 10:04:15,433] INFO django.utils.autoreload (668) Watching for file changes with StatReloader
+[2023-06-13 10:05:03,634] INFO django.utils.autoreload (266) C:\VSprojects\deploy_LP\config\settings.py changed, reloading.
+[2023-06-13 10:05:06,961] INFO django.utils.autoreload (668) Watching for file changes with StatReloader
+[2023-06-13 10:05:18,658] INFO django.utils.autoreload (266) C:\VSprojects\deploy_LP\config\settings.py changed, reloading.
+[2023-06-13 10:05:21,846] INFO django.utils.autoreload (668) Watching for file changes with StatReloader
+[2023-06-13 10:07:57,087] INFO django.utils.autoreload (266) C:\VSprojects\deploy_LP\config\settings.py changed, reloading.
+[2023-06-13 10:08:00,190] INFO django.utils.autoreload (668) Watching for file changes with StatReloader
+[2023-06-13 10:08:06,785] INFO django.utils.autoreload (266) C:\VSprojects\deploy_LP\config\settings.py changed, reloading.
+[2023-06-13 10:08:09,299] INFO django.utils.autoreload (668) Watching for file changes with StatReloader
+[2023-06-13 10:08:39,176] INFO django.utils.autoreload (266) C:\VSprojects\deploy_LP\config\settings.py changed, reloading.
+[2023-06-13 10:08:41,420] INFO django.utils.autoreload (668) Watching for file changes with StatReloader
+[2023-06-13 10:10:41,716] INFO django.utils.autoreload (266) C:\VSprojects\deploy_LP\config\settings.py changed, reloading.
+[2023-06-13 10:10:44,371] INFO django.utils.autoreload (668) Watching for file changes with StatReloader
+[2023-06-13 10:10:50,035] INFO django.server (212) "GET /mainapp/courses/ HTTP/1.1" 200 5715
+[2023-06-13 10:10:52,822] INFO django.server (212) "GET /mainapp/news/ HTTP/1.1" 200 6453
+[2023-06-13 10:10:53,814] INFO django.server (212) "GET /mainapp/ HTTP/1.1" 200 9573
