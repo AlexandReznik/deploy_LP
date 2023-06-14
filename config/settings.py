@@ -151,7 +151,6 @@ STATICFILES_DIRS = [
     BASE_DIR / 'static/img/',
     BASE_DIR / 'static/js/',
     BASE_DIR / 'static/webfonts/',
-    BASE_DIR / 'static/',
 ]
 if not DEBUG:
     
