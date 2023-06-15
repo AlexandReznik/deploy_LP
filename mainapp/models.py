@@ -11,7 +11,7 @@ from time import time
 def course_avatars_path(instance, filename):
     num = int(time() * 1000)
     suff = Path(filename).suffix
-    return "courses/course_{0}/avatars/{1}".format(instance.title, f"pic_{num}{suff}")
+    return "courses/course_{0}/avatars/{1}".format(instance.id, f"pic_{num}{suff}")
 
 
 class News(models.Model):
