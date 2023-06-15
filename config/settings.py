@@ -152,12 +152,12 @@ STATICFILES_DIRS = [
     BASE_DIR / 'static/js/',
     # BASE_DIR / 'static/webfonts/',
 ]
-# if not DEBUG:
+if not DEBUG:
     
     # STATIC_ROOT = BASE_DIR / 'static'
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+    STATIC_ROOT = BASE_DIR / 'staticfiles'
 
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+    STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
