@@ -5,7 +5,7 @@ from django.utils.translation import gettext_lazy as _
 
 admin.site.register(CourseTeacher)
 
-@admin.site.register(Courses)
+@admin.register(Courses)
 class LessonAdmin(admin.ModelAdmin):
     list_display = ['id', 'title', 'created_at']
 
