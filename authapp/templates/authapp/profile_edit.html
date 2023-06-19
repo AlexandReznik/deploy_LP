@@ -6,7 +6,7 @@
 <h3>Edit profile</h3>
 <div class="row justify-content-center">
 <div class="col-sm-7 col-md-5 col-lg-4">
-{% if user.avatar %}<img src="{{ user.avatar.url }}" >{% else %}<img src="{{ MEDIA_URL }}avatar_default.svg">{% endif %}
+{% if user.avatar %}<img src="{{ MEDIA_URL }}{{ user.avatar.url }}" >{% else %}<img src="{{ MEDIA_URL }}avatar_default.svg">{% endif %}
 </div>
 </div>
 <form method="post" class="mt-2" enctype="multipart/form-data">

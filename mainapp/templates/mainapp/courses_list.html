@@ -10,7 +10,7 @@
         {% for item in object_list %}
              <div class="card col-sm-12 col-md-6 col-lg-4 border-0">
                 <a href="{% url 'mainapp:courses_detail' pk=item.pk %}">
-                    <img src="{{ item.avatar.url }}" class="card-img-top" alt="course cover">
+                    <img src="{{ MEDIA_URL }}{{ item.avatar.url }}" class="card-img-top" alt="course cover">
                     <div class="card-body">
                         <h5 class="card-title text-center">{{ item.title }}</h5>
                     </div>
