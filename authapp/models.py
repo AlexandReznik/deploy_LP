@@ -11,7 +11,7 @@ from django.utils.translation import gettext_lazy as _
 def users_avatars_path(instance, filename):
     num = int(time() * 1000)
     suff = Path(filename).suffix
-    return "users/user_{0}/avatars/{1}".format(instance.email, f"pic_{num}{suff}")
+    return "users/user_{0}/avatars/{1}".format(instance.id, f"pic_{num}{suff}")
 
 
 class CustomUser(AbstractBaseUser, PermissionsMixin):
