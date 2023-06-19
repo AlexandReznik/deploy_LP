@@ -18,7 +18,7 @@ from django.views.generic import UpdateView
 
 
 class ProfileEditView(UserPassesTestMixin, UpdateView):
-    template_view = 'authapp/customuser_form.html'
+    template_view = 'authapp/profile_edit.html'
     model = get_user_model()
     form_class = forms.CustomUserChangeForm
 
