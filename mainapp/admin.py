@@ -3,7 +3,6 @@ from mainapp.models import News, Courses, Lesson, CourseTeacher
 from django.utils.translation import gettext_lazy as _
 
 
-admin.site.register(Courses)
 admin.site.register(CourseTeacher)
 
 @admin.site.register(Courses)
