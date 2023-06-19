@@ -1,14 +1,16 @@
 from django.contrib import admin
 from mainapp.models import News, Courses, Lesson, CourseTeacher
-from mainapp import models as mainapp_models
 from django.utils.translation import gettext_lazy as _
 
 
 admin.site.register(Courses)
 admin.site.register(CourseTeacher)
 
+@admin.site.register(Courses)
+class LessonAdmin(admin.ModelAdmin):
+    list_display = ['id', 'title', 'created_at']
 
-@admin.register(mainapp_models.Lesson)
+@admin.register(Lesson)
 class LessonAdmin(admin.ModelAdmin):
     list_display = ["id", "get_course_name", "num", "title", "deleted"]
     list_per_page = 5
@@ -28,7 +30,7 @@ class LessonAdmin(admin.ModelAdmin):
     mark_deleted.short_description = _("Mark deleted")
 
 
-@admin.register(mainapp_models.News)
+@admin.register(News)
 class NewsAdmin(admin.ModelAdmin):
     ordering = ['-created_at']
     search_fields = ['title', 'preamble', 'body']
