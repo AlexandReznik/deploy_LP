@@ -25,4 +25,7 @@ urlpatterns = [
     # Logs
     path('logs/', views.LogView.as_view(), name='log_view'),
     path("log_download/", views.LogDownloadView.as_view(), name="log_download"),
+    
+    # Categories
+    path('categories/', views.CategoryView.as_view(), name='categories'),
 ]

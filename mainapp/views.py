@@ -131,6 +131,11 @@ class CourseFeedbackFormProcessView(LoginRequiredMixin, CreateView):
         return JsonResponse({"card": rendered_card})
 
 
+class CategoryView(ListView):
+     template_name = "mainapp/categories.html"
+     model = mainapp_models.Category
+     
+
 class LogView(TemplateView):
     template_name = "mainapp/log_view.html"
 

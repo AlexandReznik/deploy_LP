@@ -15,23 +15,23 @@ def course_avatars_path(instance, filename):
 
 
 class News(models.Model):
-    title = models.CharField(max_length=256, verbose_name='Заголовок')
-    preamble = models.CharField(max_length=1024, verbose_name='Вступление')
-    body = models.TextField(verbose_name='Содержимое')
+    title = models.CharField(max_length=256)
+    preamble = models.CharField(max_length=1024)
+    body = models.TextField()
     body_as_markdown = models.BooleanField(
-        default=False, verbose_name='Разметка Markdown')
+        default=False)
 
     created_at = models.DateTimeField(
-        auto_now_add=True, verbose_name='Создано')
-    updated_at = models.DateTimeField(auto_now=True, verbose_name='Обновлено')
-    deleted = models.BooleanField(default=False, verbose_name='Удалено')
+        auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+    deleted = models.BooleanField(default=False)
 
     def __str__(self):
         return f'{self.title}'
 
     class Meta:
-        verbose_name = 'новость'
-        verbose_name_plural = 'новости'
+        verbose_name = 'news'
+        verbose_name_plural = 'news'
 
     def delete(self, *args, **kwargs):
         self.deleted = True
@@ -45,14 +45,14 @@ class CoursesManager(models.Manager):
 
 class Courses(models.Model):
     objects = CoursesManager()
-    title = models.CharField(max_length=256, verbose_name='Заголовок')
-    description = models.TextField(verbose_name='Описание')
+    title = models.CharField(max_length=256)
+    description = models.TextField()
     cost = models.DecimalField(
-        max_digits=8, decimal_places=2, verbose_name='Стоимость', default=0)
+        max_digits=8, decimal_places=2, default=0)
     created_at = models.DateTimeField(
-        auto_now_add=True, verbose_name='Создано')
-    updated_at = models.DateTimeField(auto_now=True, verbose_name='Обновлено')
-    deleted = models.BooleanField(default=False, verbose_name='Удалено')
+        auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+    deleted = models.BooleanField(default=False)
     avatar = models.ImageField(
         upload_to=course_avatars_path, blank=True, null=True
     )
@@ -61,32 +61,44 @@ class Courses(models.Model):
         return f'{self.title}'
 
     class Meta:
-        verbose_name = 'курс'
-        verbose_name_plural = 'курсы'
+        verbose_name = 'course'
+        verbose_name_plural = 'courses'
 
     def delete(self, *args, **kwargs):
         self.deleted = True
         self.save()
 
 
+class Category(models.Model):
+    name = models.CharField(max_length=256)
+    courses = models.ManyToManyField('Courses', related_name='categories')
+
+    def __str__(self):
+        return self.name
+
+    class Meta:
+        verbose_name = 'Category'
+        verbose_name_plural = 'Categories'
+
+
 class Lesson(models.Model):
     course = models.ForeignKey(
-        Courses, on_delete=models.CASCADE, verbose_name='Курс')
-    num = models.PositiveIntegerField(default=0, verbose_name='Номер урока')
-    title = models.CharField(max_length=256, verbose_name='Заголовок')
-    description = models.TextField(verbose_name='Описание')
+        Courses, on_delete=models.CASCADE)
+    num = models.PositiveIntegerField(default=0)
+    title = models.CharField(max_length=256)
+    description = models.TextField()
 
     created_at = models.DateTimeField(
-        auto_now_add=True, verbose_name='Создано')
-    updated_at = models.DateTimeField(auto_now=True, verbose_name='Обновлено')
-    deleted = models.BooleanField(default=False, verbose_name='Удалено')
+        auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+    deleted = models.BooleanField(default=False)
 
     def __str__(self):
         return f'{self.title}'
 
     class Meta:
-        verbose_name = 'урок'
-        verbose_name_plural = 'уроки'
+        verbose_name = 'lesson'
+        verbose_name_plural = 'lessons'
 
     def delete(self, *args, **kwargs):
         self.deleted = True
@@ -95,20 +107,20 @@ class Lesson(models.Model):
 
 class CourseTeacher(models.Model):
     courses = models.ManyToManyField(Courses)
-    first_name = models.CharField(max_length=256, verbose_name='Имя')
-    last_name = models.CharField(max_length=256, verbose_name='Фамилия')
+    first_name = models.CharField(max_length=256)
+    last_name = models.CharField(max_length=256)
 
     created_at = models.DateTimeField(
-        auto_now_add=True, verbose_name='Создано')
-    updated_at = models.DateTimeField(auto_now=True, verbose_name='Обновлено')
-    deleted = models.BooleanField(default=False, verbose_name='Удалено')
+        auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+    deleted = models.BooleanField(default=False)
 
     def __str__(self):
         return f'{self.first_name} {self.last_name}'
 
     class Meta:
-        verbose_name = 'преподаватель'
-        verbose_name_plural = 'преподаватели'
+        verbose_name = 'teacher'
+        verbose_name_plural = 'teachers'
 
     def delete(self, *args, **kwargs):
         self.deleted = True
