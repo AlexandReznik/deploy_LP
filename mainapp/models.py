@@ -38,6 +38,17 @@ class News(models.Model):
         self.save()
 
 
+class Category(models.Model):
+    name = models.CharField(max_length=256)
+
+    def __str__(self):
+        return self.name
+
+    class Meta:
+        verbose_name = 'Category'
+        verbose_name_plural = 'Categories'
+        
+
 class CoursesManager(models.Manager):
     def get_queryset(self):
         return super().get_queryset().filter(deleted=False)
@@ -56,6 +67,7 @@ class Courses(models.Model):
     avatar = models.ImageField(
         upload_to=course_avatars_path, blank=True, null=True
     )
+    category = models.ForeignKey(Category, on_delete=models.SET_NULL, null=True, default=None, blank=True)
 
     def __str__(self):
         return f'{self.title}'
@@ -67,18 +79,6 @@ class Courses(models.Model):
     def delete(self, *args, **kwargs):
         self.deleted = True
         self.save()
-
-
-class Category(models.Model):
-    name = models.CharField(max_length=256)
-    courses = models.ManyToManyField('Courses', related_name='categories')
-
-    def __str__(self):
-        return self.name
-
-    class Meta:
-        verbose_name = 'Category'
-        verbose_name_plural = 'Categories'
 
 
 class Lesson(models.Model):

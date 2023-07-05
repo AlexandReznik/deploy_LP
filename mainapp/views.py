@@ -16,6 +16,7 @@ from django.contrib.auth.mixins import (
     PermissionRequiredMixin,
 )
 from django.http import JsonResponse
+from django.shortcuts import render
 from django.template.loader import render_to_string
 from django.views.generic import (
     CreateView,
@@ -131,9 +132,20 @@ class CourseFeedbackFormProcessView(LoginRequiredMixin, CreateView):
         return JsonResponse({"card": rendered_card})
 
 
-class CategoryView(ListView):
-     template_name = "mainapp/categories.html"
-     model = mainapp_models.Category
+class CourseListByCategoriesView(View):
+    def get(self, request):
+        categories = mainapp_models.Category.objects.all()
+        selected_category_id = request.GET.get('category')
+        if selected_category_id:
+            courses = mainapp_models.Courses.objects.filter(category_id=selected_category_id)
+        else:
+            courses = mainapp_models.Courses.objects.all()
+        context = {
+            'categories': categories,
+            'courses': courses,
+            'selected_category_id': selected_category_id,
+        }
+        return render(request, 'mainapp/course_by_category.html', context)
      
 
 class LogView(TemplateView):
