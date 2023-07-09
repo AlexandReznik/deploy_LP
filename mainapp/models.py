@@ -6,6 +6,7 @@ from django.utils.translation import gettext_lazy as _
 from django.contrib.auth import get_user_model
 from pathlib import Path
 from time import time
+from django.core.validators import MaxValueValidator
 
 
 def course_avatars_path(instance, filename):
@@ -58,8 +59,8 @@ class Courses(models.Model):
     objects = CoursesManager()
     title = models.CharField(max_length=256)
     description = models.TextField()
-    cost = models.DecimalField(
-        max_digits=8, decimal_places=2, default=0)
+    cost = models.PositiveIntegerField(default=0)
+    discount = models.IntegerField(validators=[MaxValueValidator(100)], null=True, default=None, blank=True)
     created_at = models.DateTimeField(
         auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)

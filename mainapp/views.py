@@ -117,6 +117,10 @@ class CourseDetailView(TemplateView):
                       context["feedback_list"], timeout=300)
         else:
             context['feedback_list'] = cached_feedback
+        
+        if context["course_object"].cost is not None and context["course_object"].discount is not None:
+            discount_price = context["course_object"].cost - ((context["course_object"].cost * context["course_object"].discount) / 100)
+            context["discount_price"] = discount_price
         return context
 
 
