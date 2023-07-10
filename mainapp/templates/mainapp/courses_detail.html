@@ -52,10 +52,19 @@ role="button">Buy</a>
 </div>
 <div class="col-sm-12 d-md-none order-3 order-sm-3">
 <p class="text-center">
-<small class="text-uppercase">цена</small><br>
-<span style="font-size: 30pt;">
-{{ course_object.cost}}
+<small class="text-uppercase">price</small><br>
+{% if course_object.discount %}
+<span style="font-size: 15pt;">
+    <s>{{ course_object.cost}} $</s>
+    -{{course_object.discount}} %
 </span><br>
+<small class="text-uppercase"> new price</small><br>
+<span style="font-size: 20pt;">{{discount_price}} $</span><br>
+{% else %}
+<span style="font-size: 30pt;">
+    {{ course_object.cost}} $
+</span><br>
+{% endif %}
 <a href="#" class="btn btn-outline-primary btn-block"
 role="button">Buy</a>
 </p>
