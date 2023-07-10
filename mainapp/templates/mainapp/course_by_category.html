@@ -6,43 +6,41 @@
 {% endblock title %} 
 {% block content %}
 
-<div class="container text-center">
-    <div class="row">
-      <div class="col-sm-8">
-        <h1>Courses</h1>
-        <div class="row justify-content-center mt-3">
-        
-            {% for course in courses %}
-                 <div class="card col-sm-12 col-md-6 col-lg-4 border-0">
-                    <a href="{% url 'mainapp:courses_detail' pk=course.pk %}">
-                        <img src="{{ course.avatar.url }}" class="card-img-top" alt="course cover">
-                        <div class="card-body">
-                            <h5 class="card-title text-center">{{ course.title }}</h5>
-                        </div>
-                    </a>
+{% extends 'mainapp/base.html' %}
+{% load static %}
+
+{% block title %}
+    Courses
+{% endblock title %} 
+{% block content %}
+<div class="card my-2 sticky-top">
+    <div class="card-header">
+        Categories
+    </div>
+    <div class="card-body">
+        {% for category in categories %}
+        <ul>
+            <li>
+                <a href="?category={{ category.id }}"
+                {% if selected_category_id == category.id %}
+                style="font-weight: bold;"
+                {% endif %}>{{ category.name }}</a>
+            </li>
+        </ul>
+        {% endfor %}
+    </div>
+</div>
+<div class="row justify-content-center mt-3">
+    {% for course in courses %}
+         <div class="card col-sm-12 col-md-6 col-lg-4 border-0">
+            <a href="{% url 'mainapp:courses_detail' pk=course.pk %}">
+                <img src="{{ course.avatar.url }}" class="card-img-top" alt="course cover">
+                <div class="card-body">
+                    <h5 class="card-title text-center">{{ course.title }}</h5>
                 </div>
-            {% endfor %}
+            </a>
         </div>
-
-      </div>
-      <div class="col-sm-4">
-        <div class="card my-2 sticky-top">
-            <div class="card-header">
-            Categories
-            </div>
-        <div class="card-body">
-            {% for category in categories %}
-            <ul>
-                <li>
-                    <a href="?category={{ category.id }}"
-                    {% if selected_category_id == category.id %}
-                    style="font-weight: bold;"
-                    {% endif %}>{{ category.name }}</a>
-                </li>
-            </ul>
-            {% endfor %}
-        </div>
-
-      </div>
-    </div> 
+    {% endfor %}
+</div>
+{% endblock content %}
 {% endblock content %}
