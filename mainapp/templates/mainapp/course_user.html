@@ -13,7 +13,7 @@
     <h5 class="card-title">{{ cours.course.title }}</h5>
     <div class="row">
     <div class="col">
-    <a href="{% url 'mainapp:courses_detail' pk=cours.pk %}"
+    <a href="{% url 'mainapp:courses_detail' pk=cours.course.pk %}"
     class="card-link">More</a>
     </div>
     </div>
