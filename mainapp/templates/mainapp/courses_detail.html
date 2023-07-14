@@ -18,8 +18,9 @@
 <p>
 <small>Teachers</small><br>
 {% for item in teachers %}
-{{ item.name_second }} {{ item.name_first }}{% if forloop.last %}{%else %},{% endif %}
+{{ item.first_name }} {{ item.last_name }}{% if forloop.last %}{%else %},{% endif %}
 {% endfor %}
+
 </p>
 </div>
 </div>
@@ -81,35 +82,7 @@ role="button">Sign up</a>
 </p>
 </div>
 </div>
-<div class="accordion" id="accordionLessons">
-{% for item in lessons %}
-<div class="card">
-<div class="card-header" id="headLessonPk{{ item.pk }}">
-<h2 class="mb-0">
-<button class="btn btn-link btn-block text-left" type="button"
-data-toggle="collapse" data-target="#collapse{{ item.pk }}"
-aria-expanded="true" aria-controls="collapse{{ item.pk }}">
-{{ item.course.name }} - {{ item.title }}
-</button>
-</h2>
-</div>
-<div id="collapse{{ item.pk }}" class="collapse"
-aria-labelledby="headLessonPk{{ item.pk }}"
-data-parent="#accordionLessons">
-<div class="card-body">
-<div class="row justify-content-center">
-<div class="col-12 text-center">
-<img src="{% static 'img/no_image.svg' %}" width="250px">
-</div>
-<div class="col-12">
-{% if item.description_as_markdown %}{{ item.description }}{% else %}{{ item.description }}{% endif %}
-</div>
-</div>
-</div>
-</div>
-</div>
-{% endfor %}
-</div>
+
 <h3>Rewiews</h3>
 <div id="feedback_list">
 {% if feedback_list %}{% for item in feedback_list %}{% include 'mainapp/includes/feedback_card.html' %}{% endfor %}{% else %}<p>No feedback yet. Be first!</p>{% endif %}</div>

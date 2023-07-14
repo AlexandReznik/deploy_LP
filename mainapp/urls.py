@@ -23,6 +23,7 @@ urlpatterns = [
     path("course_feedback/", views.CourseFeedbackFormProcessView.as_view(), name="course_feedback",),
     path("course_signup/", views.create_subscription, name="course_signup"),
     path('my_courses/', views.MyCoursesView.as_view(), name="my_courses"),
+    path("mycourse/<int:pk>/detail/", views.MyCourseDetailView.as_view(), name="mycourse_detail"),
 
     # Logs
     path('logs/', views.LogView.as_view(), name='log_view'),

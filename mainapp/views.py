@@ -105,8 +105,8 @@ class CourseDetailView(TemplateView):
         context["course_object"] = get_object_or_404(
             mainapp_models.Courses, pk=pk
         )
-        context["lessons"] = mainapp_models.Lesson.objects.filter(
-            course=context["course_object"]
+        context["teachers"] = mainapp_models.CourseTeacher.objects.filter(
+            courses=context["course_object"]
         )
         if not self.request.user.is_anonymous:
             if not mainapp_models.CourseFeedback.objects.filter(
@@ -160,6 +160,23 @@ class MyCoursesView(ListView):
     def get_queryset(self):
         return mainapp_models.Subscription.objects.filter(user=self.request.user)
 
+
+class MyCourseDetailView(TemplateView):
+    template_name = 'mainapp/course_lessons.html'
+    
+    def get_context_data(self, pk=None, **kwargs):
+        context = super(MyCourseDetailView, self).get_context_data(**kwargs)
+        context["course_object"] = get_object_or_404(
+            mainapp_models.Courses, pk=pk
+        )
+        context["lessons"] = mainapp_models.Lesson.objects.filter(
+            course=context["course_object"]
+        )
+        context["teachers"] = mainapp_models.CourseTeacher.objects.filter(
+            courses=context["course_object"]
+        )
+        return context
+    
 
 class CourseFeedbackFormProcessView(LoginRequiredMixin, CreateView):
     model = mainapp_models.CourseFeedback
