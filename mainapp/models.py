@@ -7,6 +7,7 @@ from django.contrib.auth import get_user_model
 from pathlib import Path
 from time import time
 from django.core.validators import MaxValueValidator
+from authapp import models as authapp_models
 
 
 def course_avatars_path(instance, filename):
@@ -81,6 +82,11 @@ class Courses(models.Model):
         self.deleted = True
         self.save()
 
+
+class Subscription(models.Model):
+    user = models.ForeignKey(authapp_models.CustomUser, on_delete=models.CASCADE)
+    course = models.ForeignKey(Courses, on_delete=models.CASCADE)
+    
 
 class Lesson(models.Model):
     course = models.ForeignKey(

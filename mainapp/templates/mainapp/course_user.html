@@ -1,0 +1,24 @@
+{% extends 'mainapp/base.html' %}
+{% load static %}
+
+{% block title %}
+    My courses
+{% endblock title %} 
+{% block content %}
+<div class="row">
+    <div class="col-lg-8">
+    {% for cours in my_courses %}
+    <div class="card my-2">
+    <div class="card-body">
+    <h5 class="card-title">{{ cours.course.title }}</h5>
+    <div class="row">
+    <div class="col">
+    <a href="{% url 'mainapp:courses_detail' pk=cours.pk %}"
+    class="card-link">More</a>
+    </div>
+    </div>
+    </div>
+    </div>
+    {% endfor %}
+    </div>
+{% endblock content %}

@@ -1,10 +1,11 @@
 from django.contrib import admin
-from mainapp.models import News, Courses, Lesson, CourseTeacher, Category
+from mainapp.models import News, Courses, Lesson, CourseTeacher, Category, Subscription
 from django.utils.translation import gettext_lazy as _
 
 
 admin.site.register(CourseTeacher)
 admin.site.register(Category)
+admin.site.register(Subscription)
 
 @admin.register(Courses)
 class LessonAdmin(admin.ModelAdmin):

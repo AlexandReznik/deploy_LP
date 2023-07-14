@@ -1,6 +1,6 @@
 {% load static %}
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
     <div class="container">
     <a class="navbar-brand" href="{% url 'mainapp:mainapp' %}">
     <img src="{% static 'img/home.png' %}" alt="" style="width:25px;height:25px;">
@@ -25,14 +25,12 @@
     class="nav-item {% if request.resolver_match.url_name == 'courses' %}active{% endif %}">
     <a class="nav-link" href="{% url 'mainapp:courses' %}">Courses</a>
     </li>
-    {% if user.is_authenticated %}<li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="ddProfile"role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Profile</a><div class="dropdown-menu" aria-labelledby="ddProfile"><a class="dropdown-item" href="{% url 'authapp:profile_edit' user.pk %}">Edit profile</a> <a class="dropdown-item" href="#">My courses</a><div class="dropdown-divider"></div>{% if user.is_staff %}<a class="dropdown-item" href="{% url 'admin:index' %}">Moderation</a>{% endif %}{% if user.is_superuser %}<a class="dropdown-item" href="{% url 'admin:index' %}">Admin</a><a class="dropdown-item" href="{% url 'mainapp:log_view' %}" target="_blank">Logs</a>{% endif %}<div class="dropdown-divider"></div><a class="dropdown-item" href="{% url 'authapp:logout' %}">Log out</a></div></li>{% else %}<li class="nav-item"><a class="nav-link" href="{% url 'authapp:login' %}">Log in</a></li>{% endif %}
+    {% if user.is_authenticated %}<li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="ddProfile"role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Profile</a><div class="dropdown-menu" aria-labelledby="ddProfile"><a class="dropdown-item" href="{% url 'authapp:profile_edit' user.pk %}">Edit profile</a> <a class="dropdown-item" href="{% url 'mainapp:my_courses' %}">My courses</a><div class="dropdown-divider"></div>{% if user.is_staff %}<a class="dropdown-item" href="{% url 'admin:index' %}">Moderation</a>{% endif %}{% if user.is_superuser %}<a class="dropdown-item" href="{% url 'admin:index' %}">Admin</a><a class="dropdown-item" href="{% url 'mainapp:log_view' %}" target="_blank">Logs</a>{% endif %}<div class="dropdown-divider"></div><a class="dropdown-item" href="{% url 'authapp:logout' %}">Log out</a></div></li>{% else %}<li class="nav-item"><a class="nav-link" href="{% url 'authapp:login' %}">Log in</a></li>{% endif %}
     <li
     class="nav-item {% if request.resolver_match.url_name == 'contacts' %}active{% endif %}">
     <a class="nav-link" href="{% url 'mainapp:contacts' %}">Contacts</a>
     </li>
     </ul>
-    <span><a href="#">󰐮</a> <i class="fas fa-grip-lines-vertical"></i> <a
-    href="#">󰏅</a></span>
     </div>
     </div>
 </nav>

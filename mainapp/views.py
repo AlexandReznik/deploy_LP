@@ -16,7 +16,8 @@ from django.contrib.auth.mixins import (
     PermissionRequiredMixin,
 )
 from django.http import JsonResponse
-from django.shortcuts import render
+from authapp import models as authapp_models
+from django.shortcuts import render, redirect
 from django.template.loader import render_to_string
 from django.views.generic import (
     CreateView,
@@ -36,6 +37,14 @@ logger = logging.getLogger(__name__)
 
 class MainPageView(TemplateView):
     template_name = "mainapp/index.html"
+
+
+class SuccessView(TemplateView):
+    template_name = "mainapp/succsess.html"
+
+
+class ErrorView(TemplateView):
+    template_name = "mainapp/error.html"
 
 
 class NewsListView(ListView):
@@ -117,11 +126,39 @@ class CourseDetailView(TemplateView):
                       context["feedback_list"], timeout=300)
         else:
             context['feedback_list'] = cached_feedback
-        
+
         if context["course_object"].cost is not None and context["course_object"].discount is not None:
-            discount_price = context["course_object"].cost - ((context["course_object"].cost * context["course_object"].discount) / 100)
+            discount_price = context["course_object"].cost - (
+                (context["course_object"].cost * context["course_object"].discount) / 100)
             context["discount_price"] = discount_price
         return context
+
+
+def create_subscription(request):
+    if request.method == 'POST':
+        form = mainapp_forms.SubscriptionForm(request.POST)
+
+        if form.is_valid():
+            course = form.cleaned_data['course']
+            if mainapp_models.Subscription.objects.filter(user=request.user, course=course).exists():
+                return redirect('mainapp:error')
+            else:
+                subscription = form.save(commit=False)
+                subscription.user = request.user
+                subscription.save()
+                return redirect('mainapp:success')
+    else:
+        form = mainapp_forms.SubscriptionForm()
+    return render(request, 'mainapp/course_subscription.html', {'form': form})
+
+
+class MyCoursesView(ListView):
+    template_name = 'mainapp/course_user.html'
+    model = mainapp_models.Subscription
+    context_object_name = 'my_courses'
+
+    def get_queryset(self):
+        return mainapp_models.Subscription.objects.filter(user=self.request.user)
 
 
 class CourseFeedbackFormProcessView(LoginRequiredMixin, CreateView):
@@ -141,7 +178,8 @@ class CourseListByCategoriesView(View):
         categories = mainapp_models.Category.objects.all()
         selected_category_id = request.GET.get('category')
         if selected_category_id:
-            courses = mainapp_models.Courses.objects.filter(category_id=selected_category_id)
+            courses = mainapp_models.Courses.objects.filter(
+                category_id=selected_category_id)
         else:
             courses = mainapp_models.Courses.objects.all()
         context = {
@@ -150,7 +188,7 @@ class CourseListByCategoriesView(View):
             'selected_category_id': selected_category_id,
         }
         return render(request, 'mainapp/course_by_category.html', context)
-     
+
 
 class LogView(TemplateView):
     template_name = "mainapp/log_view.html"

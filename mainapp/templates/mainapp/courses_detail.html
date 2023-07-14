@@ -2,11 +2,11 @@
 {% load static crispy_forms_tags cache %}
 {% cache 300 lessons %}
 {% block title %}
-{{ course_object.title }}
+{{ course_object.name }}
 {% endblock title %}
 {% block content %}
 <h1 class="mt-2">
-{{ course_object.title }}
+{{ course_object.name }}
 </h1>
 <div class="row justify-content-center">
 <div class="col-sm-12 col-md-6 col-lg-8 order-2 order-md-1">
@@ -18,7 +18,7 @@
 <p>
 <small>Teachers</small><br>
 {% for item in teachers %}
-{{ item.last_name }} {{ item.first_name }}{% if forloop.last %}{%else %},{% endif %}
+{{ item.name_second }} {{ item.name_first }}{% if forloop.last %}{%else %},{% endif %}
 {% endfor %}
 </p>
 </div>
@@ -44,8 +44,14 @@
     {{ course_object.cost}} $
 </span><br>
 {% endif %}
-<a href="#" class="btn btn-outline-primary btn-block"
-role="button">Buy</a>
+
+{% if user.is_authenticated %}
+<a href="{% url 'mainapp:course_signup' %}" class="btn btn-outline-primary btn-block"
+role="button">Sign up</a>
+{%else%}
+<a href="{% url 'authapp:login' %}" class="btn btn-outline-primary btn-block"
+role="button">Sign up</a>
+{%endif%}
 </p>
 </div>
 </div>
@@ -65,8 +71,13 @@ role="button">Buy</a>
     {{ course_object.cost}} $
 </span><br>
 {% endif %}
-<a href="#" class="btn btn-outline-primary btn-block"
-role="button">Buy</a>
+{% if user.is_authenticated %}
+<a href="{% url 'mainapp:course_signup' %}" class="btn btn-outline-primary btn-block"
+role="button">Sign up</a>
+{%else%}
+<a href="{% url 'authapp:login' %}" class="btn btn-outline-primary btn-block"
+role="button">Sign up</a>
+{%endif%}
 </p>
 </div>
 </div>
@@ -123,5 +134,6 @@ $(document).ready(function () {
         {% endif %}
         });
 </script>
+
 {% endblock js %}
 {% endcache %}
