@@ -207,6 +207,11 @@ class CourseListByCategoriesView(View):
         return render(request, 'mainapp/course_by_category.html', context)
 
 
+class TeacherDetailView(DetailView):
+    template_name = 'mainapp/teacher.html'
+    model = mainapp_models.CourseTeacher
+    
+    
 class LogView(TemplateView):
     template_name = "mainapp/log_view.html"
 

@@ -25,6 +25,9 @@ urlpatterns = [
     path('my_courses/', views.MyCoursesView.as_view(), name="my_courses"),
     path("mycourse/<int:pk>/detail/", views.MyCourseDetailView.as_view(), name="mycourse_detail"),
 
+    # Teacher
+    path("teacher/<int:pk>/detail", views.TeacherDetailView.as_view(), name="teacher_detail"),
+    
     # Logs
     path('logs/', views.LogView.as_view(), name='log_view'),
     path("log_download/", views.LogDownloadView.as_view(), name="log_download"),

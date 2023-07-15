@@ -116,6 +116,7 @@ class CourseTeacher(models.Model):
     courses = models.ManyToManyField(Courses)
     first_name = models.CharField(max_length=256)
     last_name = models.CharField(max_length=256)
+    about = models.TextField(default="", null=True, blank=True)
 
     created_at = models.DateTimeField(
         auto_now_add=True)

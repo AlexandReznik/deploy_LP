@@ -16,7 +16,7 @@
 <p>
 <small>Teachers</small><br>
 {% for item in teachers %}
-{{ item.first_name }} {{ item.last_name }}{% if forloop.last %}{%else %},{% endif %}
+<a href="{% url 'mainapp:teacher_detail' pk=item.pk %}">{{ item.first_name }} {{ item.last_name }}{% if forloop.last %}{%else %},{% endif %}</a>
 {% endfor %}
 </p>
 </div>
