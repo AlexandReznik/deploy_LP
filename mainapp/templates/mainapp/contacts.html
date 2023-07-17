@@ -79,16 +79,21 @@
   
   
 </div>
-{% if form %}
   
   <h3>Send us message</h3>
-  <div>
-    <form method="post">
-    {% csrf_token %}
-    {{ form|crispy }}
-    <button type="submit" class="btn btn-primary btn-block">Send</button>
-    </form>
-  </div>
   
-{% endif %}
+  <div class="form-floating mb-3">
+    <label for="email">Email address</label>
+    <input type="text" class="form-control" id="email" placeholder="name@example.com">
+  </div>
+  <div class="form-floating">
+    <label for="name">Name</label>
+    <input type="text" class="form-control" id="name" placeholder="Your name">
+  </div>
+  <div class="form-floating">
+    <label for="message">Message</label>
+    <textarea class="form-control" id="message" placeholder="Your message here" rows="10"></textarea>
+  </div>
+  <button type="submit" class="btn btn-primary btn-block" onclick="sendMail()">Send</button>
+  
 {% endblock %}
