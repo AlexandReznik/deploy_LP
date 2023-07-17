@@ -17,6 +17,7 @@
     <a href="{% url 'mainapp:mycourse_detail' pk=cours.course.pk %}"
     class="card-link">More</a>
     </div>
+    {% if perms.mainapp.delete_mycourse %}<div class="col-1 text-center"><a href="{% url 'mainapp:mycourse_delete' pk=cours.pk %}"><i class="far fa-trash-alt"></i></a></div>{% endif %}
     </div>
     </div>
     </div>

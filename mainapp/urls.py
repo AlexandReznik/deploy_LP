@@ -24,6 +24,7 @@ urlpatterns = [
     path("course_signup/", views.create_subscription, name="course_signup"),
     path('my_courses/', views.MyCoursesView.as_view(), name="my_courses"),
     path("mycourse/<int:pk>/detail/", views.MyCourseDetailView.as_view(), name="mycourse_detail"),
+    path('mycourse/<int:pk>/delete', views.MyCourseDeleteView.as_view(), name="mycourse_delete"),
 
     # Teacher
     path("teacher/<int:pk>/detail", views.TeacherDetailView.as_view(), name="teacher_detail"),
