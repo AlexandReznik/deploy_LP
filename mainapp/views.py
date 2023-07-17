@@ -182,7 +182,6 @@ class MyCourseDeleteView(PermissionRequiredMixin, DeleteView):
     template_name = 'mainapp/mycourse_confirm_delete.html'
     model = mainapp_models.Subscription
     success_url = reverse_lazy("mainapp:my_courses")
-    permission_required = ("mainapp.delete_mycourse",)
     
 
 class CourseFeedbackFormProcessView(LoginRequiredMixin, CreateView):
