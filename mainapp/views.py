@@ -178,7 +178,7 @@ class MyCourseDetailView(TemplateView):
         return context
     
     
-class MyCourseDeleteView(PermissionRequiredMixin, DeleteView):
+class MyCourseDeleteView(DeleteView):
     template_name = 'mainapp/mycourse_confirm_delete.html'
     model = mainapp_models.Subscription
     success_url = reverse_lazy("mainapp:my_courses")
