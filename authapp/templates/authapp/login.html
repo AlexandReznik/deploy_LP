@@ -9,6 +9,7 @@
     <h2>Log in</h2>
     <form method="POST">
       {% csrf_token %}
+      {{ form.captcha }}
       <p>
         <input id="id_username" class="form-control" type="text" name="username" placeholder="Имя пользователя"
           required="" autofocus="">

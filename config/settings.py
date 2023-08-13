@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     'social_django',
     'crispy_forms',
     'crispy_bootstrap4',
+    'captcha',
 ]
 
 MIDDLEWARE = [
@@ -147,6 +148,8 @@ USE_I18N = True
 USE_TZ = True
 
 
+
+
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 STATIC_URL = '/static/'
@@ -176,6 +179,8 @@ AUTHENTICATION_BACKENDS = (
 
 SOCIAL_AUTH_GITHUB_KEY = str(os.getenv('SOUCIAL_AUTH_GITHUB_KEY'))
 SOCIAL_AUTH_GITHUB_SECRET = str(os.getenv('SOCIAL_AUTH_GITHUB_SECRET'))
+RECAPTCHA_PUBLIC_KEY = str(os.getenv('RECAPTCHA_PUBLIC_KEY'))
+RECAPTCHA_PRIVATE_KEY = str(os.getenv('RECAPTCHA_PRIVATE_KEY'))
 
 CRISPY_TEMPLATE_PACK = "bootstrap4"
 
