@@ -19,7 +19,6 @@ class CustomUserCreationForm(UserCreationForm):
             "last_name",
             "age",
             "avatar",
-            "captcha",
         )
     field_classes = {"username": UsernameField}
 
@@ -41,7 +40,6 @@ class CustomUserChangeForm(UserChangeForm):
             "last_name",
             "age",
             "avatar",
-            "captcha",
         )
     field_classes = {"username": UsernameField}
 
