@@ -47,7 +47,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'mainapp',
     'authapp',
-    'captcha',
+    # 'captcha',
     'social_django',
     'crispy_forms',
     'crispy_bootstrap4',
