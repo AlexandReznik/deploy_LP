@@ -47,10 +47,10 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'mainapp',
     'authapp',
+    'captcha',
     'social_django',
     'crispy_forms',
     'crispy_bootstrap4',
-    'captcha',
 ]
 
 MIDDLEWARE = [
@@ -181,6 +181,7 @@ SOCIAL_AUTH_GITHUB_KEY = str(os.getenv('SOUCIAL_AUTH_GITHUB_KEY'))
 SOCIAL_AUTH_GITHUB_SECRET = str(os.getenv('SOCIAL_AUTH_GITHUB_SECRET'))
 RECAPTCHA_PUBLIC_KEY = str(os.getenv('RECAPTCHA_PUBLIC_KEY'))
 RECAPTCHA_PRIVATE_KEY = str(os.getenv('RECAPTCHA_PRIVATE_KEY'))
+# SILENCED_SYSTEM_CHECKS=['captcha.recaptcha_test_key_error']
 
 CRISPY_TEMPLATE_PACK = "bootstrap4"
 
