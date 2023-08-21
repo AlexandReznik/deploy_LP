@@ -1,11 +1,11 @@
 from django import forms
 from django.utils.translation import gettext_lazy as _
 from mainapp import models as mainapp_models
-from captcha.fields import ReCaptchaField
-from captcha.widgets import ReCaptchaV2Checkbox
+# from captcha.fields import ReCaptchaField
+# from captcha.widgets import ReCaptchaV2Checkbox
 
 class SubscriptionForm(forms.ModelForm):
-    captcha = ReCaptchaField(widget=ReCaptchaV2Checkbox())
+    # captcha = ReCaptchaField(widget=ReCaptchaV2Checkbox())
     def __init__(self, *args, course=None, user=None, **kwargs):
         ret = super().__init__(*args, **kwargs)
         if course and user:
@@ -23,7 +23,7 @@ class SubscriptionForm(forms.ModelForm):
         
         
 class CourseFeedbackForm(forms.ModelForm):
-    captcha = ReCaptchaField(widget=ReCaptchaV2Checkbox())
+    # captcha = ReCaptchaField(widget=ReCaptchaV2Checkbox())
     def __init__(self, *args, course=None, user=None, **kwargs):
         ret = super().__init__(*args, **kwargs)
         if course and user:
