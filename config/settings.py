@@ -107,7 +107,7 @@ WSGI_APPLICATION = 'config.wsgi.application'
 DATABASES = {
     
     'default': dj_database_url.config(
-        default='postgresql://postgres:postgres@localhost:5432/mysite',
+        default='postgres://lplearning:8dgWAJ8pwTIOVfi38sVDcSbWpJ3PdG9J@dpg-ci4ouup8g3ne0dmdcfo0-a/lplearning_am22',
         conn_max_age=600
     )
 }
