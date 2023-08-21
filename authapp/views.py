@@ -15,7 +15,10 @@ from django.contrib.auth import get_user_model
 from authapp import forms
 from django.contrib.auth.mixins import UserPassesTestMixin
 from django.views.generic import UpdateView
-
+from rest_framework.authtoken.models import Token
+from rest_framework.decorators import api_view, permission_classes
+from rest_framework.response import Response
+from rest_framework.permissions import IsAuthenticated
 
 class ProfileEditView(UserPassesTestMixin, UpdateView):
     template_view = 'authapp/profile_edit.html'
@@ -66,3 +69,14 @@ class CustomLoginView(LoginView):
                 mark_safe(f"Something goes worng:<br>{msg}"),
             )
         return self.render_to_response(self.get_context_data(form=form))
+
+
+@api_view(['GET'])
+@permission_classes([IsAuthenticated])
+def get_token(request):
+    token, created = Token.objects.get_or_create(user=request.user)
+    return Response({'token': token.key})
+
+
+class TokenView(TemplateView):
+    template_name = 'authapp/token.html'

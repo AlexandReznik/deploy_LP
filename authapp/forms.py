@@ -4,12 +4,12 @@ import os
 from django import forms
 from django.core.exceptions import ValidationError
 from django.utils.translation import gettext_lazy as _
-# from captcha.fields import ReCaptchaField
-# from captcha.widgets import ReCaptchaV2Checkbox
+from captcha.fields import ReCaptchaField
+from captcha.widgets import ReCaptchaV2Checkbox
 
 
 class CustomUserCreationForm(UserCreationForm):
-    # captcha = ReCaptchaField(widget=ReCaptchaV2Checkbox())
+    captcha = ReCaptchaField(widget=ReCaptchaV2Checkbox())
     class Meta:
         model = get_user_model()
         fields = (
@@ -19,6 +19,7 @@ class CustomUserCreationForm(UserCreationForm):
             "last_name",
             "age",
             "avatar",
+            "captcha",
         )
     field_classes = {"username": UsernameField}
 
@@ -30,7 +31,7 @@ class CustomUserCreationForm(UserCreationForm):
 
 
 class CustomUserChangeForm(UserChangeForm):
-    # captcha = ReCaptchaField(widget=ReCaptchaV2Checkbox())
+    captcha = ReCaptchaField(widget=ReCaptchaV2Checkbox())
     class Meta:
         model = get_user_model()
         fields = (
@@ -40,6 +41,7 @@ class CustomUserChangeForm(UserChangeForm):
             "last_name",
             "age",
             "avatar",
+            "captcha",
         )
     field_classes = {"username": UsernameField}
 

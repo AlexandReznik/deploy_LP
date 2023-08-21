@@ -1,0 +1,48 @@
+{% extends 'authapp/base.html' %}
+{% load static %}
+{% block content %}
+    <h3>This is your API Authentication Token</h3> 
+    <a href="{% url 'authapp:mytoken' %}"><button type="button" class="btn btn-primary">Get My Token</button></a>
+    
+    <h5>You can use it to make a requests to API. Choose the way you will use it. For example, if we were using cURL, the command would be something like this:</h5>
+    <div class="card">
+        <div class="card-body">
+            <figure class="highlight"><pre><code class="language-bash" data-lang="bash">curl http://127.0.0.1:8000/hello/ -H <span class="s1">'Authorization: Token 9054f7aa9305e012b3c2300408c3dfdf390fcddf'</span></code></pre></figure>
+        </div>
+    </div>
+    <h5>Or if it was a Python <a href="http://docs.python-requests.org">requests</a> call:</h5>
+    <div class="card">
+        <div class="card-body">
+            <figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">requests</span>
+
+                <span class="n">url</span> <span class="o">=</span> <span class="s">'http://127.0.0.1:8000/hello/'</span>
+                <span class="n">headers</span> <span class="o">=</span> <span class="p">{</span><span class="s">'Authorization'</span><span class="p">:</span> <span class="s">'Token 9054f7aa9305e012b3c2300408c3dfdf390fcddf'</span><span class="p">}</span>
+                <span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span></code></pre>
+            </figure>
+        </div>
+    </div>
+    <h5>Or if we were using Angular, you could implement an <code class="highlighter-rouge">HttpInterceptor</code> and set a header:</h5>
+    <div class="card">
+        <div class="card-body">
+            <figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kr">import</span> <span class="p">{</span> <span class="nx">Injectable</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">'@angular/core'</span><span class="p">;</span>
+                <span class="kr">import</span> <span class="p">{</span> <span class="nx">HttpRequest</span><span class="p">,</span> <span class="nx">HttpHandler</span><span class="p">,</span> <span class="nx">HttpEvent</span><span class="p">,</span> <span class="nx">HttpInterceptor</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">'@angular/common/http'</span><span class="p">;</span>
+                <span class="kr">import</span> <span class="p">{</span> <span class="nx">Observable</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">'rxjs'</span><span class="p">;</span>
+                
+                <span class="err">@</span><span class="nx">Injectable</span><span class="p">()</span>
+                <span class="kr">export</span> <span class="kr">class</span> <span class="nx">AuthInterceptor</span> <span class="kr">implements</span> <span class="nx">HttpInterceptor</span> <span class="p">{</span>
+                <span class="nx">intercept</span><span class="p">(</span><span class="nx">request</span><span class="err">:</span> <span class="nx">HttpRequest</span><span class="o">&lt;</span><span class="nx">any</span><span class="o">&gt;</span><span class="p">,</span> <span class="nx">next</span><span class="err">:</span> <span class="nx">HttpHandler</span><span class="p">)</span><span class="err">:</span> <span class="nx">Observable</span><span class="o">&lt;</span><span class="nx">HttpEvent</span><span class="o">&lt;</span><span class="nx">any</span><span class="o">&gt;&gt;</span> <span class="p">{</span>
+                    <span class="kr">const</span> <span class="nx">user</span> <span class="o">=</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">localStorage</span><span class="p">.</span><span class="nx">getItem</span><span class="p">(</span><span class="s1">'user'</span><span class="p">));</span>
+                    <span class="k">if</span> <span class="p">(</span><span class="nx">user</span> <span class="o">&amp;&amp;</span> <span class="nx">user</span><span class="p">.</span><span class="nx">token</span><span class="p">)</span> <span class="p">{</span>
+                    <span class="nx">request</span> <span class="o">=</span> <span class="nx">request</span><span class="p">.</span><span class="nx">clone</span><span class="p">({</span>
+                        <span class="na">setHeaders</span><span class="p">:</span> <span class="p">{</span>
+                        <span class="na">Authorization</span><span class="p">:</span> <span class="err">`</span><span class="nx">Token</span> <span class="nx">$</span><span class="p">{</span><span class="nx">user</span><span class="p">.</span><span class="nx">accessToken</span><span class="p">}</span><span class="err">`</span>
+                        <span class="p">}</span>
+                    <span class="p">});</span>
+                    <span class="p">}</span>
+                    <span class="k">return</span> <span class="nx">next</span><span class="p">.</span><span class="nx">handle</span><span class="p">(</span><span class="nx">request</span><span class="p">);</span>
+                <span class="p">}</span>
+                <span class="p">}</span></code></pre></figure>
+        </div>
+    </div>
+
+{% endblock %}

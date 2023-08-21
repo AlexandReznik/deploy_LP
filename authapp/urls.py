@@ -10,4 +10,6 @@ urlpatterns = [
     path("logout/", views.CustomLogoutView.as_view(), name="logout"),
     path("register/", views.RegisterView.as_view(), name="register"),
     path("profile_edit/<int:pk>/", views.ProfileEditView.as_view(), name="profile_edit"),
+    path("mytoken/", views.get_token, name="mytoken"),
+    path("api-guide/", views.TokenView.as_view(), name="api_guide"),
 ]
