@@ -36,64 +36,60 @@
   {% endblock content %}
   </div>
   <!-- Footer -->
-<div class="container-lg mt-auto">
-  <hr>
-  <div class="row justify-content-center">
-  <div class="col-sm-6 col-md-3 text-center">
-  <p>
-  <strong>Braniac</strong>
-  </p>
-  <p>
-  <ul class="list-unstyled">
-  <li><a href="{% url 'mainapp:mainapp' %}">Home</a></li>
-  <li><a href="{% url 'mainapp:news' %}">News</a></li>
-  {% if user.is_authenticated %}<li><a href="{% url 'authapp:logout' %}">Log out</a></li>{% else %}<li><a href="{% url 'authapp:login' %}">Log in</a></li>{% endif %}
-  </ul>
-  </p>
-  </div>
-  <div class="col-sm-6 col-md-3 text-center">
-  <p>
-  <strong>Useful</strong>
-  </p>
-  <p>
-  <ul class="list-unstyled">
-  <li><a href="#">Circs</a></li>
-  <li><a href="#">Cookies</a></li>
-  <li><a href="#">API</a></li>
-  </li>
-  </ul>
-  </p>
-  </div>
-  <div class="col-sm-6 col-md-3 text-center">
-  <p>
-  <strong>Our social networks</strong>
-  </p>
-  <p>
-  <div class="row justify-content-around">
-  <div><a href="https://www.facebook.com/profile.php?id=100082245880996" target="_blank"><i class="fab fa-facebook-f fa-2x"></i></a>
-  </div>
-  <div><a href="https://instagram.com/_verysour_?igshid=MTI1ZDU5ODQ3Yw==" target="_blank"><i class="fab fa-instagram fa-2x"></i></a>
-  </div>
-  <div><a href="https://t.me/alexandrreznikkk" target="_blank"><i class="fa-brands fa-telegram" style="color: #158cba;"></i></a></div>
-  </div>
-  </p>
-  <p>
-  <strong>Our application</strong>
-  </p>
-  <p>
-  <div class="row justify-content-around">
-  <div><a href="https://t.me/alexandrreznikkk" target="_blank"><i class="fab fa-app-store fa-2x"></i></a>
-  </div>
-  <div><a href="https://t.me/alexandrreznikkk" target="_blank"><i class="fab fa-google-play fa-2x"></i></a></div>
-  <div><a href="https://t.me/alexandrreznikkk" target="_blank"><i class="fab fa-windows fa-2x"></i></a>
-  </div>
-  </div>
-  </p>
-  </div>
-  </div>
-  <div class="row justify-content-center">
-  </div>
-  </div>
+  <div class="container-lg mt-auto">
+    <hr>
+    <div class="row justify-content-center">
+        <div class="col-sm-6 col-md-3 text-center">
+            <p>
+                <strong>Braniac</strong>
+            </p>
+            <p>
+            <ul class="list-unstyled">
+                <li><a href="{% url 'mainapp:mainapp'%}">Home</a></li>
+                <li><a href="{% url 'mainapp:news'%}">News</a></li>
+                {% if user.is_authenticated %}<li><a href="{% url 'authapp:logout' %}">Log out</a></li>{% else %}<li><a href="{% url 'authapp:login' %}">Log in</a></li>{% endif %}
+            </ul>
+            </p>
+        </div>
+        <div class="col-sm-6 col-md-3 text-center">
+            <p>
+                <strong>Useful</strong>
+            </p>
+            <p>
+            <ul class="list-unstyled">
+                <li><a href="#">Circs</a></li>
+                <li><a href="#">Cookies</a></li>
+                <li><a href="/api/">API</a></li>
+                <li><a href="{% url 'mainapp:docs'%}">Docs</a></li>
+            </ul>
+            </p>
+        </div>
+        <div class="col-sm-6 col-md-3 text-center">
+            <p>
+                <strong>Our social networks</strong>
+            </p>
+            <p>
+            <div class="row justify-content-around">
+                <div><a href="https://www.facebook.com/profile.php?id=100082245880996" target="_blank"><i class="fab fa-facebook-f fa-2x"></i></a></div>
+                <div><a href="https://instagram.com/_verysour_?igshid=MTI1ZDU5ODQ3Yw==" target="_blank"><i class="fab fa-instagram fa-2x"></i></a></div>
+                <div><a href="https://t.me/alexandrreznikkk" target="_blank"><i class="fa-brands fa-telegram" style="color: #158cba;"></i></a></div>
+                <div><a href="https://www.linkedin.com/in/oleksandr-reznik-9b2944249/" target="_blank"><i class="fa-brands fa-linkedin-in" style="color: #158cba;"></i></a></div>
+            </div>
+            </p>
+            <p>
+                <strong>Our application</strong>
+            </p>
+            <p>
+            <div class="row justify-content-around">
+                <div><a href="https://t.me/alexandrreznikkk" target="_blank"><i class="fab fa-app-store fa-2x"></i></a></div>
+                <div><a href="https://t.me/alexandrreznikkk" target="_blank"><i class="fab fa-google-play fa-2x"></i></a></div>
+                <div><a href="https://t.me/alexandrreznikkk" target="_blank"><i class="fab fa-windows fa-2x"></i></a></div>
+            </div>
+            </p>
+        </div>
+    </div>
+    
+</div>
     
 
 <!-- JavaScript section -->
