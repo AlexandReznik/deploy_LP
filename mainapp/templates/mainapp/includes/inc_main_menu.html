@@ -30,10 +30,10 @@
     class="nav-item {% if request.resolver_match.url_name == 'contacts' %}active{% endif %}">
     <a class="nav-link" href="{% url 'mainapp:contacts' %}">Contacts</a>
     </li>
-    <li
+    {% if user.is_authenticated %}<li
     class="nav-item {% if request.resolver_match.url_name == 'api' %}active{% endif %}">
     <a class="nav-link" href="/swagger/">Api</a>
-    </li>
+    </li>{% endif %}
     </ul>
     </div>
     </div>
