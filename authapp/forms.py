@@ -9,7 +9,7 @@ from captcha.fields import CaptchaField
 
 
 class CustomUserCreationForm(UserCreationForm):
-    mycaptcha = CaptchaField()
+    captcha = CaptchaField()
     class Meta:
         model = get_user_model()
         fields = (
@@ -31,7 +31,7 @@ class CustomUserCreationForm(UserCreationForm):
 
 
 class CustomUserChangeForm(UserChangeForm):
-    mycaptcha = CaptchaField()
+    captcha = CaptchaField()
     class Meta:
         model = get_user_model()
         fields = (
