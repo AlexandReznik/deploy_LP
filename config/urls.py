@@ -25,6 +25,7 @@ from drf_yasg.views import get_schema_view
 from drf_yasg import openapi
 from rest_framework.authtoken import views
 from rest_framework import permissions
+from captcha.views import image, audio
 
 
 router = DefaultRouter()
@@ -56,6 +57,7 @@ urlpatterns = [
     path('api/', include(router.urls)),
     path('swagger/', schema_view.with_ui('swagger', cache_timeout=0),
          name='schema-swagger-ui'),
+    path('captcha/', include('captcha.urls')),
 ] 
 
 urlpatterns += static(settings.MEDIA_URL,
