@@ -69,6 +69,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.middleware.locale.LocaleMiddleware',
     'django.middleware.cache.FetchFromCacheMiddleware',
+    'social_django.middleware.SocialAuthExceptionMiddleware',
 ]
 
 CACHE_MIDDLEWARE_ALIAS = 'default'
@@ -194,14 +195,6 @@ MEDIA_ROOT = os.path.join(BASE_DIR , 'media')
 MEDIA_URL = "/media/"
 
 
-
-
-AUTHENTICATION_BACKENDS = (
-    'social_core.backends.facebook.FacebookOAuth2',
-    'social_core.backends.linkedin.LinkedinOAuth2',
-    'social_core.backends.instagram.InstagramOAuth2',
-    "django.contrib.auth.backends.ModelBackend",
-)
 AUTHENTICATION_BACKENDS = [
     'social_core.backends.google.GoogleOAuth2',
     'social_core.backends.facebook.FacebookOAuth2',
