@@ -20,6 +20,7 @@ from rest_framework.decorators import api_view, permission_classes
 from rest_framework.response import Response
 from rest_framework.permissions import IsAuthenticated
 
+
 class ProfileEditView(UserPassesTestMixin, UpdateView):
     template_view = 'authapp/profile_edit.html'
     model = get_user_model()
