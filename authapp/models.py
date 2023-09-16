@@ -10,6 +10,7 @@ from django.conf import settings
 from django.db.models.signals import post_save
 from django.dispatch import receiver
 from rest_framework.authtoken.models import Token
+import uuid
 
 
 @receiver(post_save, sender=settings.AUTH_USER_MODEL)
@@ -25,6 +26,8 @@ def users_avatars_path(instance, filename):
 
 
 class CustomUser(AbstractBaseUser, PermissionsMixin):
+    public_id = models.UUIDField(db_index=True,
+        default=uuid.uuid4, editable=False)
     username_validator = ASCIIUsernameValidator()
     username = models.CharField(
         _("username"),

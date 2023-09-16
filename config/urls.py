@@ -20,7 +20,16 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.conf.urls.i18n import i18n_patterns
 from rest_framework.routers import DefaultRouter
-from mainapp.viewset import CategoryViewSet, NewsViewSet, CoursesViewSet
+from authapp.viewset import CustomUserViewSet
+from mainapp.viewset import (
+    CategoryViewSet, 
+    NewsViewSet, 
+    CoursesViewSet, 
+    LessonViewSet, 
+    CourseFeedbackViewSet, 
+    CourseTeacherViewSet, 
+    SubscriptionViewSet
+    )
 from drf_yasg.views import get_schema_view
 from drf_yasg import openapi
 from rest_framework.authtoken import views
@@ -34,9 +43,14 @@ from django.contrib.auth.views import (
 
 
 router = DefaultRouter()
+router.register('courseteachers', CourseTeacherViewSet)
+router.register('lesson', LessonViewSet)
+router.register('coursesfeedback', CourseFeedbackViewSet)
+router.register('subscription', SubscriptionViewSet)
 router.register('courses', CoursesViewSet)
 router.register('categories', CategoryViewSet)
 router.register('news', NewsViewSet)
+router.register('users', CustomUserViewSet)
 
 
 schema_view = get_schema_view(
