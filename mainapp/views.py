@@ -54,7 +54,20 @@ class NewsListView(ListView):
     ordering = ['-created_at']
 
     def get_queryset(self):
-        return super().get_queryset().filter(deleted=False)
+        queryset = super().get_queryset().filter(deleted=False)
+        min_date = self.request.GET.get('min_date')
+        max_date = self.request.GET.get('max_date')
+
+        if min_date:
+            queryset = queryset.filter(created_at__gte=min_date)
+        if max_date:
+            queryset = queryset.filter(created_at__lte=max_date)
+        return queryset
+    
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['filter_date_form'] = mainapp_forms.DateFilterForm(self.request.GET)
+        return context
 
 
 class NewsCreateView(PermissionRequiredMixin, CreateView):

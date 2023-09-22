@@ -9,17 +9,21 @@
 	<div class="row">
 		<!-- Filters -->
 		<div class="col-md-3">
-            <div class="card mb-4">
-				<h6 class="card-header">Filter by</h6>
-				<div class="list-group list-group-flush">
-					<form method="get">
+            <div class="card my-2 sticky-top">
+                <div class="card-header">
+                    Filter by date
+                </div>
+                <div class="card-body">
+                    <form method="get">
                         {% csrf_token %}
                         {{ filter_form|crispy }}
-                        <button type="submit" class="btn btn-info btn-sm mt-1">Filter</button>
+                        
+                        <button type="submit"
+                        class="btn btn-primary btn-block">Filter</button>
                     </form>
-				</div>
-			</div>
-		</div>
+                </div>
+            </div>
+        </div>
 		<div class="col-md-9">
             <div class="row justify-content-center mt-3">
                 

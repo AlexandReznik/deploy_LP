@@ -49,3 +49,12 @@ class CoursesByPriceFilter(filters.FilterSet):
     class Meta:
         model = Courses
         fields = ['min_price', 'max_price', 'category']
+
+
+class NewsByDateFilter(filters.FilterSet):
+    min_date = filters.DateFilter(field_name='min_date', lookup_expr='gte')
+    max_date = filters.DateFilter(field_name='max_date', lookup_expr='lte')
+
+    class Meta:
+        model = News
+        fields = ['min_date', 'max_date']

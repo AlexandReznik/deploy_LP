@@ -1,4 +1,5 @@
 {% extends 'mainapp/base.html' %}
+{% load crispy_forms_tags %}
 {% block title %}
 News
 {% endblock title %}
@@ -27,32 +28,22 @@ class="card-link">More</a>
 {% endfor %}
 </div>
 <div class="col-lg-4">
-<div class="card my-2 sticky-top">
-<div class="card-header">
-Filters
-</div>
-<div class="card-body">
-<form action="">
-<div class="input-group mb-3">
-<div class="input-group-prepend">
-<span class="input-group-text" id="basic-addon1">Date from...</span>
-</div>
-<input type="date" class="form-control" name="dateFrom">
-</div>
-<div class="input-group mb-3">
-<div class="input-group-prepend">
-<span class="input-group-text" id="basic-addon1">Date to...</span>
-</div>
-<input type="date" class="form-control" name="dateTo">
-</div>
-<button type="submit"
-class="btn btn-primary btn-block">Filter</button>
-</form>
-</div>
-</div>
-{% if perms.mainapp.add_news %}<a class="btn btn-primary btn-block" role="button" href="{% url 'mainapp:news_create' %}">Add news</a>{% endif %}
-</div>
+    <div class="card my-2 sticky-top">
+    <div class="card-header">
+    Filter by date
+    </div>
+    <div class="card-body">
+    <form method="get">
+        {% csrf_token %}
+        {{ filter_date_form|crispy }}
+        
+        <button type="submit"
+        class="btn btn-primary btn-block">Filter</button>
+    </form>
+    </div>
+    </div>
+    {% if perms.mainapp.add_news %}<a class="btn btn-primary btn-block" role="button" href="{% url 'mainapp:news_create' %}">Add news</a>{% endif %}
+    </div>
 </div>
 {% include 'mainapp/includes/pagination.html' %}
-
 {% endblock content %}

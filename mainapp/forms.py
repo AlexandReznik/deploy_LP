@@ -45,3 +45,8 @@ class PriceFilterForm(forms.Form):
     min_price = forms.DecimalField(required=False, min_value=0)
     max_price = forms.DecimalField(required=False, min_value=0)
     category = forms.ModelMultipleChoiceField(required=False, queryset=mainapp_models.Category.objects.all(), widget=forms.CheckboxSelectMultiple)
+
+
+class DateFilterForm(forms.Form):
+    min_date = forms.DateField(required=False, widget=forms.DateInput(attrs={'type': 'date'}))
+    max_date = forms.DateField(required=False, widget=forms.DateInput(attrs={'type': 'date'}))
