@@ -60,7 +60,7 @@ class Courses(models.Model):
     objects = CoursesManager()
     title = models.CharField(max_length=256)
     description = models.TextField()
-    cost = models.PositiveIntegerField(default=0)
+    price = models.PositiveIntegerField(default=0)
     discount = models.IntegerField(validators=[MaxValueValidator(100)], null=True, default=None, blank=True)
     created_at = models.DateTimeField(
         auto_now_add=True)

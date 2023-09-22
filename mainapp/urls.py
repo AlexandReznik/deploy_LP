@@ -34,7 +34,7 @@ urlpatterns = [
     path("log_download/", views.LogDownloadView.as_view(), name="log_download"),
     
     # Categories
-    path('course-by-category/', views.CourseListByCategoriesView.as_view(), name='categories'),
+    # path('course-by-category/', views.CourseListByCategoriesView.as_view(), name='categories'),
 
     # Other
     path('success/', views.SuccessView.as_view(), name="success"),

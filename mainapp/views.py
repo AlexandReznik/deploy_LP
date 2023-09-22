@@ -89,12 +89,31 @@ class NewsDeleteView(PermissionRequiredMixin, DeleteView):
 class CourseListView(ListView):
     template_name = "mainapp/courses_list.html"
     model = mainapp_models.Courses
-    paginate_by = 6
+    paginate_by = 5
+    context_object_name = 'courses'
     ordering = ['-created_at']
-
+        
     def get_queryset(self):
-        return super().get_queryset().filter(deleted=False)
+        queryset = super().get_queryset().filter(deleted=False)
+        min_price = self.request.GET.get('min_price')
+        max_price = self.request.GET.get('max_price')
+        category = self.request.GET.getlist('category')
 
+        if min_price:
+            queryset = queryset.filter(price__gte=min_price)
+
+        if max_price:
+            queryset = queryset.filter(price__lte=max_price)
+
+        if category:
+            queryset = queryset.filter(category__in=category)
+            
+        return queryset
+    
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['filter_form'] = mainapp_forms.PriceFilterForm(self.request.GET)
+        return context
 
 class CourseDetailView(TemplateView):
     template_name = "mainapp/courses_detail.html"
@@ -127,9 +146,9 @@ class CourseDetailView(TemplateView):
         else:
             context['feedback_list'] = cached_feedback
 
-        if context["course_object"].cost is not None and context["course_object"].discount is not None:
-            discount_price = context["course_object"].cost - (
-                (context["course_object"].cost * context["course_object"].discount) / 100)
+        if context["course_object"].price is not None and context["course_object"].discount is not None:
+            discount_price = context["course_object"].price - (
+                (context["course_object"].price * context["course_object"].discount) / 100)
             context["discount_price"] = discount_price
         return context
 

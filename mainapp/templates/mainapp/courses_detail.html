@@ -35,14 +35,14 @@
 <small class="text-uppercase">price</small><br>
 {% if course_object.discount %}
 <span style="font-size: 20pt;">
-    <s>{{ course_object.cost}} $</s>
+    <s>{{ course_object.price}} $</s>
     -{{course_object.discount}} %
 </span><br>
 <small class="text-uppercase"> new price</small><br>
 <span style="font-size: 30pt;">{{discount_price}} $</span><br>
 {% else %}
 <span style="font-size: 30pt;">
-    {{ course_object.cost}} $
+    {{ course_object.price}} $
 </span><br>
 {% endif %}
 
@@ -62,14 +62,14 @@ role="button">Sign up</a>
 <small class="text-uppercase">price</small><br>
 {% if course_object.discount %}
 <span style="font-size: 15pt;">
-    <s>{{ course_object.cost}} $</s>
+    <s>{{ course_object.price}} $</s>
     -{{course_object.discount}} %
 </span><br>
 <small class="text-uppercase"> new price</small><br>
 <span style="font-size: 20pt;">{{discount_price}} $</span><br>
 {% else %}
 <span style="font-size: 30pt;">
-    {{ course_object.cost}} $
+    {{ course_object.price}} $
 </span><br>
 {% endif %}
 {% if user.is_authenticated %}

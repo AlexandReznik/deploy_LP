@@ -39,4 +39,9 @@ class CourseFeedbackForm(forms.ModelForm):
             "rating": forms.RadioSelect(),
         }
     captcha = ReCaptchaField(widget=ReCaptchaV2Checkbox())
-        
+    
+    
+class PriceFilterForm(forms.Form):
+    min_price = forms.DecimalField(required=False, min_value=0)
+    max_price = forms.DecimalField(required=False, min_value=0)
+    category = forms.ModelMultipleChoiceField(required=False, queryset=mainapp_models.Category.objects.all(), widget=forms.CheckboxSelectMultiple)

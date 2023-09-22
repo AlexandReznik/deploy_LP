@@ -5,21 +5,40 @@
     Courses
 {% endblock title %} 
 {% block content %}
-    <div class="row justify-content-center mt-3">
-        
-        {% for item in object_list %}
-             <div class="card col-sm-12 col-md-6 col-lg-4 border-0">
-                <a href="{% url 'mainapp:courses_detail' pk=item.pk %}">
-                    <img src="{{ item.avatar.url }}" class="card-img-top" alt="course cover">
-                    <div class="card-body">
-                        <h5 class="card-title text-center">{{ item.title }}</h5>
+<main class="container my-4">
+	<div class="row">
+		<!-- Filters -->
+		<div class="col-md-3">
+            <div class="card mb-4">
+				<h6 class="card-header">Filter by</h6>
+				<div class="list-group list-group-flush">
+					<form method="get">
+                        {% csrf_token %}
+                        {{ filter_form|crispy }}
+                        <button type="submit" class="btn btn-info btn-sm mt-1">Filter</button>
+                    </form>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-9">
+            <div class="row justify-content-center mt-3">
+                
+                {% for item in courses %}
+                    <div class="card col-sm-12 col-md-6 col-lg-4 border-0">
+                        <a href="{% url 'mainapp:courses_detail' pk=item.pk %}">
+                            <img src="{{ item.avatar.url }}" class="card-img-top" alt="course cover">
+                            <div class="card-body">
+                                <h5 class="card-title text-center">{{ item.title }}</h5>
+                            </div>
+                        </a>
                     </div>
-                </a>
+                {% endfor %}
             </div>
-        {% endfor %}
-
-        
-    </div>
+        </div>
+	</div>
+</main>
     
+{% include 'mainapp/includes/pagination.html' %}
+{% endblock content %}
 {% include 'mainapp/includes/pagination.html' %}
 {% endblock content %}

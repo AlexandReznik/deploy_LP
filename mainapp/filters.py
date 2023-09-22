@@ -1,5 +1,5 @@
 from django_filters import rest_framework as filters
-from .models import Courses, News, Lesson, CourseTeacher
+from .models import Courses, News, Lesson, CourseTeacher, Category
 
 
 class CoursesFilter(filters.FilterSet):
@@ -40,4 +40,12 @@ class CourseTeacherFilter(filters.FilterSet):
         model = CourseTeacher
         fields = ['courses', 'first_name', 'first_name']
         
-    
+
+class CoursesByPriceFilter(filters.FilterSet):
+    min_price = filters.NumberFilter(field_name='min_price', lookup_expr='gte')
+    max_price = filters.NumberFilter(field_name='max_price', lookup_expr='lte')
+    category = filters.ModelMultipleChoiceFilter(field_name='category', queryset=Category.objects.all())
+
+    class Meta:
+        model = Courses
+        fields = ['min_price', 'max_price', 'category']
