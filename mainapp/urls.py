@@ -8,7 +8,7 @@ app_name = MainappConfig.name
 urlpatterns = [
     path('contacts/', views.ContactsView.as_view(), name="contacts"),
     path('docs/', views.DocSitePageView.as_view(), name="docs"),
-    path('', views.MainPageView.as_view(), name="mainapp"),
+    path('', cache_page(60 * 5)(views.MainPageView.as_view()), name="mainapp"),
 
     # News
     path("news/", views.NewsListView.as_view(), name="news"),
