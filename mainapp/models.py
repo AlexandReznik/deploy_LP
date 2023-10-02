@@ -1,6 +1,4 @@
 from django.db import models
-from email.policy import default
-from unittest.util import _MAX_LENGTH
 from django.db import models
 from django.utils.translation import gettext_lazy as _
 from django.contrib.auth import get_user_model
@@ -13,7 +11,7 @@ from authapp import models as authapp_models
 def course_avatars_path(instance, filename):
     num = int(time() * 1000)
     suff = Path(filename).suffix
-    return "courses/course_{0}/avatars/{1}".format(instance.id, f"pic_{num}{suff}")
+    return "course_{0}/avatars/{1}".format(instance.id, f"pic_{num}{suff}")
 
 
 class News(models.Model):

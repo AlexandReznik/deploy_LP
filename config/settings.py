@@ -164,7 +164,7 @@ STATICFILES_DIRS = [
 ]
 STATIC_ROOT = os.path.join(BASE_DIR , 'staticfiles')
     
-
+DEFAULT_AVATAR_URL = "https://avatars.dicebear.com/api/identicon/.svg"
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
@@ -191,7 +191,8 @@ REST_FRAMEWORK = {
     'PAGE_SIZE': 100,
 }
 # Media files
-MEDIA_ROOT = os.path.join(BASE_DIR , 'media')
+# MEDIA_ROOT = os.path.join(BASE_DIR , 'media')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'uploads')
 MEDIA_URL = "/media/"
 
 

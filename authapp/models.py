@@ -22,7 +22,7 @@ def create_auth_token(sender, instance=None, created=False, **kwargs):
 def users_avatars_path(instance, filename):
     num = int(time() * 1000)
     suff = Path(filename).suffix
-    return "users/user_{0}/avatars/{1}".format(instance.id, f"pic_{num}{suff}")
+    return "user_{0}/avatars/{1}".format(instance.id, f"pic_{num}{suff}")
 
 
 class CustomUser(AbstractBaseUser, PermissionsMixin):
