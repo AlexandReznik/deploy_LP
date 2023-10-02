@@ -11,8 +11,8 @@ from authapp import models as authapp_models
 def course_avatars_path(instance, filename):
     num = int(time() * 1000)
     suff = Path(filename).suffix
-    return "course_{0}/avatars/{1}".format(instance.id, f"pic_{num}{suff}")
-
+    return "course_{0}/avatars/{1}".format(instance.title, f"pic_{num}{suff}")
+# 
 
 class News(models.Model):
     title = models.CharField(max_length=256)
