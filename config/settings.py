@@ -160,7 +160,7 @@ USE_TZ = True
 STATIC_URL = '/staticfiles/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
-    # os.path.join(BASE_DIR, 'media'),
+    os.path.join(BASE_DIR, 'media'),
     os.path.join(BASE_DIR, 'uploads'),
 ]
 STATIC_ROOT = os.path.join(BASE_DIR , 'staticfiles')
@@ -194,7 +194,7 @@ REST_FRAMEWORK = {
 # Media files
 # MEDIA_ROOT = os.path.join(BASE_DIR , 'media')
 MEDIA_ROOT = os.path.join(BASE_DIR, 'uploads')
-MEDIA_URL = "/media/"
+MEDIA_URL = "/media/" 
 
 
 AUTHENTICATION_BACKENDS = [
