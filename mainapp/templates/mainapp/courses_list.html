@@ -7,23 +7,18 @@
 {% block content %}
 
 	<div class="row">
-		<!-- Filters -->
 		<div class="col-md-3">
-            <div class="card my-2 sticky-top">
-                <div class="card-header">
-                    Filters
-                </div>
+            <div class="card mt-3" >
                 <div class="card-body">
+                    <h5 class="card-title">Filters</h5>
                     <form method="get">
-                        {% csrf_token %}
-                        {{ filter_form|crispy }}
-                        
-                        <button type="submit"
-                        class="btn btn-primary btn-block">Filter</button>
+                    {% csrf_token %}
+                    {{ filter_form|crispy }}    
+                    <button type="submit" class="btn btn-primary btn-block">Filter</button>
                     </form>
                 </div>
-            </div>
-        </div>
+            </div>  
+        </div> 
 		<div class="col-md-9">
             <div class="row justify-content-center mt-3">
                 
