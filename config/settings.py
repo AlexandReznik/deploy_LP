@@ -30,7 +30,9 @@ SECRET_KEY = str(os.getenv('SECRET_KEY'))
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['16.171.128.37', 'localhost']
+# ALLOWED_HOSTS = ['16.171.128.37', 'localhost']
+ALLOWED_HOSTS = []
+
 
 RENDER_EXTERNAL_HOSTNAME = os.environ.get('RENDER_EXTERNAL_HOSTNAME')
 if RENDER_EXTERNAL_HOSTNAME:
@@ -106,18 +108,18 @@ WSGI_APPLICATION = 'config.wsgi.application'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'lplearning',
-        'USER': 'admin',
-        'PASSWORD': 'Kinzer2004',
-        'HOST': 'localhost',
-        'PORT': ''
-    }
-    # 'default': dj_database_url.config(
-    #     default=str(os.getenv('default')),
-    #     conn_max_age=600
-    # )
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.postgresql_psycopg2',
+    #     'NAME': 'lplearning',
+    #     'USER': 'admin',
+    #     'PASSWORD': 'Kinzer2004',
+    #     'HOST': 'localhost',
+    #     'PORT': ''
+    # }
+    'default': dj_database_url.config(
+        default=str(os.getenv('default')),
+        conn_max_age=600
+    )
 }
 
 
