@@ -106,11 +106,18 @@ WSGI_APPLICATION = 'config.wsgi.application'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
 DATABASES = {
-    
-    'default': dj_database_url.config(
-        default=str(os.getenv('default')),
-        conn_max_age=600
-    )
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'Lplearning',
+        'USER': 'admin',
+        'PASSWORD': 'Kinzer2004',
+        'HOST': 'localhost',
+        'PORT': ''
+    }
+    # 'default': dj_database_url.config(
+    #     default=str(os.getenv('default')),
+    #     conn_max_age=600
+    # )
 }
 
 
