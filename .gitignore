@@ -1,3 +1,6 @@
+env.env
+.venv
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -173,5 +176,3 @@ cython_debug/
 # Built Visual Studio Code Extensions
 *.vsix
 
-.env
-.venv
